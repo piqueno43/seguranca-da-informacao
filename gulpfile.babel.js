@@ -1,3 +1,5 @@
+"use strict";
+
 import gulp from 'gulp';
 import autoprefixer from 'gulp-autoprefixer';
 import cleanCSS from 'gulp-clean-css';
@@ -9,31 +11,32 @@ import del from 'del';
 import webpack from 'webpack-stream';
 import browserSync from 'browser-sync';
 import rename from 'gulp-rename';
-import git from 'gulp-git';
+import conteudo from './src/contents/je.json';
+const dest = 'dist';
 
 const paths = {
   env: {
-    src: './dist'
+    src: dest
   },
   styles: {
     src: 'src/styles/**/*.scss',
-    dest: 'dist/assets/css/',
+    dest: `${dest}/assets/css/`,
   },
   scripts: {
     src: 'src/scripts/**/*.js',
-    dest: 'dist/assets/js/',
+    dest: `${dest}/assets/js/`,
   },
   images: {
-    src: 'src/images/**/*.{jpg,jpeg,png}',
-    dest: 'dist/assets/images/',
+    src: 'src/images/**/*.{jpg,jpeg,png,gif,svg,ico}',
+    dest: `${dest}/assets/images/`,
   },
   fonts: {
     src: 'src/fonts/**/*.{eot,svg,ttf,woff,woff2}',
-    dest: 'dist/assets/fonts/',
+    dest: `${dest}/assets/fonts/`,
   },
 };
 
-export const clean = () => del(['dist']);
+export const clean = () => del([dest]);
 
 export function serve() {
   return browserSync.init({
@@ -47,11 +50,11 @@ export function serve() {
 export function styles() {
   return gulp
     .src(paths.styles.src)
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({ cascade: false }))
     .pipe(cleanCSS())
-    .pipe(sourcemaps.write('.'))
+    // .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(browserSync.stream());
 }
@@ -59,7 +62,7 @@ export function styles() {
 export function scripts() {
   return gulp
     .src(paths.scripts.src)
-    .pipe(webpack(require('./webpack.config.js')))
+    // .pipe(webpack(require('./webpack.config.js')))
     .pipe(gulp.dest(paths.scripts.dest))
     .pipe(browserSync.stream());
 }
@@ -81,10 +84,10 @@ export function fonts() {
 
 export function views() {
   return gulp
-    .src('src/index.ejs')
-    .pipe(ejs())
+    .src(['src/views/**/*.ejs'])
+    .pipe(ejs({conteudo}))
     .pipe(rename({extname: '.html'}))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest(dest))
     .pipe(browserSync.stream());
 }
 
@@ -93,49 +96,18 @@ export function watch() {
   gulp.watch(paths.scripts.src, scripts);
   gulp.watch(paths.images.src, images);
   gulp.watch('src/**/*.ejs', views);
-  gulp.watch('dist/index.html').on('change', browserSync.reload);
+  gulp.watch(`${dest}/**/*.html`).on('change', browserSync.reload);
 }
 
-// Run git add
-export function gitAdd() {
-  return gulp
-    .src(paths.env.src)
-    .pipe(git.add())
-}
-
-// Run git commit
-export function gitCommit() {
-  return gulp
-    .src(paths.env.src)
-    .pipe(git.commit(`Send to production ${new Date()}`))
-}
-// Run add remote
-export function gitRemote() {
-  return gulp
-    .src(paths.env.src)
-    .pipe(git.addRemote('develop', 'https://github.com/piqueno43/workflow.git', function(){
-      if (err) throw err;
-      }))
-}
-
-// Run add push
-export function gitPush() {
-  return gulp
-    .src(paths.env.src)
-    .pipe(git.push('develop', ['master'], function (err) {
-      if (err) throw err;
-    }))
-}
-
-const build = gulp.series(clean, gulp.parallel(styles, scripts, images, views));
+const build = gulp.series(clean, gulp.parallel(styles, scripts, images, fonts, views));
 
 const defaultTask = gulp.parallel(build, serve, watch);
-const production = gulp.parallel(gitAdd, gitCommit, gitPush);
+
 
 gulp.task('build', build);
 
 gulp.task('default', defaultTask);
 
-gulp.task('production', production);
+
 
 export default defaultTask;

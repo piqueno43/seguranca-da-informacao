@@ -1,0 +1,24 @@
+/* SourceSansPro regular */
+$path-font: '/assets/fonts/shared/source-sans-pro';
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("#{$path-font}/SourceSansPro-Regular.ttf") format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* SourceSansPro italic */
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url('#{$path-font}/SourceSansPro-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* SourceSansPro bold */
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url('#{$path-font}/SourceSansPro-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}

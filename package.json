@@ -1,20 +1,20 @@
 {
-  "name": "gulp-workflow",
+  "name": "justicaeleitoral",
   "version": "4.1.1",
-  "description": "Workflow using Gulp.js",
+  "description": "Hotsites justicaeleitoral using Gulp.js",
   "license": "MIT",
   "repository": "calazans10/gulp-workflow",
   "author": {
-    "name": "Jeferson Farias Calazans",
-    "email": "calazans10@gmail.com",
-    "url": "https://calazans10.com"
+    "name": "Edivaldo Silva",
+    "email": "edivaldo.silva43@gmail.com",
+    "url": "https://edivaldo.dev"
   },
   "scripts": {
     "start": "gulp",
     "build": "gulp production"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=8"
   },
   "keywords": [
     "gulp",
@@ -36,17 +36,15 @@
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.2.0",
     "gulp-ejs": "^5.1.0",
-    "gulp-git": "^2.10.1",
-    "gulp-git-push": "^2.0.0",
-    "gulp-handlebars": "^5.0.2",
     "gulp-imagemin": "^6.2.0",
-    "gulp-pug": "^4.0.1",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
-    "gulp-wrap": "^0.15.0",
     "node-sass": "^4.13.1",
     "terser-webpack-plugin": "^2.3.4",
     "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3"
   }
 }

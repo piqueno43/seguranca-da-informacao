@@ -1,0 +1,324 @@
+<%
+const config = {
+  'title': 'Justiça Eleitoral',
+  'path': 'justica-eleitoral',
+  'fonts': [
+    'shared/fonts/open-sans.css',
+    'shared/fonts/merriweather.css',
+  ],
+  'styles': [
+    'shared/font-awesome.css',
+    'shared/bootstrap.css',
+    'shared/fancybox.css',
+    'shared/style.css',
+    'justica-eleitoral.css'
+  ],
+  'scripts': [
+    'shared/jquery-3.4.1.min.js',
+    'shared/bootstrap.min.js',
+    'justica-eleitoral/geral.js'
+  ],
+};
+%>
+<%- include('../templates/shared/header', {config}); -%>
+<%- include('../templates/shared/menu'); -%>
+<section id="nova-home">
+   <div class="container">
+      <div class="row">
+         <div class="consumo-dados">
+            <a href="#" class="btn btn-consumo-dados" data-toggle="modal" data-target="#consumo-dados-modal"><img class="gif-wifi" src="/assets/images/justica-eleitoral/gif-wifi.gif" alt="Navegação sem consumo do plano de dados do seu celular">Navegação sem consumo do plano de dados do seu celular</a>
+            <div class="modal fade" id="consumo-dados-modal" tabindex="-1" aria-labelledby="consumo-dados-modalLabel" aria-hidden="true">
+               <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <h5 class="modal-title" id="consumo-dados-modalLabel">Navegação sem consumo do plano de dados do seu celular</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                     </div>
+                     <div class="modal-body">
+                        <p>Navegando no portal da Justiça Eleitoral pelo celular, você não gasta nada do seu pacote de dados. Fique por dentro das novidades sobre as Eleições 2020 sem nenhuma cobrança. Válido pra telefones de qualquer operadora
+                           do Brasil! Uma parceria do TSE com a Conexis Brasil Digital.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="row destaques">
+         <div class="col-md-6 destaque destaque-1">
+            <a class="link-destaque" href="/dicas-ao-eleitor">
+               <img class="imagem-destaque" src="/assets/images/justica-eleitoral/banner-dicas-ao-eleitor.jpg" alt="Confira dicas e cuidados para votar com segurança">
+               <span class="texto">
+                  <h1 class="titulo">Confira dicas e cuidados para votar com segurança</h1>
+                  <p class="sutia">Plano de Segurança Sanitária foi elaborado por especialistas do Sírio Libanês e Albert Einstein e da Fundação Fiocruz</p>
+               </span>
+            </a>
+         </div>
+         <div class="col-md-6 outros-destaques">
+            <div class="destaque destaque-2">
+               <a class="link-destaque" href="/fato-ou-boato">
+                  <img class="imagem-destaque" src="/assets/images/justica-eleitoral/banner-fato-ou-boato.png"
+                     alt="Esclarecimentos sobre informações falsas">
+                  <span class="texto">
+                     <h5 class="titulo">Esclarecimentos sobre informações falsas</h5>
+                  </span>
+               </a>
+            </div>
+            <div class="destaque destaque-3">
+               <a class="link-destaque" href="/tudo-sobre-as-eleicoes">
+                  <img class="imagem-destaque" src="/assets/images/justica-eleitoral/banner-tudo-sobre-as-eleicoes.png"
+                     alt="Posso votar sem título? Quais documentos levar? Tire suas dúvidas">
+                  <span class="texto">
+                     <h5 class="titulo">Posso votar sem título? Quais documentos levar? Tire suas dúvidas</h5>
+                  </span>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- cards -->
+      <div id="ancora-cards" class="row">
+         <img id="ver-grade" class="ver" src="/assets/images/justica-eleitoral/icone-grade.png">
+         <img id="ver-lista" class="ver close" src="/assets/images/justica-eleitoral/icone-lista.png">
+      </div>
+      <div class="row">
+         <div class="col-md-4 card-bg card-te">
+            <img src="/assets/images/justica-eleitoral/icone-te.png">
+            <div class="quadro-branco">
+               <a target="_blank" href="/titulo-eleitoral/">
+                  <h4>Título Eleitoral</h4>
+               </a>
+               <p>O que é o e-Título? Tudo sobre o Título de Eleitor!</p>
+            </div>
+         </div>
+         <div id="ancora-mais" class="col-md-4 card-bg card-eleicoes">
+            <img src="/assets/images/justica-eleitoral/iconDivulgacand.png">
+            <div class="quadro-branco">
+               <a target="_blank" href="/DivulgaCand/">
+                  <h4>
+                     Conheça seu candidato
+                  </h4>
+               </a>
+               <p>
+                  Saiba tudo sobre quem tenta vagas nas Câmaras e nas Prefeituras.
+               </p>
+            </div>
+         </div>
+         <div class="col-md-4 card-bg card-parcerias-digitais ultimo">
+            <img src="/assets/images/justica-eleitoral/icone-parcerias.png">
+            <div class="quadro-branco">
+               <a target="_blank" href="/parcerias-digitais-eleicoes/">
+                  <h4>
+                     Parcerias Digitais Eleições 2020
+                  </h4>
+               </a>
+               <p>
+                  Conheça as parcerias que a JE construiu com as principais plataformas digitais do mundo.
+               </p>
+            </div>
+         </div>
+         <div class="col-md-4 card-bg card-doadores">
+            <img src="/assets/images/justica-eleitoral/icone-doadores.png">
+            <div class="quadro-branco">
+               <a target="_blank" href="/doadores-eleicoes/">
+                  <h4>Doadores das Eleições 2020</h4>
+               </a>
+               <p>Conheça as empresas e instituições que doaram equipamentos de proteção, produtos e serviços.
+               </p>
+            </div>
+         </div>
+         <div class="col-md-4 card-bg card-dialogos ">
+            <img src="/assets/images/justica-eleitoral/icone-dialogos.png">
+            <div class="quadro-branco">
+               <a target="_blank" href="/dialogos-democraticos/">
+                  <h4>Diálogos Democráticos</h4>
+               </a>
+               <p>A série promove debates virtuais com figuras públicas sobre os temas mais relevantes para as Eleições 2020.
+               </p>
+            </div>
+         </div>
+         <div  class="col-md-4 card-bg card-mulheres ultimo">
+            <img src="/assets/images/justica-eleitoral/icone-mulheres.png">
+            <div class="quadro-branco">
+               <a target="_blank" href="/participa-mulher/">
+                  <h4>
+                     #ParticipaMulher
+                  </h4>
+               </a>
+               <p>
+                  Uma sociedade realmente democrática inclui a participação das mulheres em todas as áreas, inclusive na política.
+               </p>
+            </div>
+         </div>
+         <div class="col-md-4 card-bg card-aje close">
+            <img src="/assets/images/justica-eleitoral/icone-aje.png">
+            <div class="quadro-branco">
+               <a target="_blank" href="a-justica-eleitoral.html">
+                  <h4>
+                     Conheça a Justiça Eleitoral
+                  </h4>
+               </a>
+               <p>
+                  Você sabe como funciona a Justiça Eleitoral? Seus principais serviços, órgãos e atribuições?
+               </p>
+            </div>
+         </div>
+         <div class="col-md-4 card-bg card-jovemeleitor close">
+            <img src="/assets/images/justica-eleitoral/icone-jovemeleitor.png">
+            <div class="quadro-branco">
+               <a target="_blank" href="/jovem-eleitor/">
+                  <h4>
+                     Jovem Eleitor
+                  </h4>
+               </a>
+               <p>
+                  Quando a gente cresce, ganha novas responsabilidades: assume um namoro, escolhe uma
+                  profissão, conquista um emprego.
+               </p>
+            </div>
+         </div>
+         <div class="col-md-4 card-bg card-desinformacao close ultimo">
+            <img src="/assets/images/justica-eleitoral/icone-desinformacao.png">
+            <div class="quadro-branco">
+               <a target="_blank" href="/desinformacao/">
+                  <h4>
+                     Desinformação
+                  </h4>
+               </a>
+               <p>
+                  Combate aos efeitos negativos provocados pela desinformação.
+               </p>
+            </div>
+         </div>
+         <div class="col-md-4 card-bg card-tps close">
+            <img src="/assets/images/justica-eleitoral/icone-tps.png">
+            <div class="quadro-branco">
+               <a target="_blank" href="/tps/">
+                  <h4>
+                     Teste Público de Segurança
+                  </h4>
+               </a>
+               <p>
+                  É um evento permanente do calendário da Justiça Eleitoral.
+               </p>
+            </div>
+         </div>
+         <div class="col-md-4 card-bg card-spe close ultimo">
+            <img src="/assets/images/justica-eleitoral/icone-spe.png">
+            <div class="quadro-branco">
+               <a target="_blank" href="/spe/">
+                  <h4>
+                     Segurança do Processo Eleitoral
+                  </h4>
+               </a>
+               <p>
+                  Como o eleitor pode ter certeza de que a urna eletrônica é segura?
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-12 text-center">
+            <a id="mostrar-mais-cards" href="#ancora-mais" class="btn btn-outline-primary">Veja mais</a>
+            <a id="mostrar-menos-cards" href="#ancora-cards" class="btn btn-outline-primary close"><i
+               class="fa fa-angle-up"></i></a>
+         </div>
+      </div>
+      <!-- JE QR CODE -->
+      <section id="je-qrcode">
+         <div class="row">
+            <div class="col-md-6 titulo-je">
+               <h2>Aponte a câmera</h2>
+               <p>Tira-dúvidas do WhatsApp</p>
+            </div>
+            <div class="col-md-6">
+               <figure>
+                  <img src="/assets/images/justica-eleitoral/qrcode-whatsapp.jpg">
+                  <figcaption>QR Code</figcaption>
+               </figure>
+            </div>
+         </div>
+      </section>
+      <!-- FIM / JE QR CODE -->
+      <div class="row je-estados">
+         <div class="col-md-12 titulo-je text-center">
+            <h2>JE nos Estados</h2>
+            <img class="img-fluid" src="/assets/images/justica-eleitoral/linha-je-estados.png">
+            <p class="">Acesse o site do TRE do seu estado para encontrar informações específicas à sua região.
+            </p>
+         </div>
+         <div class="col-md-12">
+            <div class="mapa norte">
+               <h2>Norte</h2>
+               <ul>
+                  <li><a target="_blank" href="https://www.tre-ac.jus.br/">Acre</a></li>
+                  <li><a target="_blank" href="https://www.tre-ap.jus.br/">Amapá</a></li>
+                  <li><a target="_blank" href="https://www.tre-am.jus.br/">Amazonas</a></li>
+                  <li><a target="_blank" href="https://www.tre-pa.jus.br/">Pará</a></li>
+                  <li><a target="_blank" href="https://www.tre-ro.jus.br/">Rondônia</a></li>
+                  <li><a target="_blank" href="https://www.tre-rr.jus.br/">Roraima</a></li>
+                  <li><a target="_blank" href="https://www.tre-to.jus.br/">Tocantins</a></li>
+               </ul>
+            </div>
+            <div class="mapa nordeste">
+               <h2>Nordeste</h2>
+               <ul>
+                  <li><a target="_blank" href="https://www.tre-al.jus.br/">Alagoas</a></li>
+                  <li><a target="_blank" href="https://www.tre-ba.jus.br/">Bahia</a></li>
+                  <li><a target="_blank" href="https://www.tre-ce.jus.br/">Ceará</a></li>
+                  <li><a target="_blank" href="https://www.tre-ma.jus.br/">Maranhão</a></li>
+                  <li><a target="_blank" href="https://www.tre-pb.jus.br/">Paraíba</a></li>
+                  <li><a target="_blank" href="https://www.tre-pe.jus.br/">Pernambuco</a></li>
+                  <li><a target="_blank" href="https://www.tre-pi.jus.br/">Piauí</a></li>
+                  <li><a target="_blank" href="https://www.tre-rn.jus.br/">Rio Grande do Norte</a></li>
+                  <li><a target="_blank" href="https://www.tre-se.jus.br/">Sergipe</a></li>
+               </ul>
+            </div>
+            <div class="mapa centrooeste">
+               <h2>Centro-Oeste</h2>
+               <ul>
+                  <li><a target="_blank" href="https://www.tre-df.jus.br/">Distrito Federal</a></li>
+                  <li><a target="_blank" href="https://www.tre-go.jus.br/">Goiás</a></li>
+                  <li><a target="_blank" href="https://www.tre-mt.jus.br/">Mato Grosso</a></li>
+                  <li><a target="_blank" href="https://www.tre-ms.jus.br/">Mato Grosso do Sul</a></li>
+               </ul>
+            </div>
+            <div class="mapa sudeste">
+               <h2>Sudeste</h2>
+               <ul>
+                  <li><a target="_blank" href="https://www.tre-es.jus.br/">Espiríto Santo</a></li>
+                  <li><a target="_blank" href="https://www.tre-mg.jus.br/">Minas Gerais</a></li>
+                  <li>
+                     <a target="_blank" href="https://www.tre-rj.jus.br/"></a>Rio de Janeiro</a>
+                  </li>
+                  <li><a target="_blank" href="https://www.tre-sp.jus.br/">São Paulo</a></li>
+               </ul>
+            </div>
+            <div class="mapa sul">
+               <h2>Sul</h2>
+               <ul>
+                  <li><a target="_blank" href="https://www.tre-pr.jus.br/">Paraná</a></li>
+                  <li><a target="_blank" href="https://www.tre-sc.jus.br/">Santa Catarina</a></li>
+                  <li><a target="_blank" href="https://www.tre-rs.jus.br/">Rio Grande do Sul</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="row nossas-redes">
+         <div class="col-md-12 text-center">
+            <h2>Nossas Redes Sociais</h2>
+            <p>Estamos nas principais redes sociais do mundo e esperamos você por lá.</p>
+         </div>
+         <div class="col-md-12 text-center">
+            <a target="_blank" href="https://www.facebook.com/TSEJus/"><img src="/assets/images/justica-eleitoral/icone-face.png"></a>
+            <a target="_blank" href="https://twitter.com/tsejusbr"><img src="/assets/images/justica-eleitoral/icone-twitter.png"></a>
+            <a target="_blank" href="https://www.instagram.com/tsejus"><img src="/assets/images/justica-eleitoral/icone-instagram.png"></a>
+            <a target="_blank" href="https://www.youtube.com/user/justicaeleitoral"><img src="/assets/images/justica-eleitoral/icone-youtube.png"></a>
+            <a target="_blank" href="https://www.flickr.com/photos/tsejusbr/albums"><img src="/assets/images/justica-eleitoral/icone-flicker.png"></a>
+         </div>
+      </div>
+   </div>
+</section>
+<%- include('../templates/shared/footer', {config}); -%>
+

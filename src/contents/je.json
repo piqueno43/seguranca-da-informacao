@@ -1,0 +1,22 @@
+{
+  "global": {
+    "styles": ["style"],
+    "name": "justicaeleitoral",
+    "title": "Justiça Eleitoral"
+  },
+  "home": {
+    "styles": ["style"],
+    "name": "justicaeleitoral",
+    "title": "Justiça Eleitoral"
+  },
+  "justicaeleitoral": {
+    "styles": ["style"],
+    "name": "justicaeleitoral",
+    "title": "Justiça Eleitoral"
+  },
+  "ajusticaeleitoral": {
+    "styles": ["style"],
+    "name": "ajusticaeleitoral",
+    "title": "Justiça Eleitoral"
+  }
+}

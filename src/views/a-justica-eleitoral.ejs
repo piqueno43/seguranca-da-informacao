@@ -1,0 +1,924 @@
+<%
+const config = {
+  'title': 'A Justiça Eleitoral',
+  'path': 'a-justica-eleitoral',
+  'fonts': [
+    'shared/fonts/open-sans.css',
+    'shared/fonts/source-sans-pro.css',
+    'shared/fonts/merriweather.css',
+  ],
+  'styles': [
+    'shared/font-awesome.css',
+    'shared/bootstrap.css',
+    'shared/fancybox.css',
+    'shared/style.css',
+    'a-justica-eleitoral.css'
+  ],
+  'scripts': [
+    'shared/jquery-3.4.1.min.js',
+    'shared/popper.min.js',
+    'shared/bootstrap.min.js',
+    'shared/util.js',
+    'justica-eleitoral/a-justica-eleitoral.js',
+    'justica-eleitoral/main.js',
+    'justica-eleitoral/swipe-content.js',
+  ],
+};
+%>
+<%- include('../templates/shared/header', {config})%>
+<%- include('../templates/shared/menu'); -%>
+
+
+<main id="justica-eleitoral">
+   <section>
+      <div class="justica-eleitoral_slide">
+         <div class="bd-example">
+            <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <img src="/assets/images/justica-eleitoral/slide-justica-eleitoral-1.jpg" class="d-block" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                     <img src="/assets/images/justica-eleitoral/slide-justica-eleitoral-2.jpg" class="d-block" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                     <img src="/assets/images/justica-eleitoral/slide-justica-eleitoral-3.jpg" class="d-block" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                     <img src="/assets/images/justica-eleitoral/slide-justica-eleitoral-4.jpg" class="d-block" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                     <img src="/assets/images/justica-eleitoral/slide-justica-eleitoral-5.jpg" class="d-block" alt="...">
+                  </div>
+               </div>
+               <div class="carousel-indicators slide-texto">
+                  <div class="container">
+                     <div class="row">
+                        <img src="/assets/images/justica-eleitoral/logo-justica-eleitoral.png" class="img-fluid" alt="...">
+                        <div class="col-md-12 slide-texto_paragrafos">
+                           <p>A Justiça Eleitoral é composta pelo TSE, pelos TREs, pelos juízes e pelas juntas eleitorais. Ela é responsável por organizar todas as etapas do processo eleitoral brasileiro, desde o alistamento dos eleitores até
+                              a diplomação dos candidatos eleitos. Por meio desta página, você conhecerá a história e a estrutura da JE, saberá quais são suas competências e quais são as atribuições de cada um dos seus órgãos.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="menuFixo" class="submenu je-menu">
+      <div class="container">
+         <nav class="navbar navbar-expand-md">
+            <a class="navbar-brand" href="#">Selecione</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"><i class="fa fa-angle-down"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+               <ul class="navbar-nav">
+                  <li class="nav-item">
+                     <a class="nav-link" href="#jeFaz">O que a JE faz</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#perguntasFrequentes">Perguntas frequentes</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#coisasJE">87 coisas sobre a JE</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#mitosJE">Mitos sobre a JE</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#glossario">Glossário</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#linhaTempo">Linha do tempo</a>
+                  </li>
+                  <li class="nav-item last">
+                     <a class="nav-link" href="http://www.tse.jus.br/o-tse/tribunais-regionais" target="_blank">TRE´s</a>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </div>
+   </section>
+   <section id="jeFaz" class="je-faz">
+      <div class="container je-faz_conteudo">
+         <h3 class="je-faz_titulo">Você sabe o que a Justiça Eleitoral faz?</h3>
+         <p class="je-faz_sub-titulo">Responda e descubra!</p>
+         <div class="row">
+            <div class="col-md-3 je-faz_quadros">
+               <div class="je-faz_titulo-quadros">
+                  <img src="/assets/images/justica-eleitoral/je-faz-icone-fiscalizacao.jpg" alt="">
+                  <h5>Fiscaliza os candidatos eleitos</h5>
+               </div>
+               <div class="je-faz_botao">
+                  <div data-toggle="modal" data-target="#jefaz_errou" role="button" href="javascript:;" class="btn-faz">FAZ</div>
+                  <div data-toggle="modal" data-target="#jefaz_1" role="button" href="javascript:;" class="btn-nao-faz">NÃO FAZ</div>
+               </div>
+            </div>
+            <div class="col-md-3 je-faz_quadros">
+               <div class="je-faz_titulo-quadros">
+                  <img src="/assets/images/justica-eleitoral/je-faz-icone-organiza.jpg" alt="">
+                  <h5>Organiza o processo eleitoral</h5>
+               </div>
+               <div class="je-faz_botao">
+                  <div data-toggle="modal" data-target="#jefaz_2" role="button" href="javascript:;" class="btn-faz">
+                     FAZ
+                  </div>
+                  <div data-toggle="modal" data-target="#jefaz_errou" role="button" href="javascript:;" class="btn-nao-faz">NÃO FAZ</div>
+               </div>
+            </div>
+            <div class="col-md-3 je-faz_quadros">
+               <div class="je-faz_titulo-quadros">
+                  <img src="/assets/images/justica-eleitoral/je-faz-icone-cancelamento.jpg" alt="">
+                  <h5>Envia e-mails informando cancelamento de título</h5>
+               </div>
+               <div class="je-faz_botao">
+                  <div data-toggle="modal" data-target="#jefaz_errou" role="button" href="javascript:;" class="btn-faz">FAZ</div>
+                  <div data-toggle="modal" role="button" href="javascript:;" data-target="#jefaz_3" class="btn-nao-faz">NÃO FAZ</div>
+               </div>
+            </div>
+            <div class="col-md-3 je-faz_quadros">
+               <div class="je-faz_titulo-quadros">
+                  <img src="/assets/images/justica-eleitoral/je-faz-icone-perfil.jpg" alt="">
+                  <h5>Define o perfil dos candidatos dos partidos políticos</h5>
+               </div>
+               <div class="je-faz_botao">
+                  <div data-toggle="modal" role="button" href="javascript:;" data-target="#jefaz_errou" class="btn-faz">FAZ</div>
+                  <div data-toggle="modal" role="button" href="javascript:;" data-target="#jefaz_4" class="btn-nao-faz">NÃO FAZ</div>
+               </div>
+            </div>
+            <div class="col-md-3 je-faz_quadros">
+               <div class="je-faz_titulo-quadros">
+                  <img src="/assets/images/justica-eleitoral/je-faz-icone-taxa.jpg" alt="">
+                  <h5>Cobra taxa pelos serviços oferecidos</h5>
+               </div>
+               <div class="je-faz_botao">
+                  <div data-toggle="modal" role="button" href="javascript:;" data-target="#jefaz_errou" class="btn-faz">FAZ</div>
+                  <div data-toggle="modal" role="button" href="javascript:;" data-target="#jefaz_5" class="btn-nao-faz">NÃO FAZ</div>
+               </div>
+            </div>
+            <div class="col-md-3 je-faz_quadros">
+               <div class="je-faz_titulo-quadros">
+                  <img src="/assets/images/justica-eleitoral/je-faz-icone-opor.jpg" alt="">
+                  <h5>Recusa pedidos de registro de candidatura</h5>
+               </div>
+               <div class="je-faz_botao">
+                  <div data-toggle="modal" role="button" href="javascript:;" data-target="#jefaz_errou" class="btn-faz">FAZ</div>
+                  <div data-toggle="modal" role="button" href="javascript:;" data-target="#jefaz_6" class="btn-nao-faz">NÃO FAZ</div>
+               </div>
+            </div>
+            <div class="col-md-3 je-faz_quadros">
+               <div class="je-faz_titulo-quadros">
+                  <img src="/assets/images/justica-eleitoral/je-faz-icone-atuacao.jpg" alt="">
+                  <h5>Atua de forma consultiva</h5>
+               </div>
+               <div class="je-faz_botao">
+                  <div data-toggle="modal" role="button" href="javascript:;" data-target="#jefaz_7" class="btn-faz">
+                     FAZ
+                  </div>
+                  <div data-toggle="modal" role="button" href="javascript:;" data-target="#jefaz_errou" class="btn-nao-faz">NÃO FAZ</div>
+               </div>
+            </div>
+            <div class="col-md-3 je-faz_quadros box-shadow">
+               <div class="je-faz_titulo-quadros">
+                  <img src="/assets/images/justica-eleitoral/je-faz-icone-juizes.jpg" alt="">
+                  <h5>Elege seus próprios magistrados (juízes)</h5>
+               </div>
+               <div class="je-faz_botao">
+                  <div data-toggle="modal" role="button" href="javascript:;" data-target="#jefaz_errou" class="btn-faz">FAZ</div>
+                  <div data-toggle="modal" role="button" href="javascript:;" data-target="#jefaz_8" class="btn-nao-faz">NÃO FAZ</div>
+               </div>
+            </div>
+            <div class="col-md-3 je-faz_quadros">
+               <div class="je-faz_titulo-quadros">
+                  <img src="/assets/images/justica-eleitoral/je-faz-icone-testes-publicos.jpg" alt="">
+                  <h5>Realiza testes públicos de segurança da urna periodicamente</h5>
+               </div>
+               <div class="je-faz_botao">
+                  <div data-toggle="modal" data-target="#jefaz_9" role="button" href="javascript:;" class="btn-faz">
+                     FAZ
+                  </div>
+                  <div data-toggle="modal" data-target="#jefaz_errou" role="button" href="javascript:;" class="btn-nao-faz">NÃO FAZ</div>
+               </div>
+            </div>
+            <div class="col-md-3 je-faz_quadros">
+               <div class="je-faz_titulo-quadros">
+                  <img src="/assets/images/justica-eleitoral/je-faz-icone-organiza-fiscaliza.jpg" alt="">
+                  <h5>Organiza, fiscaliza e realiza eleições, plebiscitos e referendos</h5>
+               </div>
+               <div class="je-faz_botao">
+                  <div data-toggle="modal" data-target="#jefaz_10" role="button" href="javascript:;" class="btn-faz">
+                     FAZ
+                  </div>
+                  <div data-toggle="modal" data-target="#jefaz_errou" role="button" href="javascript:;" class="btn-nao-faz">NÃO FAZ</div>
+               </div>
+            </div>
+            <div class="col-md-3 je-faz_quadros">
+               <div class="je-faz_titulo-quadros">
+                  <img src="/assets/images/justica-eleitoral/je-faz-icone-examina-partidos.jpg" alt="">
+                  <h5>Examina as contas dos partidos e candidatos</h5>
+               </div>
+               <div class="je-faz_botao">
+                  <div data-toggle="modal" role="button" href="javascript:;" data-target="#jefaz_11" class="btn-faz">
+                     FAZ
+                  </div>
+                  <div data-toggle="modal" role="button" href="javascript:;" data-target="#jefaz_errou" class="btn-nao-faz">NÃO FAZ</div>
+               </div>
+            </div>
+            <div class="col-md-3 je-faz_quadros">
+               <div class="je-faz_titulo-quadros">
+                  <img src="/assets/images/justica-eleitoral/je-faz-icone-cancela-titulo.jpg" alt="">
+                  <h5>Cancela o título de eleitor</h5>
+               </div>
+               <div class="je-faz_botao">
+                  <div data-toggle="modal" role="button" href="javascript:;" data-target="#jefaz_12" class="btn-faz">
+                     FAZ
+                  </div>
+                  <div data-toggle="modal" role="button" href="javascript:;" data-target="#jefaz_errou" class="btn-nao-faz">NÃO FAZ</div>
+               </div>
+            </div>
+            <div class="col-md-3 je-faz_quadros">
+               <div class="je-faz_titulo-quadros">
+                  <img src="/assets/images/justica-eleitoral/je-faz-icone-prende-cidadao.jpg" alt="">
+                  <h5>Prende qualquer cidadão durante as eleições</h5>
+               </div>
+               <div class="je-faz_botao">
+                  <div data-toggle="modal" role="button" href="javascript:;" data-target="#jefaz_errou" class="btn-faz">FAZ</div>
+                  <div data-toggle="modal" role="button" href="javascript:;" data-target="#jefaz_13" class="btn-nao-faz">NÃO FAZ</div>
+               </div>
+            </div>
+            <div class="col-md-3 je-faz_quadros">
+               <div class="je-faz_titulo-quadros">
+                  <img src="/assets/images/justica-eleitoral/je-faz-icone-autoriza.jpg" alt="">
+                  <h5>Autoriza os partidos políticos a fiscalizarem todas as etapas da eleição</h5>
+               </div>
+               <div class="je-faz_botao">
+                  <div data-toggle="modal" role="button" href="javascript:;" data-target="#jefaz_14" class="btn-faz">
+                     FAZ
+                  </div>
+                  <div data-toggle="modal" role="button" href="javascript:;" data-target="#jefaz_errou" class="btn-nao-faz">NÃO FAZ</div>
+               </div>
+            </div>
+            <div class="col-md-3 je-faz_quadros">
+               <div class="je-faz_titulo-quadros">
+                  <img src="/assets/images/justica-eleitoral/je-faz-icone-emite.jpg" alt="">
+                  <h5>Emite a Identificação Civil Nacional (ICN)</h5>
+               </div>
+               <div class="je-faz_botao">
+                  <div data-toggle="modal" role="button" href="javascript:;" data-target="#jefaz_15" class="btn-faz">
+                     FAZ
+                  </div>
+                  <div data-toggle="modal" role="button" href="javascript:;" data-target="#jefaz_errou" class="btn-nao-faz">NÃO FAZ</div>
+               </div>
+            </div>
+            <div class="col-md-3 je-faz_quadros box-shadow">
+               <div class="je-faz_titulo-quadros">
+                  <img src="/assets/images/justica-eleitoral/je-faz-icone-julga.jpg" alt="">
+                  <h5>Julga crimes eleitorais (corrupção, lavagem de dinheiro etc.)</h5>
+               </div>
+               <div class="je-faz_botao">
+                  <div data-toggle="modal" role="button" href="javascript:;" data-target="#jefaz_16" class="btn-faz">
+                     FAZ
+                  </div>
+                  <div data-toggle="modal" role="button" href="javascript:;" data-target="#jefaz_errou" class="btn-nao-faz">NÃO FAZ</div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="perguntasFrequentes" class="geral-perguntas-frequentes">
+      <div class="container-fluid geral-pesquisa geral_je">
+         <div class="container">
+            <div class="row geral-pesquisa_form">
+               <div class="col-md-3 geral-pesquisa_imagem ">
+                  <img class="img_je" src="/assets/images/justica-eleitoral/boneco.png" alt="Banner">
+               </div>
+               <div class="col-md-4 geral-pesquisa_titulo">
+                  <h2 class="titulo_je">Perguntas frequentes</h2>
+               </div>
+               <div class="col-md-5 geral-pesquisa_input">
+                  <input type="text" class="form-control" id="pesquisar" aria-describedby="pesquisar" placeholder="Pesquisar">
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container-fluid perguntas">
+         <div class="container">
+            <div>
+               <div class="geral_perguntas">
+                  <div id="accordion">
+                     <div class="card estrutura_pergunta_je_1"></div>
+                     <div class="card estrutura_pergunta_je_2"></div>
+                     <div class="card estrutura_pergunta_je_3"></div>
+                     <div class="card estrutura_pergunta_je_4"></div>
+                     <div class="card estrutura_pergunta_je_5"></div>
+                     <div class="card estrutura_pergunta_je_6"></div>
+                     <!-- <div class="card estrutura_pergunta_je_7"></div>
+                        <div class="card estrutura_pergunta_je_8"></div> -->
+                     <div class="card estrutura_pergunta_je_9"></div>
+                     <!-- <div class="card estrutura_pergunta_je_10"></div> -->
+                     <div class="card estrutura_pergunta_je_11"></div>
+                  </div>
+               </div>
+            </div>
+            <!-- /Perguntas frequentes -->
+         </div>
+      </div>
+   </section>
+   <section class="je-videos">
+      <div id="coisasJE" class="container je-videos_87">
+         <h3 class="je-faz_titulo-branco">87 coisas sobre a JE que você não sabe</h3>
+         <div id="carouselJeVideos87" class="carousel slide" data-ride="carousel">
+            <div class="je-videos-linha row">
+               <div class="je-videos-coluna col-md-4 active">
+                  <a data-fancybox="video" data-original-title="87 coisas sobre a JE que vc não sabe" href="https://www.youtube.com/embed/1HaReV3f2Nc" title="87 coisas sobre a JE que vc não sabe">
+                     <figure class="imagem-youtube">
+                        <i class="fab fa-youtube"></i>
+                        <img class="img-fluid" src="https://i.ytimg.com/vi/1HaReV3f2Nc/mqdefault.jpg" alt="87 coisas sobre a JE que vc não sabe">
+                     </figure>
+                  </a>
+               </div>
+               <div class="je-videos-coluna col-md-4">
+                  <a data-fancybox="video" data-original-title="87 coisas sobre a JE que vc não sabe" href="https://www.youtube.com/embed/O4beqnP60_Q" title="87 coisas sobre a JE que vc não sabe">
+                     <figure class="imagem-youtube">
+                        <i class="fab fa-youtube"></i>
+                        <img class="img-fluid" src="https://i.ytimg.com/vi/O4beqnP60_Q/mqdefault.jpg" alt="87 coisas sobre a JE que vc não sabe">
+                     </figure>
+                  </a>
+               </div>
+               <div class="je-videos-coluna col-md-4">
+                  <a data-fancybox="video" data-original-title="87 coisas sobre a JE que vc não sabe" href="https://www.youtube.com/embed/_dAcg_Zuj1I" title="87 coisas sobre a JE que vc não sabe">
+                     <figure class="imagem-youtube">
+                        <i class="fab fa-youtube"></i>
+                        <img class="img-fluid" src="https://i.ytimg.com/vi/_dAcg_Zuj1I/mqdefault.jpg" alt="87 coisas sobre a JE que vc não sabe">
+                     </figure>
+                  </a>
+               </div>
+            </div>
+            <ol class="carousel-indicators">
+               <li data-target="#carouselJeVideos87" data-slide-to="0" class="active"></li>
+               <li data-target="#carouselJeVideos87" data-slide-to="1"></li>
+               <li data-target="#carouselJeVideos87" data-slide-to="2"></li>
+            </ol>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+            </a>
+         </div>
+         <div class="row">
+            <div class="col-md-12">
+               <a class="btn btn-branco" href="https://www.youtube.com/playlist?list=PLljYw1P54c4yXpMOLLgdmFozktKLq61Tp" target="_blank" title="87 coisas sobre a JE que vc não sabe">ACESSE A PLAYLIST</a>
+            </div>
+         </div>
+      </div>
+      <div id="mitosJE" class="container je-videos_87">
+         <h3 class="je-faz_titulo-branco">JE não para</h3>
+         <div id="carouselJeVideosJEnaopara" class="carousel slide" data-ride="carousel-mitos">
+            <div class="je-videos-linha row">
+               <div class="je-videos-coluna col-md-3 active">
+                  <a data-fancybox="video" data-original-title="A atuação dos ministros no julgamento das prestações de contas" href="https://www.youtube.com/embed/Qlr9YKmlau8" title="A atuação dos ministros no julgamento das prestações de contas">
+                     <figure class="imagem-youtube">
+                        <i class="fab fa-youtube"></i>
+                        <img class="img-fluid" src="https://i.ytimg.com/vi/Qlr9YKmlau8/mqdefault.jpg" alt="A atuação dos ministros no julgamento das prestações de contas">
+                     </figure>
+                  </a>
+               </div>
+               <div class="je-videos-coluna col-md-3">
+                  <a data-fancybox="video" data-original-title="Grupos de Trabalho" href="https://www.youtube.com/embed/2nlpG0INYD8" title="Grupos de Trabalho">
+                     <figure class="imagem-youtube">
+                        <i class="fab fa-youtube"></i>
+                        <img class="img-fluid" src="https://i.ytimg.com/vi/2nlpG0INYD8/mqdefault.jpg" alt="Grupos de Trabalho">
+                     </figure>
+                  </a>
+               </div>
+               <div class="je-videos-coluna col-md-3">
+                  <a data-fancybox="video" data-original-title="TPS e compra de novas urnas" href="https://www.youtube.com/embed/PXuYGw6_New" title="TPS e compra de novas urnas">
+                     <figure class="imagem-youtube">
+                        <i class="fab fa-youtube"></i>
+                        <img class="img-fluid" src="https://i.ytimg.com/vi/PXuYGw6_New/mqdefault.jpg" alt="TPS e compra de novas urnas">
+                     </figure>
+                  </a>
+               </div>
+               <div class="je-videos-coluna col-md-3">
+                  <a data-fancybox="video" data-original-title="Ações do TSE" href="https://www.youtube.com/embed/aOZ_Zeb9je4" title="Ações do TSE">
+                     <figure class="imagem-youtube">
+                        <i class="fab fa-youtube"></i>
+                        <img class="img-fluid" src="https://i.ytimg.com/vi/aOZ_Zeb9je4/mqdefault.jpg" alt="Ações do TSE">
+                     </figure>
+                  </a>
+               </div>
+            </div>
+            <ol class="carousel-indicators">
+               <li data-target="#carouselJeVideosJEnaopara" data-slide-to="0" class="active"></li>
+               <li data-target="#carouselJeVideosJEnaopara" data-slide-to="1"></li>
+               <li data-target="#carouselJeVideosJEnaopara" data-slide-to="2"></li>
+               <li data-target="#carouselJeVideosJEnaopara" data-slide-to="3"></li>
+            </ol>
+            <a class="carousel-control-prev" href="#carouselJeVideosJEnaopara" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselJeVideosJEnaopara" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+            </a>
+         </div>
+         <div class="row">
+            <div class="col-md-12">
+               <a class="btn btn-branco" href="https://www.youtube.com/playlist?list=PLljYw1P54c4wRawI3rPmAjjh0Na098Ian" target="_blank" title="Confira aqui uma série de reportagens sobre o trabalho da Justiça
+                  Eleitoral em ano sem eleições.">ACESSE A PLAYLIST</a>
+            </div>
+         </div>
+      </div>
+      <div id="mitosJE" class="container je-videos_87">
+         <h3 class="je-faz_titulo-branco">Mitos sobre a Justiça Eleitoral</h3>
+         <div id="carouselJeVideosMitos" class="carousel slide" data-ride="carousel-mitos">
+            <div class="je-videos-linha row">
+               <div class="je-videos-coluna col-md-3 active">
+                  <a data-fancybox="video" data-original-title="A Justiça Eleitoral só trabalha em ano eleitoral?" href="https://www.youtube.com/embed/V7054cnEIhE" title="A Justiça Eleitoral só trabalha em ano eleitoral?">
+                     <figure class="imagem-youtube">
+                        <i class="fab fa-youtube"></i>
+                        <img class="img-fluid" src="https://i.ytimg.com/vi/V7054cnEIhE/mqdefault.jpg" alt="A Justiça Eleitoral só trabalha em ano eleitoral?">
+                     </figure>
+                  </a>
+               </div>
+               <div class="je-videos-coluna col-md-3">
+                  <a data-fancybox="video" data-original-title="A Justiça Eleitoral deve fiscalizar promessas de campanha" href="https://www.youtube.com/embed/tji7GsQcgXE" title="A Justiça Eleitoral deve fiscalizar promessas de campanha">
+                     <figure class="imagem-youtube">
+                        <i class="fab fa-youtube"></i>
+                        <img class="img-fluid" src="https://i.ytimg.com/vi/tji7GsQcgXE/mqdefault.jpg" alt="A Justiça Eleitoral deve fiscalizar promessas de campanha">
+                     </figure>
+                  </a>
+               </div>
+               <div class="je-videos-coluna col-md-3">
+                  <a data-fancybox="video" data-original-title="A Justiça Eleitoral obriga o eleitor a votar?" href="https://www.youtube.com/embed/C7Dmaep4cYs" title="A Justiça Eleitoral obriga o eleitor a votar?">
+                     <figure class="imagem-youtube">
+                        <i class="fab fa-youtube"></i>
+                        <img class="img-fluid" src="https://i.ytimg.com/vi/C7Dmaep4cYs/mqdefault.jpg" alt="A Justiça Eleitoral obriga o eleitor a votar?">
+                     </figure>
+                  </a>
+               </div>
+               <div class="je-videos-coluna col-md-3">
+                  <a data-fancybox="video" data-original-title="A Justiça Eleitoral ignora as campanhas eleitorais antecipadas?" href="https://www.youtube.com/embed/ric103dj6Q4" title="A Justiça Eleitoral ignora as campanhas eleitorais antecipadas?">
+                     <figure class="imagem-youtube">
+                        <i class="fab fa-youtube"></i>
+                        <img class="img-fluid" src="https://i.ytimg.com/vi/ric103dj6Q4/mqdefault.jpg" alt="A Justiça Eleitoral ignora as campanhas eleitorais antecipadas?">
+                     </figure>
+                  </a>
+               </div>
+            </div>
+            <ol class="carousel-indicators">
+               <li data-target="#carouselJeVideosMitos" data-slide-to="0" class="active"></li>
+               <li data-target="#carouselJeVideosMitos" data-slide-to="1"></li>
+               <li data-target="#carouselJeVideosMitos" data-slide-to="2"></li>
+               <li data-target="#carouselJeVideosMitos" data-slide-to="3"></li>
+            </ol>
+            <a class="carousel-control-prev" href="#carouselJeVideosMitos" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselJeVideosMitos" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+            </a>
+         </div>
+      </div>
+   </section>
+   <section id="glossario" class="je-glossario">
+      <div class="container">
+      <div class="row">
+         <h3 class="je-glossario_titulo">Glossário<br><span>da Justiça Eleitoral</span></h3>
+         <div class="col-md-3">
+            <div class="row">
+               <div class="col-4 je-glossario_botoes">
+                  <a class="btn btn-glossario" href="javascript: mostrar_glossario_letra('a')">A</a>
+               </div>
+               <div class="col-4 je-glossario_botoes">
+                  <a class="btn btn-glossario" href="javascript: mostrar_glossario_letra('b')">B</a>
+               </div>
+               <div class="col-4 je-glossario_botoes">
+                  <a class="btn btn-glossario" href="javascript: mostrar_glossario_letra('c')">C</a>
+               </div>
+               <div class="col-4 je-glossario_botoes">
+                  <a class="btn btn-glossario" href="javascript: mostrar_glossario_letra('d')">D</a>
+               </div>
+               <div class="col-4 je-glossario_botoes">
+                  <a class="btn btn-glossario" href="javascript: mostrar_glossario_letra('e')">E</a>
+               </div>
+               <div class="col-4 je-glossario_botoes">
+                  <a class="btn btn-glossario" href="javascript: mostrar_glossario_letra('f')">F</a>
+               </div>
+               <div class="col-4 je-glossario_botoes">
+                  <a class="btn btn-glossario" href="javascript: mostrar_glossario_letra('g')">G</a>
+               </div>
+               <div class="col-4 je-glossario_botoes">
+                  <a class="btn btn-glossario" href="javascript: mostrar_glossario_letra('h')">H</a>
+               </div>
+               <div class="col-4 je-glossario_botoes">
+                  <a class="btn btn-glossario" href="javascript: mostrar_glossario_letra('i')">I</a>
+               </div>
+               <div class="col-4 je-glossario_botoes">
+                  <a class="btn btn-glossario" href="javascript: mostrar_glossario_letra('j')">J</a>
+               </div>
+               <!-- <div class="col-4 je-glossario_botoes">
+                  <a class="btn btn-glossario" href="javascript: mostrar_glossario_letra('k')">K</a>
+                  </div> -->
+               <div class="col-4 je-glossario_botoes">
+                  <a class="btn btn-glossario" href="javascript: mostrar_glossario_letra('l')">L</a>
+               </div>
+               <!-- <div class="col-4 je-glossario_botoes">
+                  <a class="btn btn-glossario" href="javascript: mostrar_glossario_letra('m')">M</a>
+                  </div>
+                  <div class="col-4 je-glossario_botoes">
+                  <a class="btn btn-glossario" href="javascript: mostrar_glossario_letra('n')">N</a>
+                  </div> -->
+               <div class="col-4 je-glossario_botoes">
+                  <a class="btn btn-glossario" href="javascript: mostrar_glossario_letra('o')">O</a>
+               </div>
+               <div class="col-4 je-glossario_botoes">
+                  <a class="btn btn-glossario" href="javascript: mostrar_glossario_letra('p')">P</a>
+               </div>
+               <div class="col-4 je-glossario_botoes">
+                  <a class="btn btn-glossario" href="javascript: mostrar_glossario_letra('q')">Q</a>
+               </div>
+               <div class="col-4 je-glossario_botoes">
+                  <a class="btn btn-glossario" href="javascript: mostrar_glossario_letra('r')">R</a>
+               </div>
+               <div class="col-4 je-glossario_botoes">
+                  <a class="btn btn-glossario" href="javascript: mostrar_glossario_letra('s')">S</a>
+               </div>
+               <div class="col-4 je-glossario_botoes">
+                  <a class="btn btn-glossario" href="javascript: mostrar_glossario_letra('t')">T</a>
+               </div>
+               <div class="col-4 je-glossario_botoes">
+                  <a class="btn btn-glossario" href="javascript: mostrar_glossario_letra('u')">U</a>
+               </div>
+               <div class="col-4 je-glossario_botoes">
+                  <a class="btn btn-glossario" href="javascript: mostrar_glossario_letra('v')">V</a>
+               </div>
+               <!-- <div class="col-4 je-glossario_botoes">
+                  <a class="btn btn-glossario" href="javascript: mostrar_glossario_letra('w')">W</a>
+                  </div>
+                  <div class="col-4 je-glossario_botoes">
+                  <a class="btn btn-glossario" href="javascript: mostrar_glossario_letra('x')">X</a>
+                  </div>
+                  <div class="col-4 je-glossario_botoes">
+                  <a class="btn btn-glossario" href="javascript: mostrar_glossario_letra('y')">Y</a>
+                  </div> -->
+               <div class="col-4 je-glossario_botoes">
+                  <a class="btn btn-glossario" href="javascript: mostrar_glossario_letra('z')">Z</a>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-6">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="je-glossario_perguntas geral-perguntas-frequentes!">
+                     <div class=" container-fluid perguntas">
+                        <div class="container">
+                           <div class="geral_perguntas">
+                              <div id="accordion">
+                                 <div class="card glossario-a je-glossario_letra">A</div>
+                                 <div class="card glossario-a estrutura_abstencao-eleitoral"></div>
+                                 <div class="card glossario-a estrutura_abuso-do-poder-economico"></div>
+                                 <div class="card glossario-a estrutura_abuso-do-poder-politico"></div>
+                                 <div class="card glossario-a estrutura_acao-de-impugnacao-de-mandato-eletivo"></div>
+                                 <div class="card glossario-a estrutura_acao-de-investigacao-judicial-eleitoral"></div>
+                                 <div class="card glossario-a estrutura_aliciamento-de-eleitor"></div>
+                                 <div class="card glossario-a estrutura_alistamento-eleitoral"></div>
+                                 <div class="card glossario-a estrutura_apelido-eleitoral"></div>
+                                 <div class="card glossario-a estrutura_apuracao-da-eleicao"></div>
+                                 <div class="card glossario-a estrutura_ata-da-eleicao"></div>
+                                 <div class="card glossario-a estrutura_atividade-politico-partidaria"></div>
+                                 <div class="card glossario-a estrutura_autonomia-partidaria"></div>
+                                 <div class="card glossario-b je-glossario_letra">B</div>
+                                 <div class="card glossario-b estrutura_base-eleitoral"></div>
+                                 <div class="card glossario-b estrutura_batimento"></div>
+                                 <div class="card glossario-b estrutura_biometria"></div>
+                                 <div class="card glossario-c je-glossario_letra">C</div>
+                                 <div class="card glossario-c estrutura_cabina-eleitoral"></div>
+                                 <div class="card glossario-c estrutura_cabo-eleitoral"></div>
+                                 <div class="card glossario-c estrutura_cadastro-eleitoral"></div>
+                                 <div class="card glossario-c estrutura_caderno-de-folha-de-votacao"></div>
+                                 <div class="card glossario-d je-glossario_letra">D</div>
+                                 <div class="card glossario-d estrutura_debate-eleitoral"></div>
+                                 <div class="card glossario-d estrutura_delegado-de-partido"></div>
+                                 <div class="card glossario-d estrutura_direito-de-resposta"></div>
+                                 <div class="card glossario-e je-glossario_letra">E</div>
+                                 <div class="card glossario-e estrutura_elegibilidade"></div>
+                                 <div class="card glossario-e estrutura_eleicao"></div>
+                                 <div class="card glossario-e estrutura_eleitor"></div>
+                                 <div class="card glossario-f je-glossario_letra">F</div>
+                                 <div class="card glossario-f estrutura_fileiro"></div>
+                                 <div class="card glossario-f estrutura_filiacao-partidaria"></div>
+                                 <div class="card glossario-f estrutura_funcao-eleitoral"></div>
+                                 <div class="card glossario-g je-glossario_letra">G</div>
+                                 <div class="card glossario-g estrutura_gastos-eleitorais"></div>
+                                 <div class="card glossario-h je-glossario_letra">H</div>
+                                 <div class="card glossario-h estrutura_horario-gratuito"></div>
+                                 <div class="card glossario-i je-glossario_letra">I</div>
+                                 <div class="card glossario-i estrutura_impugnacao-eleitoral"></div>
+                                 <div class="card glossario-i estrutura_inelegibilidade"></div>
+                                 <div class="card glossario-i estrutura_isencao-eleitoral"></div>
+                                 <div class="card glossario-j je-glossario_letra">J</div>
+                                 <div class="card glossario-j estrutura_junta-eleitoral"></div>
+                                 <div class="card glossario-j estrutura_justificacao-de-eleitor"></div>
+                                 <div class="card glossario-l je-glossario_letra">L</div>
+                                 <div class="card glossario-l estrutura_legenda-partidaria"></div>
+                                 <div class="card glossario-l estrutura_lei-da-ficha-limpa"></div>
+                                 <div class="card glossario-l estrutura_lista-eleitoral"></div>
+                                 <div class="card glossario-o je-glossario_letra">O</div>
+                                 <div class="card glossario-o estrutura_observador-eleitoral"></div>
+                                 <div class="card glossario-p je-glossario_letra">P</div>
+                                 <div class="card glossario-p estrutura_partido-nanico"></div>
+                                 <div class="card glossario-p estrutura_pluripartidarismo"></div>
+                                 <div class="card glossario-p estrutura_puxadores-do-voto"></div>
+                                 <div class="card glossario-q je-glossario_letra">Q</div>
+                                 <div class="card glossario-q estrutura_quociente-eleitoral"></div>
+                                 <div class="card glossario-r je-glossario_letra">R</div>
+                                 <div class="card glossario-r estrutura_recontagem-de-votos"></div>
+                                 <div class="card glossario-s je-glossario_letra">S</div>
+                                 <div class="card glossario-s estrutura_selo-eleitoral"></div>
+                                 <div class="card glossario-s estrutura_sufragio"></div>
+                                 <div class="card glossario-t je-glossario_letra">T</div>
+                                 <div class="card glossario-t estrutura_titulo-de-eleitor"></div>
+                                 <div class="card glossario-t estrutura_totalizador"></div>
+                                 <div class="card glossario-t estrutura_transfugismo-partidario"></div>
+                                 <div class="card glossario-u je-glossario_letra">U</div>
+                                 <div class="card glossario-u estrutura_urna-de-contingencia"></div>
+                                 <div class="card glossario-v je-glossario_letra">V</div>
+                                 <div class="card glossario-v estrutura_volante"></div>
+                                 <div class="card glossario-v estrutura_votacao-paralela"></div>
+                                 <div class="card glossario-v estrutura_voto-de-cabresto"></div>
+                                 <div class="card glossario-z je-glossario_letra">Z</div>
+                                 <div class="card glossario-z estrutura_zeresima"></div>
+                              </div>
+                              <div>
+                                 <br>
+                                 <p>
+                                    <a class="external-link" href="http://www.tse.jus.br/eleitor/glossario/glossario-eleitoral">Acesse a íntegra do Glossário
+                                    Eleitoral</a>
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-3 je-glossario_video">
+            <h3 class="je-glossario_titulo"><span>Vídeos</span></h3>
+            <div class="je-glossario_video-lista">
+               <a data-fancybox="video" data-original-title="Glossário Eleitoral nº 1" href="https://www.youtube.com/embed/yVnhkslvGQg" title="Glossário Eleitoral nº 1">
+                  <figure>
+                     <i class="fab fa-youtube"></i>
+                     <img class="img-fluid" src="https://i.ytimg.com/vi/yVnhkslvGQg/mqdefault.jpg" alt="Biometria Nacional">
+                  </figure>
+               </a>
+            </div>
+            <div class="je-glossario_video-lista">
+               <a data-fancybox="video" data-original-title="Glossário Eleitoral nº 2" href="https://www.youtube.com/embed/hzSnM28Jyw0" title="Glossário Eleitoral nº 2">
+                  <figure>
+                     <i class="fab fa-youtube"></i>
+                     <img class="img-fluid" src="https://i.ytimg.com/vi/hzSnM28Jyw0/mqdefault.jpg" alt="Biometria Nacional">
+                  </figure>
+               </a>
+            </div>
+            <div class="je-glossario_video-lista">
+               <a data-fancybox="video" data-original-title="Glossário Eleitoral nº 3" href="https://www.youtube.com/embed/kiqEY96w6KA" title="Glossário Eleitoral nº 3">
+                  <figure>
+                     <i class="fab fa-youtube"></i>
+                     <img class="img-fluid" src="https://i.ytimg.com/vi/kiqEY96w6KA/mqdefault.jpg" alt="Biometria Nacional">
+                  </figure>
+               </a>
+            </div>
+            <div class="je-glossario_video-lista">
+               <a data-fancybox="video" data-original-title="Glossário Eleitoral nº 4" href="https://www.youtube.com/embed/6P8FwHisI_E" title="Glossário Eleitoral nº 4">
+                  <figure>
+                     <i class="fab fa-youtube"></i>
+                     <img class="img-fluid" src="https://i.ytimg.com/vi/6P8FwHisI_E/mqdefault.jpg" alt="Você já ouviu falar em zerésima? E em boqueiro? Achou complicado? Assista, então, ao nosso Glossário Eleitoral e fique por dentro dessas e de muitas outras expressões do ambiente eleitoral. ">
+                  </figure>
+               </a>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="linhaTempo" class="timeline">
+      <h3>História da JE - Linha do tempo</h3>
+      <div id="timeline-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+         <ol class="carousel-indicators">
+            <li id="ano_0" data-target="#timeline-carousel" data-slide-to="0" class="active"><i class="fa fa-circle"></i><br>1932</li>
+            <li id="ano_1" data-target="#timeline-carousel" data-slide-to="1"><i class="fa fa-circle"></i><br>1933</li>
+            <li id="ano_2" data-target="#timeline-carousel" data-slide-to="2"><i class="fa fa-circle"></i><br>1935</li>
+            <li id="ano_3" data-target="#timeline-carousel" data-slide-to="3"><i class="fa fa-circle"></i><br>1937</li>
+            <li id="ano_4" data-target="#timeline-carousel" data-slide-to="4"><i class="fa fa-circle"></i><br>1945</li>
+            <li id="ano_5" data-target="#timeline-carousel" data-slide-to="5"><i class="fa fa-circle"></i><br>1946</li>
+            <li id="ano_6" data-target="#timeline-carousel" data-slide-to="6"><i class="fa fa-circle"></i><br>1950</li>
+            <li id="ano_7" data-target="#timeline-carousel" data-slide-to="7"><i class="fa fa-circle"></i><br>1951</li>
+            <li id="ano_8" data-target="#timeline-carousel" data-slide-to="8"><i class="fa fa-circle"></i><br>1955</li>
+            <li id="ano_9" data-target="#timeline-carousel" data-slide-to="9"><i class="fa fa-circle"></i><br>1958</li>
+            <li id="ano_10" data-target="#timeline-carousel" data-slide-to="10"><i class="fa fa-circle"></i><br>1960</li>
+            <li id="ano_11" data-target="#timeline-carousel" data-slide-to="11"><i class="fa fa-circle"></i><br>1963</li>
+            <li id="ano_12" data-target="#timeline-carousel" data-slide-to="12"><i class="fa fa-circle"></i><br>1964</li>
+            <li id="ano_13" data-target="#timeline-carousel" data-slide-to="13"><i class="fa fa-circle"></i><br>1965</li>
+            <li id="ano_14" data-target="#timeline-carousel" data-slide-to="14"><i class="fa fa-circle"></i><br>1966</li>
+            <li id="ano_15" data-target="#timeline-carousel" data-slide-to="15"><i class="fa fa-circle"></i><br>1982</li>
+            <li id="ano_16" data-target="#timeline-carousel" data-slide-to="16"><i class="fa fa-circle"></i><br>1985</li>
+            <li id="ano_17" data-target="#timeline-carousel" data-slide-to="17"><i class="fa fa-circle"></i><br>1986</li>
+            <li id="ano_18" data-target="#timeline-carousel" data-slide-to="18"><i class="fa fa-circle"></i><br>1988</li>
+            <li id="ano_19" data-target="#timeline-carousel" data-slide-to="19"><i class="fa fa-circle"></i><br>1989</li>
+            <li id="ano_20" data-target="#timeline-carousel" data-slide-to="20"><i class="fa fa-circle"></i><br>1991</li>
+            <li id="ano_21" data-target="#timeline-carousel" data-slide-to="21"><i class="fa fa-circle"></i><br>1993</li>
+            <li id="ano_22" data-target="#timeline-carousel" data-slide-to="22"><i class="fa fa-circle"></i><br>1995</li>
+            <li id="ano_23" data-target="#timeline-carousel" data-slide-to="23"><i class="fa fa-circle"></i><br>1996</li>
+            <li id="ano_24" data-target="#timeline-carousel" data-slide-to="24"><i class="fa fa-circle"></i><br>2000</li>
+            <li id="ano_25" data-target="#timeline-carousel" data-slide-to="25"><i class="fa fa-circle"></i><br>2005</li>
+            <li id="ano_26" data-target="#timeline-carousel" data-slide-to="26"><i class="fa fa-circle"></i><br>2008</li>
+            <li id="ano_27" data-target="#timeline-carousel" data-slide-to="27"><i class="fa fa-circle"></i><br>2017</li>
+            <li id="ano_28" data-target="#timeline-carousel" data-slide-to="28"><i class="fa fa-circle"></i><br>2019</li>
+         </ol>
+         <div class="container">
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <h4>1932</h4>
+                  <p>24.2.1932 – Com a edição do Decreto nº 21.076 (primeiro código eleitoral do Brasil), é criada a Justiça Eleitoral e sua estrutura, com um Tribunal Superior e Tribunais Regionais em cada estado. Entre as importantes inovações
+                     do código, destaca-se a conquista, pelas mulheres, do direito de votar e ser votada – direito este expressado num dispositivo legal pela primeira vez. Além disso, o decreto instituiu o 5º modelo de título eleitoral, o voto
+                     secreto e a representação proporcional.
+                  </p>
+                  <p>
+                     20.5.1932 – Instalação do Tribunal Superior da Justiça Eleitoral (TSJE) na Avenida Rio Branco, Rio de Janeiro (RJ).
+                  </p>
+               </div>
+               <div class="carousel-item">
+                  <h4>1933</h4>
+                  <p>3.5.1933 – Realização da primeira eleição após a criação da Justiça Eleitoral. Na ocasião, Carlota Queiroz foi a única mulher eleita para o cargo de Deputada Federal na Assembleia Constituinte.</p>
+               </div>
+               <div class="carousel-item">
+                  <h4>1935</h4>
+                  <p>4.5.1935 – Publicação da Lei nº 48, que modificou o Código Eleitoral de 1932. A Lei não chegou ser aplicada, pois ocorreu o golpe do Estado Novo em 1937.</p>
+               </div>
+               <div class="carousel-item">
+                  <h4>1937</h4>
+                  <p>10.11.1937 – Outorgada a Constituição de 1937, que extinguiu a Justiça Eleitoral, aboliu os partidos políticos existentes, suspendeu as eleições livres e estabeleceu eleição indireta para presidente da República, com mandato
+                     de seis anos. Apesar da previsão constitucional, a eleição citada jamais ocorreu.
+                  </p>
+               </div>
+               <div class="carousel-item">
+                  <h4>1945</h4>
+                  <p>28.5.1945 – Publicação do Decreto-lei nº 7.586 (segundo Código Eleitoral), que reinstalou a Justiça Eleitoral e instituiu o 6º modelo de título eleitoral.</p>
+                  <p>1.6.1945 – Instalação do Tribunal Superior Eleitoral (TSE) no Palácio Monroe, Rio de Janeiro.</p>
+                  <p>2.12.1945 – Realização da primeira eleição após a reinstalação da Justiça Eleitoral, na qual foram eleitos deputados e senadores que formariam nova Assembleia Nacional Constituinte, além de novo presidente da República: o General
+                     Eurico Gaspar Dutra.
+                  </p>
+               </div>
+               <div class="carousel-item">
+                  <h4>1946</h4>
+                  <p>Transferência da sede do TSE para o atual edifício do Centro Cultural da Justiça Eleitoral (CCJE), Rua 1º de Março, Rio de Janeiro.</p>
+               </div>
+               <div class="carousel-item">
+                  <h4>1950</h4>
+                  <p>24.7.1950 – Publicação da Lei nº 1.164 (3º Código Eleitoral).</p>
+               </div>
+               <div class="carousel-item">
+                  <h4>1951</h4>
+                  <p>31.8.1951 – O TSE publicou a Resolução nº 4.357 que instituiu o 7º modelo de título eleitoral.</p>
+               </div>
+               <div class="carousel-item">
+                  <h4>1955</h4>
+                  <p>25.7.1955 – Publicação da Lei nº 2.250, que instituiu o 8º modelo de título eleitoral e criou a folha individual de votação que fixou o eleitor em uma única seção eleitoral.</p>
+                  <p>30.8.1955 – Publicação da Lei nº 2.582, que instituiu a cédula única de votação para os cargos de presidente e vice-presidente – embora ainda fosse facultado aos partidos políticos fabricar e distribuir cédulas de acordo com
+                     o modelo estabelecido na lei.
+                  </p>
+               </div>
+               <div class="carousel-item">
+                  <h4>1958</h4>
+                  <p>A máquina de votar criada por Sócrates Ricardo Puntel seria, segundo seu próprio inventor, capaz de totalizar os votos por ela captados em apenas quatro segundos. A máquina funcionava por meio de teclas e duas réguas,
+                     que indicavam os cargos a serem preenchidos à época. O eleitor votaria pelo número do candidato. Em 1968, Puntel realizou uma eleição simulada na sede do Almirantado, conquistando a simpatia do então ministro da Marinha
+                     Augusto Rademaker. Dois meses depois ele apresentou sua invenção ao TSE. Contudo, por ser de utilização complicada, a máquina não foi adotada pela Justiça Eleitoral.
+                  </p>
+               </div>
+               <div class="carousel-item">
+                  <h4>1960</h4>
+                  <p>22.4.1960 – Transferência da sede do TSE do Rio de Janeiro para Brasília.</p>
+               </div>
+               <div class="carousel-item">
+                  <h4>1963</h4>
+                  <p>6.1.1963 – Realização de referendo (1ª consulta popular realizada no país) sobre a manutenção do parlamentarismo em vigor ou o retorno do sistema presidencialista.</p>
+               </div>
+               <div class="carousel-item">
+                  <h4>1964</h4>
+                  <p>9.4.1964 – Publicação do Ato Institucional nº 1, que estabeleceu a eleição indireta para Presidente da República pelo Congresso Nacional.</p>
+               </div>
+               <div class="carousel-item">
+                  <h4>1965</h4>
+                  <p>15.7.1965 – Publicação da Lei nº 4.737 (4º Código Eleitoral).</p>
+                  <p>27.10.1965 – Publicação do Ato Institucional nº 2, que extinguiu os partidos políticos existentes. As exigências legais para a criação de novos partidos se tornaram maiores, o que acabou forçando o bipartidarismo no país, representado
+                     pela Aliança Renovadora Nacional (ARENA) e pelo Movimento Democrático Brasileiro (MDB). O ato também estabeleceu definitivamente a eleição indireta para presidente e vice-presidente da República, em votação nominal pelos
+                     membros do Congresso Nacional.
+                  </p>
+               </div>
+               <div class="carousel-item">
+                  <h4>1966</h4>
+                  <p>5.2.1966 – Publicação do Ato Institucional nº 3, que estabeleceu a eleição indireta para governadores pelas Assembleias Legislativas estaduais, e que estes nomeassem os prefeitos das capitais, após aprovação das respectivas
+                     Assembleias Legislativas.
+                  </p>
+               </div>
+               <div class="carousel-item">
+                  <h4>1982</h4>
+                  <p>7.6.1982 – Entrou em vigor a Lei nº 6.996, que dispôs sobre a utilização do processamento eletrônico de dados nos serviços eleitorais.</p>
+               </div>
+               <div class="carousel-item">
+                  <h4>1985</h4>
+                  <p>20.12.1985 – Publicação da Lei nº 7.444 que instituiu o 9º modelo de título eleitoral.</p>
+               </div>
+               <div class="carousel-item">
+                  <h4>1986</h4>
+                  <p>15.4.1986 – Início do recadastramento eleitoral nacional mediante processamento eletrônico de dados.</p>
+               </div>
+               <div class="carousel-item">
+                  <h4>1988</h4>
+                  <p>5.10.1988 – Promulgação da Constituição Cidadã, que estabeleceu o sistema de eleição em dois turnos para os cargos de presidente da República, governador e prefeito (nas cidades com mais de 200 mil eleitores), além do voto
+                     facultativo para os analfabetos, para os maiores de 70 anos e para eleitores entre dezesseis e dezoito anos.
+                  </p>
+               </div>
+               <div class="carousel-item">
+                  <h4>1989</h4>
+                  <p>15.11.1989 – Realização da 1ª eleição direta para presidente após 29 anos, com totalização eletrônica dos votos.</p>
+                  <p>17.12.1989 – No segundo turno das eleições presidenciais, os eleitores do município de Brusque (SC) votaram por meio de um computador, pela primeira vez, em caráter experimental.</p>
+               </div>
+               <div class="carousel-item">
+                  <h4>1991</h4>
+                  <p>31.3.1991 – Primeiro pleito totalmente informatizado da América Latina, realizado pelo TRE/SC, a qual abrangeu tanto a etapa do voto como a da apuração da consulta plebiscitária para emancipação do Distrito de Cocal (atual
+                     Cocal do Sul), no município de Urussanga, quando votaram mais de 6 mil eleitores em 16 seções eletrônicas.
+                  </p>
+               </div>
+               <div class="carousel-item">
+                  <h4>1993</h4>
+                  <p>21.4.1993 – Realização de plebiscito sobre a forma (monarquia ou república) e o sistema (parlamentarismo ou presidencialismo) de governo no país. Essa consulta consolidou a forma e o sistema de governo atual – República presidencialista.</p>
+               </div>
+               <div class="carousel-item">
+                  <h4>1995</h4>
+                  <p>12.2.1995 – Ocorre a primeira eleição totalmente informatizada no Brasil, no Município de Xaxim (SC), para os cargos de prefeito e de vice-prefeito.</p>
+               </div>
+               <div class="carousel-item">
+                  <h4>1996</h4>
+                  <p>3.10.1996 – Primeira eleição em que a urna eletrônica adotada pelo TSE foi utilizada. O sistema eletrônico de votação foi usado em todas as capitais e cidades com mais de 200 mil eleitores.</p>
+               </div>
+               <div class="carousel-item">
+                  <h4>2000</h4>
+                  <p>1.10.2000 – A urna eletrônica foi utilizada na totalidade dos municípios brasileiros.</p>
+               </div>
+               <div class="carousel-item">
+                  <h4>2005</h4>
+                  <p>23.10.2005 – Os brasileiros foram consultados, por meio de referendo, sobre a proibição do comércio de armas de fogo e munições no país. </p>
+               </div>
+               <div class="carousel-item">
+                  <h4>2008</h4>
+                  <p>26.10.2008 – A biometria foi testada pela primeira vez nos municípios de Colorado do Oeste (RO), São João Batista (SC) e Fátima do Sul (MS) e, desde então, o cadastro biométrico dos eleitores em todo território nacional está
+                     sendo ampliado.
+                  </p>
+               </div>
+               <div class="carousel-item">
+                  <h4>2017</h4>
+                  <p>1.12.2017 – Lançamento do e-Título – via digital do título eleitoral que pode ser acessada por meio de aplicativo para smartphones e tablets.</p>
+               </div>
+               <div class="carousel-item">
+                  <h4>2019</h4>
+                  <p>14.3.2019 – O Supremo Tribunal Federal (STF) reconheceu que compete à Justiça Eleitoral processar e julgar crimes comuns que tenham conexão com crimes eleitorais.</p>
+               </div>
+            </div>
+            <a class="carousel-control-prev" href="#timeline-carousel" role="button" data-slide="prev">
+            <i class="fas fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#timeline-carousel" role="button" data-slide="next">
+            <i class="fas fa-angle-right"></i>
+            </a>
+         </div>
+      </div>
+   </section>
+   <div id="modalJeFaz">
+      <div class="modal fade" id="jefaz_errou" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+               <div class="container">
+                  <div class="modal-header servicos__modal_head">
+                     <h5 class="servicos__modal_titulo">Errou!</h5>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  </div>
+                  <div class="modal-body">
+                     <div class="text-center"><img src="/assets/images/justica-eleitoral/je-faz-errou.png" class="img-modal-icone"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</main>
+<%- include('../templates/shared/footer', {config} );%>
