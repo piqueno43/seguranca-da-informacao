@@ -1,0 +1,248 @@
+<%
+const config = {
+  'title': 'Jovem Eleitor - Justiça Eleitoral',
+  'path': 'jovem-eleitor',
+  'fonts': [
+    'shared/fonts/source-sans-pro.css',
+    'shared/fonts/gotham.css',
+  ],
+  'styles': [
+    'shared/bootstrap.css',
+    'shared/font-awesome.css',
+    'shared/style.css',
+    'jovem-eleitor.css'
+  ],
+  'scripts': [
+    'shared/jquery-3.4.1.min.js',
+    'shared/bootstrap.min.js',
+    'shared/geral.js',
+    'jovem-eleitor/jquery.mask.min.js',
+    'jovem-eleitor/simplebar.min.js',
+    'jovem-eleitor/jovem-eleitor.js',
+    'jovem-eleitor/calculadora.js',
+  ],
+};
+%>
+<%- include('../../templates/shared/header', { config })%>
+<%- include('../../templates/shared/menu', { config }); -%>
+<main id="titulo-eleitoral">
+   <section>
+      <div class="titulo_eleitoral_slide">
+         <div class="bd-example">
+            <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active imagem-principal">
+                     <img src="/assets/images/jovem-eleitor/banner-jovem-eleitor.jpg" class="img-fluid" alt="Banner do título">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <div class="container">
+      <h2 class="titulo-pagina">Quando a gente cresce, ganha novas responsabilidades: assume um namoro, escolhe uma profissão, conquista um emprego. Agora, você também é responsável pelo futuro da sua cidade. Está no voto o poder de transformar o seu bairro, melhorar a sua comunidade, defender os interesses da sua galera.</h2>
+   </div>
+   <section id="jovem-eleitor">
+      <div class="perguntas">
+         <div class="container">
+            <div class="row">
+               <div class="pergunta pergunta-1">
+                  <div class="pessoa">
+                     <img src="/assets/images/jovem-eleitor/pessoa-1.svg" alt="">
+                  </div>
+                  <div class="balao-pergunta"><a href="#conteudo-jovem-eleitor">Quem pode fazer?</a></div>
+                  <div class="duvidas">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                  </div>
+               </div>
+               <div class="pergunta pergunta-2">
+                  <div class="pessoa">
+                     <img src="/assets/images/jovem-eleitor/pessoa-2.svg" alt="">
+                  </div>
+                  <div class="balao-pergunta"><a href="#conteudo-jovem-eleitor">O que é título de eleitor?</a></div>
+                  <div class="duvidas">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                  </div>
+               </div>
+               <div class="pergunta pergunta-3">
+                  <div class="pessoa">
+                     <img src="/assets/images/jovem-eleitor/pessoa-3.svg" alt="">
+                  </div>
+                  <div class="balao-pergunta"><a href="#conteudo-jovem-eleitor">Como fazer?</a></div>
+                  <div class="duvidas">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                  </div>
+               </div>
+               <div class="pergunta pergunta-4">
+                  <div class="pessoa">
+                     <img src="/assets/images/jovem-eleitor/pessoa-4.svg" alt="">
+                  </div>
+                  <div class="balao-pergunta"><a href="#conteudo-jovem-eleitor">Quando fica pronto?</a></div>
+                  <div class="duvidas">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                  </div>
+               </div>
+               <div class="pergunta pergunta-5">
+                  <div class="pessoa">
+                     <img src="/assets/images/jovem-eleitor/pessoa-5.svg" alt="">
+                  </div>
+                  <div class="balao-pergunta"><a href="#conteudo-jovem-eleitor">Posso ter problemas se não tirar o título?</a>
+                  </div>
+                  <div class="duvidas">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                  </div>
+               </div>
+               <div class="pergunta pergunta-6">
+                  <div class="pessoa">
+                     <img src="/assets/images/jovem-eleitor/pessoa-6.svg" alt="">
+                  </div>
+                  <div class="balao-pergunta"><a href="#conteudo-jovem-eleitor">Como saber se estas informações são verdadeiras?</a>
+                  </div>
+                  <div class="duvidas">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="respostas">
+         <div id="conteudo-jovem-eleitor">
+            <div class="info-duvidas">
+               <img src="/assets/images/jovem-eleitor/info-duvidas.png" alt="Jovem Eleitor, entre na luta por um país melhor">
+               <h3>Está com dúvidas?</h3>
+               <p>Clique nos balões com as perguntas e obtenha as respostas aqui.</p>
+            </div>
+            <div class="container-respostas">
+               <ul class="pergunta-selecionada">
+                  <li></li>
+               </ul>
+               <ul class="conversa conversa-1">
+                  <li>Quem completar 16 anos até a data da eleição (4 de outubro de 2020) pode tirar o título antes do prazo final.</li>
+                  <li>Para votar nas Eleições Municipais de 2020, o prazo final para emissão do título é dia 6 de maio de 2020.</li>
+                  <li>Mas você não vai deixar para última hora, né? ;-)</li>
+                  <li class="emoji"><img src="/assets/images/jovem-eleitor/emoji/call-me-hand_emoji-modifier-fitzpatrick-type-1-2_1f919-1f3fb_1f3fb.png" alt=""></li>
+               </ul>
+               <ul class="conversa conversa-2">
+                  <li>É o documento que garante o direito de votar e ser votado*</li>
+                  <li>Qualquer brasileiro acima de 16 anos de idade tem o direito de votar e participar do processo de escolha dos seus representantes.</li>
+                  <li><i>* aos 16 você pode votar, mas para ser votado é preciso ter, pelo menos, 18 anos completos. Para saber mais sobre o título de eleitor, acesse: <br> <a class="quebrar-link" href="/titulo-eleitoral">https://www.justicaeleitoral.jus.br/titulo-eleitoral/</a>.</i></li>
+                  <li class="emoji"><img src="/assets/images/jovem-eleitor/emoji/fisted-hand-sign_emoji-modifier-fitzpatrick-type-3_1f44a-1f3fc_1f3fc.png" alt=""></li>
+               </ul>
+               <ul class="conversa conversa-3">
+                  <li>Para tirar o título de eleitor, é preciso ir ao cartório eleitoral mais próximo de sua casa, levando documento de identidade e comprovante de residência.</li>
+                  <li>Para quem é do sexo masculino e já completou 18 anos, também é preciso apresentar o certificado de alistamento militar.</li>
+                  <li>O atendimento pode ser agendado no portal do TRE do seu estado (<a href="http://www.tse.jus.br/o-tse/tribunais-regionais">encontre aqui o link</a> para o TRE do seu estado). Assim, não precisa nem pegar fila.</li>
+                  <li class="emoji"><img src="/assets/images/jovem-eleitor/emoji/i-love-you-hand-sign_emoji-modifier-fitzpatrick-type-5_1f91f-1f3fe_1f3fe.png" alt=""></li>
+               </ul>
+               <ul class="conversa conversa-4">
+                  <li>O alistamento eleitoral é super-rápido e você recebe na hora o seu título de eleitor.</li>
+                  <li>E pra ficar ainda melhor, é só baixar o <a href="/titulo-eleitoral/#videos-titulo">app e-Título</a> e ter os serviços da Justiça Eleitoral na palma da mão.</li>
+                  <li class="emoji"><img src="/assets/images/jovem-eleitor/emoji/smiling-face-with-heart-shaped-eyes_1f60d.png" alt=""></li>
+               </ul>
+               <ul class="conversa conversa-5">
+                  <li>O maior problema é não participar da escolha dos seus representantes, afinal: “seu voto tem super poderes”!</li>
+                  <li>Ao completar 18 anos, o alistamento eleitoral é obrigatório e, se não tiver o título, pode ter problemas na emissão de outros documentos, como passaporte, CPF e até mesmo para se matricular em instituições de ensino.</li>
+                  <li class="emoji"><img src="/assets/images/jovem-eleitor/emoji/smiling-face-with-open-mouth_1f603.png" alt="">
+                  </li>
+               </ul>
+               <ul class="conversa conversa-6">
+                  <li>Desinformação se combate com informação!</li>
+                  <li>Saiba como identificar um conteúdo falso acessando nossa página <a href="/fato-ou-boato" class="quebrar-link">http://www.justicaeleitoral.jus.br/fato-ou-boato/</a> e #NaDuvidaNaoCompartilhe</li>
+                  <li class="emoji"><img src="/assets/images/jovem-eleitor/emoji/winking-face_1f609.png" alt="">
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="calculadora-jovem-eleitor">
+         <div class="box-data-nascimento">
+            <div class="form-inline form-data-nascimento">
+               <div class="form-group">
+                  <label for="data-nascimento" class="label-data-nascimento">Informe sua data de nascimento:</label>
+                  <div class="input-group">
+                     <input type="text" class="form-control input-data-nascimento" id="data-nascimento" placeholder="__/__/____" aria-label="Data de nascimento" aria-describedby="basic-addon2" autocomplete="off">
+                     <div class="input-group-append">
+                        <button class="btn btn-warning calcular-idade" type="button">Enviar</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-7 resposta-calculadora">
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="banner-jovem-eleitor">
+         <div class="container">
+            <h2 class="titulo-secao">Outros assuntos que podem te interessar!</h2>
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="col-12 banner banner-eleicoes">Eleições</div>
+               </div>
+               <div class="col-md-8">
+                  <p>É por meio do voto que os brasileiros escolhem seus representantes no Poder Legislativo (vereador, deputado estadual, federal, senador) e no Poder Executivo (prefeito, governador e presidente). Por isso a eleição é tão importante! Ao votar, o cidadão pode ajudar a mudar o futuro da sua cidade e do seu estado.</p>
+                  <p><a href="#" data-toggle="collapse" data-target="#ocorrem">• Quando ocorrem?</a></p>
+                  <div id="ocorrem" class="collapse">
+                     <p>As eleições acontecem a cada dois anos, em anos pares, alternando-se entre eleições municipais e gerais. Ocorrem sempre no primeiro domingo do mês de outubro e, havendo segundo turno, no último domingo do mesmo mês.</p>
+                  </div>
+                  <p><a href="#" data-toggle="collapse" data-target="#obrigado">• Quem pode votar?</a></p>
+                  <div id="obrigado" class="collapse">
+                     <p>Todo cidadão brasileiro alfabetizado, maior de 18 anos e legalmente capaz é obrigado a votar. O voto é facultativo para os eleitores analfabetos, os maiores de 70 anos, e os que têm entre 16 e 18 anos.</p>
+                  </div>
+                  <p><a href="#" data-toggle="collapse" data-target="#diferenca">• Qual a diferença entre eleição geral, municipal e suplementar?</a></p>
+                  <div id="diferenca" class="collapse">
+                     <p><strong>Eleição geral</strong> – É realizada, em todo o país, para os cargos de presidente e vice-presidente da República, e, em cada estado, para governador e vice-governador, senador, deputado federal e estadual (no DF, para deputado distrital).</p>
+                     <p><strong>Eleição municipal</strong> – É realizada, em cada município, para os cargos de prefeito, vice-prefeito e vereador.</p>
+                     <p><strong>Eleição suplementar</strong> – É realizada apenas em seções cujos eleitores tenham sido impedidos de votar (como no caso de enchente, no dia da votação), ou cujos votos tenham sido anulados (por decisão judicial). Assim, os eleitores afetados têm uma nova oportunidade para exercer o seu direito de votar.</p>
+                  </div>
+                  <p><a href="#" data-toggle="collapse" data-target="#feita">• Como é feita a votação?</a></p>
+                  <div id="feita" class="collapse">
+                     <p>A votação é feita por meio da urna eletrônica, que permite a coleta dos votos de forma rápida e segura. Para conhecer mais sobre a urna eletrônica, acesse a página <a href="/spe">Segurança do Processo Eleitoral</a>.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="col-12 banner banner-je">Justiça Eleitoral</div>
+               </div>
+               <div class="col-md-8">
+                  <p>A <a href="/">Justiça Eleitoral</a> é responsável por organizar as eleições. Dela fazem parte o <a href="https://www.tse.jus.br">Tribunal Superior Eleitoral (TSE)</a>, o <a href="http://www.tse.jus.br/o-tse/tribunais-regionais">Tribunal Regional Eleitoral (TRE)</a> do seu Estado e o cartório eleitoral da sua localidade.</p>
+                  <p>Saiba mais acessando a página <a href="/">Conheça a Justiça Eleitoral</a>.</p>
+               </div>
+            </div>
+            <div class="row titulo-eleitoral">
+               <div class="col-md-4">
+                  <div class="col-12 banner banner-titulo">Título Eleitoral</div>
+               </div>
+               <div class="col-md-8">
+                  <p>Quer saber mais sobre o título? <a href="/titulo-eleitoral">Acesse</a>.</p>
+               </div>
+            </div>
+            <div class="row campanha-jovem-eleitor">
+               <div class="col-md-4">
+                  <div class="col-12 banner banner-campanha">Campanha Jovem Eleitor</div>
+               </div>
+               <div class="col-md-8">
+                  <p>A Justiça Eleitoral convida os jovens de 16 a 18 anos para participarem do processo eleitoral. <a href="https://www.youtube.com/watch?v=2P5WoNkSFhY&list=PLAFD3758F2233D1D5">Confira</a>.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+</main>
+<%- include('../../templates/shared/footer', { config } );%>

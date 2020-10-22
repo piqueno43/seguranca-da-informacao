@@ -728,7 +728,7 @@ a:visited,
 }
 
 .navegacao__setas_descer:hover {
-	background-image: url(#{$path-img}/seta-baixo-hover.svg);
+	background-image: url(#{$path-img-shared}/seta-baixo-hover.svg);
 	transition: background-image 0.3s ease-out;
 }
 
