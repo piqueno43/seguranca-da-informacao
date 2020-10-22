@@ -82,9 +82,9 @@ export function fonts() {
     .pipe(browserSync.stream());
 }
 
-export function views() {
+export function pages() {
   return gulp
-    .src(['src/views/**/*.ejs'])
+    .src(['src/pages/**/*.ejs'])
     .pipe(ejs({conteudo}))
     .pipe(rename({extname: '.html'}))
     .pipe(gulp.dest(dest))
@@ -95,11 +95,11 @@ export function watch() {
   gulp.watch(paths.styles.src, styles);
   gulp.watch(paths.scripts.src, scripts);
   gulp.watch(paths.images.src, images);
-  gulp.watch('src/**/*.ejs', views);
+  gulp.watch('src/**/*.ejs', pages);
   gulp.watch(`${dest}/**/*.html`).on('change', browserSync.reload);
 }
 
-const build = gulp.series(clean, gulp.parallel(styles, scripts, images, fonts, views));
+const build = gulp.series(clean, gulp.parallel(styles, scripts, images, fonts, pages));
 
 const defaultTask = gulp.parallel(build, serve, watch);
 

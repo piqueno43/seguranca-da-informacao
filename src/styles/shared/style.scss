@@ -861,6 +861,8 @@ a:visited,
 				padding-left: 1rem;
 			}
 
+
+
 			.nav-link {
 				padding-bottom: 0;
 				padding-top: 0;
@@ -912,7 +914,11 @@ a:visited,
 	border-left: 0 solid transparent;
 	border-bottom: 1px solid #ebebeb;
 	cursor: pointer;
-	padding: .5rem 1rem;
+  padding: .5rem 1rem;
+
+  &.active {
+    border-bottom-color: #FFCC66;
+  }
 }
 
 .menu-interno a:link,

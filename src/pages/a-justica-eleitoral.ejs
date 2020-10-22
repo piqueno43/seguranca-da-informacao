@@ -25,10 +25,8 @@ const config = {
   ],
 };
 %>
-<%- include('../templates/shared/header', {config})%>
-<%- include('../templates/shared/menu'); -%>
-
-
+<%- include('../templates/shared/header', { config })%>
+<%- include('../templates/shared/menu', { config }); -%>
 <main id="justica-eleitoral">
    <section>
       <div class="justica-eleitoral_slide">
@@ -921,4 +919,4 @@ const config = {
       </div>
    </div>
 </main>
-<%- include('../templates/shared/footer', {config} );%>
+<%- include('../templates/shared/footer', { config } );%>
