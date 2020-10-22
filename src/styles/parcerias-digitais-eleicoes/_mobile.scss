@@ -1,0 +1,62 @@
+// Ajustando as imagens do topo
+@media screen and (max-width: 568px) {
+    .topo-orientacoes {
+        img {
+            display: flex;
+            margin: 0 auto;
+        }
+        .seu-voto-tem-poder {
+            img {
+                width: 200px;
+            }
+        }
+    }
+}
+
+// Titulo do box whats
+@media screen and (max-width: 560px) {
+    .titulo-box-1 {
+        font-size: 22px !important;
+        text-align: center;
+    }
+    .box-orientacoes-1 {
+        img {
+            display: flex;
+            width: 100px;
+            margin: 0 auto;
+        }
+        padding-bottom: 20px !important;
+    }
+}
+
+// Titulo do box facebook
+@media screen and (max-width: 560px) {
+    .titulo-box-3 {
+        text-align: center;
+        font-size: 22px !important;
+    }
+    .box-orientacoes-3 {
+        img {
+            display: flex;
+            width: 100px;
+            margin: 0 auto;
+        }
+        padding-bottom: 20px !important;
+    }
+}
+
+// Titulo do box instagram
+@media screen and (max-width: 560px) {
+    .titulo-box-4 {
+        text-align: center;
+        font-size: 22px !important;
+    }
+    .box-orientacoes-4 {
+        img {
+            display: flex;
+            width: 100px;
+            margin: 0 auto;
+        }
+        padding-bottom: 20px !important;
+    }
+}
