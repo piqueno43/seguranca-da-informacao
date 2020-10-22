@@ -34,6 +34,10 @@ const paths = {
     src: 'src/fonts/**/*.{eot,svg,ttf,woff,woff2}',
     dest: `${dest}/assets/fonts/`,
   },
+  files: {
+    src: 'src/files/**/*.{pdf,zip}',
+    dest: `${dest}/assets/arquivos/`,
+  },
 };
 
 export const clean = () => del([dest]);
@@ -81,6 +85,12 @@ export function fonts() {
     .pipe(gulp.dest(paths.fonts.dest))
     .pipe(browserSync.stream());
 }
+export function files() {
+  return gulp
+    .src(paths.files.src)
+    .pipe(gulp.dest(paths.files.dest))
+    .pipe(browserSync.stream());
+}
 
 export function pages() {
   return gulp
@@ -95,11 +105,13 @@ export function watch() {
   gulp.watch(paths.styles.src, styles);
   gulp.watch(paths.scripts.src, scripts);
   gulp.watch(paths.images.src, images);
+  gulp.watch(paths.fonts.src, fonts);
+  gulp.watch(paths.files.src, files);
   gulp.watch('src/**/*.ejs', pages);
   gulp.watch(`${dest}/**/*.html`).on('change', browserSync.reload);
 }
 
-const build = gulp.series(clean, gulp.parallel(styles, scripts, images, fonts, pages));
+const build = gulp.series(clean, gulp.parallel(styles, scripts, images, fonts, files, pages));
 
 const defaultTask = gulp.parallel(build, serve, watch);
 
