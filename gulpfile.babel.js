@@ -1,5 +1,3 @@
-"use strict";
-
 import gulp from 'gulp';
 import autoprefixer from 'gulp-autoprefixer';
 import cleanCSS from 'gulp-clean-css';
