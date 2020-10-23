@@ -42,7 +42,7 @@ const paths = {
 
 export const clean = () => del([dest]);
 
-export function serve() {
+export const serve = () => {
   return browserSync.init({
     server: {
       baseDir: paths.env.src,
@@ -51,7 +51,7 @@ export function serve() {
   });
 }
 
-export function styles() {
+export const styles = () => {
   return gulp
     .src(paths.styles.src)
     // .pipe(sourcemaps.init())
@@ -63,7 +63,7 @@ export function styles() {
     .pipe(browserSync.stream());
 }
 
-export function scripts() {
+export const scripts = () => {
   return gulp
     .src(paths.scripts.src)
     // .pipe(webpack(require('./webpack.config.js')))
@@ -71,7 +71,7 @@ export function scripts() {
     .pipe(browserSync.stream());
 }
 
-export function images() {
+export const images = () => {
   return gulp
     .src(paths.images.src, { since: gulp.lastRun(images) })
     .pipe(imagemin({ optimizationLevel: 5 }))
@@ -79,20 +79,20 @@ export function images() {
     .pipe(browserSync.stream());
 }
 
-export function fonts() {
+export const fonts = () => {
   return gulp
     .src(paths.fonts.src)
     .pipe(gulp.dest(paths.fonts.dest))
     .pipe(browserSync.stream());
 }
-export function files() {
+export const files = () => {
   return gulp
     .src(paths.files.src)
     .pipe(gulp.dest(paths.files.dest))
     .pipe(browserSync.stream());
 }
 
-export function pages() {
+export const pages = () => {
   return gulp
     .src(['src/pages/**/*.ejs'])
     .pipe(ejs({conteudo}))
@@ -100,8 +100,14 @@ export function pages() {
     .pipe(gulp.dest(dest))
     .pipe(browserSync.stream());
 }
+export const folder = () => {
+  return gulp
+    .src('src/pages/participa-mulher/voto-feminino/**/*.*')
+    .pipe(gulp.dest(`${dest}/participa-mulher/voto-feminino`))
+    .pipe(browserSync.stream());
+}
 
-export function watch() {
+export const watch = () => {
   gulp.watch(paths.styles.src, styles);
   gulp.watch(paths.scripts.src, scripts);
   gulp.watch(paths.images.src, images);
@@ -111,7 +117,7 @@ export function watch() {
   gulp.watch(`${dest}/**/*.html`).on('change', browserSync.reload);
 }
 
-const build = gulp.series(clean, gulp.parallel(styles, scripts, images, fonts, files, pages));
+const build = gulp.series(clean, gulp.parallel(styles, scripts, images, fonts, files, pages, folder));
 
 const defaultTask = gulp.parallel(build, serve, watch);
 

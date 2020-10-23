@@ -1,0 +1,983 @@
+$path-img: '/assets/images/participa-mulher';
+
+#mulheres-na-politica {
+	#brandingLogo {
+		display: none !important;
+		visibility: hidden !important;
+	}
+	// main {
+	// 	background-color: #EBEAF1;
+	// }
+	.fixar {
+		position: fixed;
+		top: 0px;
+		width: 100%;
+		transition: 2s;
+		z-index: 99999999;
+		margin-top: 0px !important;
+		margin-bottom: 0px !important;
+		background-color: #68314E;
+		line-height: 12px;
+	}
+	#menuFixo {
+		.navbar-brand {
+			display: none;
+			@media (max-width: 768px) {
+				display: block;
+			}
+		}
+		.iconnes {
+			.fa {
+				margin-top: 5px;
+				font-size: 5em;
+				height: 40px;
+			}
+		}
+		.navbar-nav li {
+			padding-left: 5px;
+			padding-right: 5px;
+			@media (max-width: 1230px) {
+				font-size: 1em;
+			}
+			@media (max-width: 980px) {
+				font-size: 1em;
+			}
+		}
+		ul {
+			margin: 0px auto;
+		}
+	}
+	.submenu {
+		background-image: url('#{$path-img}/bg-barra-menu-pagina.png');
+		background-position: top center;
+		background-repeat: no-repeat;
+		line-height: 13px;
+		font-size: 0.9em;
+		font-weight: lighter;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		margin-top: -300px;
+		margin-bottom: 300px;
+		.navbar {
+			padding-bottom: 0px;
+		}
+		@media (max-width: 1500px) {
+			margin-top: -200px;
+			margin-bottom: 200px;
+		}
+		@media (max-width: 1200px) {
+			margin-top: -150px;
+			margin-bottom: 150px;
+		}
+		@media (max-width: 1200px) {
+			margin-top: 0px;
+			margin-bottom: 0px;
+			background-color: #68314E;
+			.navbar {
+				padding: 0px;
+			}
+			.navbar-toggler-icon {
+				color: #FFF;
+				width: none;
+				height: 1em;
+			}
+		}
+		@media (max-width: 768px) {
+			background-color: #68314E;
+			line-height: 30px;
+		}
+		li {
+			padding-bottom: 5px;
+			@media (max-width: 768px) {
+				width: 100%;
+				text-align: left;
+				border-bottom: 1px solid #996500;
+			}
+			&:hover {
+				border-bottom: 2px solid #996500;
+			}
+			a::first-letter {
+				font-size: 1.3em;
+			}
+		}
+		a:link,
+		a:visited {
+			color: #FFF;
+		}
+		a:hover {
+			color: #FFF;
+		}
+	}
+	// submenu
+	.container-fluid {
+		padding: 0px;
+	}
+	.banner_bg {
+		text-align: center;
+		background-image: url('#{$path-img}/bg-mulheres-na-politica-1.jpg');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+		background-position: top right;
+		.imagem-mascara {
+			bottom: 0;
+			@media (min-width: 768px) {
+				margin-top: -70px;
+			}
+		}
+		.apresentacao {
+			.logo {
+				width: 55%;
+				@media (max-width: 768px) {
+					width: 70%;
+				}
+			}
+			background-repeat: no-repeat;
+			background-position: center center;
+			img {
+				margin-top: 30px;
+				margin-bottom: 30px;
+			}
+			width: 100%;
+			height: 500px;
+			margin: 0 auto;
+			h1 {
+				color: #FFF;
+				font-size: 1.6em;
+				font-weight: normal;
+				margin: 0px auto;
+				margin-bottom: 110px;
+				text-shadow: #000 1px 0 10px;
+				@media (max-width: 1400px) {
+					margin-bottom: 0px;
+				}
+				span {
+					color: rgb(250, 190, 71);
+				}
+			}
+		}
+	}
+	.banner_bg {
+		background-image: url('#{$path-img}/bg-mulheres-na-politica-2b.jpg');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+		background-position: top center;
+		img {
+			bottom: 0;
+		}
+	}
+	.banner_mascara {
+		height: 700px;
+		background-color: #EBEAF1;
+	}
+	.menu-pagina {
+		text-transform: uppercase;
+		background-image: url('#{$path-img}/bg-barra-menu-pagina.png');
+		background-repeat: repeat-y;
+		background-position: top center;
+		margin-top: 70px;
+		margin-bottom: 50px;
+		@media (max-width: 768px) {
+			margin-top: 170px;
+			background-image: none;
+			li {
+				width: 100%;
+				border-bottom: #68314E solid 1px;
+			}
+		}
+		.nav-link {
+			line-height: 20px;
+			border: 3px solid transparent;
+			font-size: 1em;
+			letter-spacing: .1rem;
+			&::first-letter {
+				font-size: 150%;
+			}
+		}
+		.nav-link,
+		.nav-link:visited {
+			color: #FFF;
+			@media (max-width: 768px) {
+				color: #68314E;
+			}
+		}
+		.nav-link:hover {
+			color: #CC9933;
+			border-bottom-color: #CC9933;
+		}
+	}
+	h2 {
+		text-align: center;
+		color: #68314E;
+		letter-spacing: 1px;
+		width: 100%;
+		line-height: 360px;
+		font-size: 3em;
+		background-image: url('#{$path-img}/bg-h2-nas-redes-sociais.png');
+		background-position: top right;
+		background-repeat: no-repeat;
+		@media (max-width: 768px) {
+			line-height: 40px;
+			// height: 360px;
+			background-position: top center;
+			background-size: 50%;
+			padding-top: 180px;
+			margin-bottom: 70px;
+		}
+		&::first-letter {
+			font-size: 1.3em;
+		}
+	}
+	.banner_mascara {
+		height: auto;
+	}
+	#seminario {
+		padding-top: 80px;
+		background-color: #ebeaf1;
+		@media (min-width: 768px) {
+			margin-top: 0;
+		}
+		.banner_mascara {
+			height: auto;
+		}
+		h2 {
+			background: url('#{$path-img}/bg-h2-seminario.png') no-repeat right;
+			background-color: #ebeaf1;
+			line-height: 60px;
+			height: 195px;
+			&::first-letter {
+				font-size: 1em;
+			}
+			@media (max-width: 768px) {
+				margin-top: -50px;
+				height: auto;
+			}
+		}
+		.container {
+			background-color: #ebeaf1;
+		}
+		.banner_bg {
+			background-image: url('#{$path-img}/bg-seminario.jpg');
+		}
+	}
+	#estatisticas {
+		@media (min-width: 768px) {
+			margin-top: -46px;
+		}
+		.btn-primary {
+			color: #69324e;
+			background-color: #CC9933;
+			font-weight: bold;
+			border: none;
+			font-size: 1.3em;
+			margin-bottom: 10px;
+			margin-right: 8px;
+			box-shadow: none;
+			&:hover {
+				color: #CC9933;
+				background-color: #c9c7c8;
+				border-color: #CC9933;
+			}
+		}
+		background-color: #EBEAF1;
+		.banner_mascara {
+			height: auto;
+		}
+		h2 {
+			background-image: url('#{$path-img}/bg-h2-estatisticas.png');
+			line-height: 120px;
+		}
+		.banner_bg {
+			background-image: url('#{$path-img}/bg-parcerias-e-programas.jpg');
+		}
+		.nav {
+			margin-bottom: 40px;
+		}
+		.nav-link {
+			color: #3B1C2C;
+		}
+		.nav-item {
+			font-size: 1.6em;
+			a {
+				color: #CC9933;
+			}
+		}
+		.dropdown-item+.active {
+			background-color: #c9c7c8 !important;
+		}
+		.graficos {
+			@media (max-width: 768px) {
+				height: 900px;
+				border-radius: 0px;
+			}
+			//    background-color: #FFF;
+			padding-bottom: 40px;
+			padding-top: 40px;
+			//    border-top-left-radius: 100px;
+			//    border-bottom-right-radius: 100px;
+			//    box-shadow: 2px 5px #b2b2b2;
+			margin-bottom: 30px;
+			transition: 1s;
+			ul {
+				padding: 0px;
+				padding-left: 3%;
+				padding-top: 3%;
+				li {
+					list-style: none;
+					padding: 0.5rem 0;
+					transition: 1s;
+					font-size: 1.2em;
+					font-weight: inherit;
+					border-bottom: 1px #CC9933 solid;
+					&:last-child {
+						border: none;
+					}
+					a {
+						color: #3B1C2C;
+						text-decoration: none;
+						&.ativo {
+							font-weight: bold;
+							transform-origin: 60% 100%;
+							padding-left: 10px;
+							transition: 1s;
+						}
+					}
+					&:hover {
+						font-weight: bold;
+						transform-origin: 60% 100%;
+						padding-left: 10px;
+						transition: 1s;
+					}
+				}
+			}
+			.fonte {
+				font-size: 0.7em;
+				margin: 0px auto;
+			}
+		}
+		.graficos_item {
+			position: absolute;
+			max-width: 100%;
+			height: 400px;
+			margin: 0px auto;
+		}
+		.graficos_lista {
+			@media (max-width: 768px) {
+				height: 350px;
+			}
+		}
+		.nav-item .active,
+		.nav .active {
+			font-weight: bold;
+			border-bottom: 2px solid #68314E;
+		}
+		.fonte-grafico {
+			margin-top: 30px;
+			text-align: center;
+			padding: 5%;
+			p {
+				margin: 0px auto;
+			}
+		}
+		.card-header {
+			.btn-link {
+				color: #000;
+				font-weight: bolder;
+			}
+		}
+	}
+	#parcerias-e-programas {
+		background-color: #EBEAF1;
+		h2 {
+			background-image: url('#{$path-img}/bg-h2-parcerias-e-programas.png');
+		}
+		.banner_bg {
+			background-image: url('#{$path-img}/bg-parcerias-e-programas.jpg');
+		}
+	}
+	#nas-redes-sociais {
+		background-color: #EBEAF1;
+		h2 {
+			background-image: url('#{$path-img}/bg-h2-nas-redes-sociais.png');
+		}
+		.banner_bg {
+			background-image: url('#{$path-img}/bg-campanhas.jpg');
+		}
+	}
+	#campanhas {
+		background-color: #EBEAF1;
+		h2 {
+			background-image: url('#{$path-img}/bg-h2-campanhas.png');
+		}
+		.banner_bg {
+			background-image: url('#{$path-img}/bg-campanhas.jpg');
+		}
+		#carouselNovo {
+			margin-bottom: 150px;
+			.carousel-inner {
+				background-color: transparent;
+				height: 450px;
+				overflow: hidden;
+			}
+			.carousel-indicators {
+				display: none;
+			}
+			.carousel-item {
+				text-align: center;
+				overflow: hidden;
+				max-height: 450px;
+				position: relative;
+				.card-body {
+					position: absolute;
+					background-image: url('#{$path-img}/transparente-marrom.png');
+					bottom: 0;
+					width: 100%;
+				}
+				.col-md-4 {
+					float: left;
+				}
+				.btn-primary {
+					color: #CC9933;
+					background-color: transparent;
+					border-color: #CC9933;
+					cursor: pointer;
+					&:hover {
+						color: #FFF;
+						background-color: #CC9933;
+						border-color: #CC9933;
+					}
+				}
+			}
+			.controls-top {
+				margin-top: -250px;
+				i {
+					color: #3B1C2C;
+					font-size: 3em;
+					&.fa-chevron-left {
+						margin-left: -50px;
+					}
+					&.fa-chevron-right {
+						float: right;
+						margin-right: -50px;
+					}
+					@media(max-width: 768px) {
+						&.fa-chevron-left {
+							margin-left: -20px;
+						}
+						&.fa-chevron-right {
+							float: right;
+							margin-right: -20px;
+						}
+					}
+				}
+			}
+			// campanhas
+			.pecas {
+				display: none;
+				position: absolute;
+				height: 0;
+			}
+			.mostrar-pecas {
+				display: block !important;
+				position: absolute;
+				background-color: rgba(204, 153, 51, 1);
+				width: 100%;
+				text-align: left;
+				padding: 5%;
+				font-size: 1.3em;
+				height: 100vh;
+				opacity: 1;
+				animation-name: fadeInHeight;
+				animation-iteration-count: 1;
+				animation-timing-function: ease-in;
+				animation-duration: 1.2s;
+				a:link {
+					color: #3B1C2C;
+				}
+				a:visited {
+					color: #3B1C2C;
+				}
+				a:hover {
+					padding-left: 10px;
+					transition: 1s;
+				}
+				.btn-outline-dark {
+					cursor: pointer;
+				}
+				p {
+					&:first-child {
+						font-size: 0.7em;
+						color: #3B1C2C;
+					}
+				}
+			}
+			.card-title {
+				height: 60px;
+				color: #FFF;
+				font-weight: lighter !important;
+			}
+			.card-text {
+				height: 90px;
+				color: #FFF;
+				display: none;
+			}
+		}
+		.carousel_novo {
+			.carousel-item {
+				margin-right: 0px !important;
+			}
+			@media (min-width: 768px) {
+				/* show 3 items */
+				.carousel-inner .active,
+				.carousel-inner .active+.carousel-item,
+				.carousel-inner .active+.carousel-item+.carousel-item,
+				.carousel-inner .active+.carousel-item+.carousel-item+.carousel-item {
+					display: block;
+				}
+				.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+				.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item,
+				.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item+.carousel-item,
+				.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item+.carousel-item+.carousel-item {
+					transition: none;
+				}
+				.carousel-inner .carousel-item-next,
+				.carousel-inner .carousel-item-prev {
+					position: relative;
+					transform: translate3d(0, 0, 0);
+				}
+				.carousel-inner .active.carousel-item+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+					position: absolute;
+					top: 0;
+					right: -33%;
+					z-index: -1;
+					display: block;
+					visibility: visible;
+				}
+				/* left or forward direction */
+				.active.carousel-item-left+.carousel-item-next.carousel-item-left,
+				.carousel-item-next.carousel-item-left+.carousel-item,
+				.carousel-item-next.carousel-item-left+.carousel-item+.carousel-item,
+				.carousel-item-next.carousel-item-left+.carousel-item+.carousel-item+.carousel-item,
+				.carousel-item-next.carousel-item-left+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+					position: relative;
+					transform: translate3d(-100%, 0, 0);
+					visibility: visible;
+				}
+				/* farthest right hidden item must be abso position for animations */
+				.carousel-inner .carousel-item-prev.carousel-item-right {
+					position: absolute;
+					top: 0;
+					left: 0;
+					z-index: -1;
+					display: block;
+					visibility: visible;
+				}
+				/* right or prev direction */
+				.active.carousel-item-right+.carousel-item-prev.carousel-item-right,
+				.carousel-item-prev.carousel-item-right+.carousel-item,
+				.carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item,
+				.carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+.carousel-item,
+				.carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+					position: relative;
+					transform: translate3d(100%, 0, 0);
+					visibility: visible;
+					display: block;
+					visibility: visible;
+				}
+			}
+		}
+	}
+	.simple-pagination {
+		margin: 0px auto !important;
+		li {
+			a {
+				border-radius: 20px;
+				height: 25px;
+				width: 25px;
+				line-height: 25px;
+			}
+			span {
+				border-radius: 20px;
+				height: 25px;
+				width: 25px;
+				line-height: 25px;
+				&.current {
+					background: #3B1C2C;
+					color: #FFF;
+					border-color: #3B1C2C;
+				}
+			}
+		}
+	}
+	#historia {
+		background-color: #EBEAF1;
+		h2 {
+			background-image: url('#{$path-img}/bg-h2-historia.png');
+			line-height: 40px;
+			padding-top: 150px;
+			background-repeat: no-repeat;
+		}
+		.voto-feminino {
+			margin-bottom: 70px;
+			margin-top: 50px;
+		}
+		.banner_bg {
+			background-image: url('#{$path-img}/bg-legislacao.jpg');
+		}
+		.timeline {
+			padding-top: 0px;
+			.carousel-indicators li {
+				height: 90px;
+				&.active i {
+					color: #68314E;
+				}
+			}
+			.carousel-control-prev,
+			.carousel-control-next {
+				color: #3B1C2C;
+				opacity: 1;
+			}
+		}
+		.timeline .carousel-indicators li.barra i {
+			color: #68314E;
+			transition: color 0.5s ease;
+		}
+		.timeline .carousel-indicators li {
+			i {
+				color: #C8C8C8;
+				background-color: #EBEAF1;
+				font-size: 1em;
+				padding-top: 30px;
+			}
+			&.active {
+				font-size: 2.5em;
+				transition: 1s;
+				height: 90px;
+				i {
+					visibility: visible;
+					padding-top: 20px;
+				}
+			}
+		}
+		.timeline .carousel-indicators li {
+			text-indent: 0px;
+			background-image: url('#{$path-img}/bg-timeline-linha.png') !important;
+			background-repeat: repeat-x;
+			background-position: center;
+			color: #CC9933;
+			width: 7%;
+			padding-left: 10px;
+			text-align: center;
+			&:first-child {
+				padding-left: 0px;
+			}
+		}
+		.timeline .carousel-indicators li.barra {
+			background-image: url('#{$path-img}/bg-timeline-linha-ativa-mulher.png') !important;
+			background-repeat: repeat-x;
+			background-position: center;
+		}
+		.timeline #timeline-carousel .carousel-inner .carousel-item {
+			figure {
+				text-align: right;
+				img {
+					width: 70%;
+					@media (max-width: 768px) {
+						width: 100%;
+					}
+				}
+			}
+			font-size: 1.1em;
+			h4 {
+				display: block !important;
+				font-size: 3em;
+				color: #CC9933;
+				text-align: center;
+				font-style: bold;
+				visibility: hidden;
+				@media (max-width: 768px) {
+					visibility: visible;
+				}
+			}
+			h5 {
+				color: #CC9933;
+				text-align: right;
+				font-size: 2em;
+				@media (max-width: 768px) {
+					margin-bottom: 50px;
+					text-align: center;
+					margin-top: 50px;
+				}
+			}
+			b {
+				color: #68314E;
+				font-weight: 700;
+			}
+			strong {
+				font-size: 1.3em;
+			}
+		}
+	}
+	//fim:historria
+	#legislacao {
+		background-color: #EBEAF1;
+		h2 {
+			background-image: url('#{$path-img}/bg-h2-legislacao.png');
+		}
+		.card-header {
+			background: transparent;
+			.card-link {
+				color: #CC9933;
+				font-size: 2em;
+				i {
+					float: right;
+					margin-top: 10px;
+				}
+			}
+		}
+		.btn-primary {
+			color: #CC9933;
+			background-color: #3B1C2C;
+			border: none;
+			margin-bottom: 10px;
+			margin-right: 8px;
+			box-shadow: none;
+			&[aria-expanded="true"] {
+				color: #3B1C2C;
+				background-color: #CC9933;
+			}
+		}
+		.banner_bg {
+			background-image: url('#{$path-img}/bg-legislacao.jpg');
+		}
+		.card-body {
+			a:link,
+			a:visited {
+				color: #3B1C2C;
+				font-size: 1.7em;
+				font-weight: 700;
+			}
+			.leg_item {
+				margin-bottom: 30px;
+				border-bottom: #C8C8C8 1px solid;
+				border-left: #C8C8C8 1px solid;
+				padding: 3%;
+				padding-top: 0px;
+				p {
+					&:last-child {
+						font-weight: 700;
+						font-style: italic;
+					}
+				}
+				span {
+					font-size: 1.5em;
+					color: #CC9933;
+				}
+			}
+		}
+	}
+	#noticias {
+		background-color: #EBEAF1;
+		h2 {
+			background-image: url('#{$path-img}/bg-h2-nas-redes-sociais.png');
+		}
+		.banner_bg {
+			background-image: url('#{$path-img}/bg-noticias.jpg');
+		}
+		#noticias_lista {
+			div {
+				margin-bottom: 30px;
+			}
+			a:link,
+			a:visited {
+				color: #3B1C2C;
+			}
+			h3 {
+				color: #3B1C2C;
+				font-size: 1.7em;
+				font-weight: normal;
+				margin-bottom: 0px;
+				@media(max-width: 768px) {
+					font-size: 1.3em;
+				}
+			}
+			p {
+				padding-bottom: 0px;
+				padding-top: 0px;
+				margin-bottom: 0px;
+				margin-top: 0px;
+			}
+			span {
+				color: #CC9933;
+				font-weight: bold;
+				font-size: 1.3em;
+				@media(max-width: 768px) {
+					font-size: 1em;
+				}
+			}
+		}
+	}
+	.subtitulo {
+		text-align: center;
+		font-size: 2em;
+		width: 70%;
+		margin: 0px auto;
+		margin-bottom: 10%;
+		@media(max-width: 768px) {
+			font-size: 1.5em;
+			width: 90%;
+		}
+		span {
+			font-style: italic;
+		}
+	}
+
+  #guia {
+    background-color: #ebeaf1;
+
+    h3 {
+      font-size: 1.3em;
+    }
+
+    a {
+      color: #68314e;
+    font-weight: bold;
+    }
+  }
+}
+
+//mulheres-na-politica
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInHeight {
+	0% {
+		height: 0;
+		opacity: 0;
+	}
+	100% {
+		height: 100vh;
+		opacity: 1;
+	}
+}
+
+#sideBarRybena {
+	@media (max-width: 768px) {
+		top: 82% !important;
+	}
+}
+
+.owl-carousel {
+	.mostrar-pecas {
+		display: block !important;
+		position: absolute;
+		background-color: rgba(204, 153, 51, 1);
+		width: 100%;
+		text-align: left;
+		padding: 5%;
+		font-size: 1.3em;
+		height: 100vh;
+		opacity: 1;
+		animation-name: fadeInHeight;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in;
+		animation-duration: 1.2s;
+		z-index: 99999999;
+		a:link {
+			color: #3B1C2C;
+		}
+		a:visited {
+			color: #3B1C2C;
+		}
+		a:hover {
+			padding-left: 10px;
+			transition: 1s;
+		}
+		.btn-outline-dark {
+			cursor: pointer;
+		}
+		p {
+			&:first-child {
+				font-size: 0.7em;
+				color: #3B1C2C;
+			}
+		}
+	}
+	.conteudo {
+		height: 450px;
+	}
+	img {
+		position: absolute;
+	}
+	.card-body {
+		position: absolute;
+		z-index: 99999999;
+		background-color: rgba(59, 28, 44, 0.8);
+		color: #FFF;
+		bottom: 0;
+		text-align: center;
+		width: 100%;
+		h4 {
+			height: 70px;
+			font-weight: lighter;
+		}
+		.btn-primary {
+			color: #CC9933;
+			background-color: transparent;
+			border-color: #CC9933;
+			cursor: pointer;
+			&:hover {
+				color: #FFF;
+				background-color: #CC9933;
+				border-color: #CC9933;
+			}
+		}
+	}
+	.pecas {
+		position: absolute;
+		display: none;
+	}
+	.owl-nav {
+		font-size: 7em;
+		color: #3B1C2C;
+		.owl-prev {
+			width: 15px;
+			height: 100px;
+			position: absolute;
+			top: 32%;
+			margin-left: -38px;
+			display: block !important;
+			border: 0px solid black;
+			@media(max-width: 768px) {
+				top: -20%;
+				margin-left: 5%;
+			}
+		}
+		.owl-next {
+			width: 15px;
+			height: 100px;
+			position: absolute;
+			top: 32%;
+			right: -30px;
+			display: block !important;
+			border: 0px solid black;
+			@media(max-width: 768px) {
+				top: -20%;
+				right: 5%;
+			}
+		}
+		.owl-prev i,
+		.owl-next i {
+			transform: scale(1, 6);
+			color: #3B1C2C;
+		}
+	}
+}
+

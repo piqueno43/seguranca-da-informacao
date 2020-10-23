@@ -1,2 +1,622 @@
-@import 'jovem-eleitor/simplebar';
-@import 'jovem-eleitor/style';
+@import './shared/simplebar';
+
+$path-img: '/assets/images/jovem-eleitor';
+#jovem-eleitor {
+	background-color: #E6ECF0;
+	background-image: url(#{$path-img}/bg-jovem-eleitor.png);
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: contain;
+	min-height: 800px;
+	padding-top: 150px;
+	padding-bottom: 100px;
+	position: relative;
+	@media (max-width: 576px) {
+		background-size: cover;
+		padding-top: 0px;
+	}
+	.perguntas {
+		position: absolute;
+		width: 100%;
+		height: 750px;
+		background: transparent;
+		z-index: 2;
+		@media (max-width: 576px) {
+			height: 100%;
+			position: inherit;
+			width: 100%;
+		}
+		@media (max-width: 576px) {
+			.pessoa {
+				display: none;
+			}
+		}
+		.container {
+			position: relative;
+			min-height: 700px;
+			@media (max-width: 576px) {
+				min-height: 100%;
+			}
+		}
+		.pergunta {
+			position: absolute;
+			@media (max-width: 576px) {
+				position: inherit;
+				width: 100%;
+				margin: 5px 0;
+			}
+			&.estou-nessa-pergunta {
+				.balao-pergunta {
+					background: #3E4496;
+					color: #fff;
+					a {
+						color: #fff;
+					}
+				}
+			}
+			.balao-pergunta {
+				background-color: #fff;
+				border-radius: 10px;
+				color: #3E4496;
+				cursor: pointer;
+				font-weight: bold;
+				min-height: 50px;
+				padding: 10px;
+				position: absolute;
+				width: 170px;
+				text-align: center;
+				@media (max-width: 576px) {
+					position: inherit;
+					width: 100%;
+				}
+				a {
+					&:hover {
+						color: #fff;
+						text-decoration: none;
+					}
+				}
+				&:hover {
+					background: #3E4496;
+					color: #fff;
+					a {
+						color: #fff;
+					}
+				}
+			}
+			.duvidas {
+				position: absolute;
+				@media (max-width: 576px) {
+					display: none;
+				}
+				span {
+					position: absolute;
+					display: block;
+					width: 27px;
+					height: 27px;
+					background-image: url(#{$path-img}/duvida.png);
+					background-position: center;
+					background-repeat: no-repeat;
+				}
+			}
+		}
+		@keyframes piscar {
+			0% {
+				opacity: .4;
+			}
+			100% {
+				opacity: 0;
+			}
+		}
+		.pergunta-1 {
+			top: 273px;
+			left: 90px;
+			.balao-pergunta {
+				top: -20px;
+				left: -90px;
+			}
+			.duvidas {
+				top: 0;
+				right: 0;
+				span {
+					&:nth-of-type(1) {
+						top: -12px;
+						right: -18px;
+						animation: piscar 1.5s infinite;
+					}
+					&:nth-of-type(2) {
+						top: -30px;
+						right: 30px;
+						animation: piscar 2s infinite;
+					}
+					&:nth-of-type(3) {
+						top: 30px;
+						animation: piscar 2.5s infinite;
+					}
+				}
+			}
+		}
+		.pergunta-2 {
+			top: -25px;
+			left: 20px;
+			.balao-pergunta {
+				top: -20px;
+				right: -130px;
+			}
+			.duvidas {
+				top: 0;
+				right: 0;
+				span {
+					&:nth-of-type(1) {
+						top: -46px;
+						right: 93px;
+						animation: piscar 1.5s infinite;
+					}
+					&:nth-of-type(2) {
+						top: -15px;
+						right: 130px;
+						animation: piscar 2s infinite;
+					}
+					&:nth-of-type(3) {
+						top: -35px;
+						right: 45px;
+						animation: piscar 2.5s infinite;
+					}
+				}
+			}
+		}
+		.pergunta-3 {
+			top: -208px;
+			left: 350px;
+			.balao-pergunta {
+				top: 70px;
+				right: -120px;
+			}
+			.duvidas {
+				top: 0;
+				right: 0;
+				span {
+					&:nth-of-type(1) {
+						top: -13px;
+						right: 53px;
+						animation: piscar 1.5s infinite;
+					}
+					&:nth-of-type(2) {
+						top: 62px;
+						right: 51px;
+						animation: piscar 2s infinite;
+					}
+					&:nth-of-type(3) {
+						top: 25px;
+						right: 36px;
+						animation: piscar 2.5s infinite;
+					}
+				}
+			}
+		}
+		.pergunta-4 {
+			top: 122px;
+			right: 150px;
+			.balao-pergunta {
+				top: -30px;
+				right: -140px;
+			}
+			.duvidas {
+				top: 0;
+				right: 0;
+				span {
+					&:nth-of-type(1) {
+						top: -21px;
+						right: 122px;
+						animation: piscar 1.5s infinite;
+					}
+					&:nth-of-type(2) {
+						top: -15px;
+						right: 37px;
+						animation: piscar 2s infinite;
+					}
+					&:nth-of-type(3) {
+						top: -39px;
+						right: 78px;
+						animation: piscar 2.5s infinite;
+					}
+				}
+			}
+		}
+		.pergunta-5 {
+			bottom: 80px;
+			right: -150px;
+			.balao-pergunta {
+				top: -40px;
+				left: -90px;
+			}
+			.duvidas {
+				top: 0;
+				right: 0;
+				span {
+					&:nth-of-type(1) {
+						top: -25px;
+						left: -76px;
+						animation: piscar 1.5s infinite;
+					}
+					&:nth-of-type(2) {
+						top: -15px;
+						left: 6px;
+						animation: piscar 2s infinite;
+					}
+					&:nth-of-type(3) {
+						top: -44px;
+						left: -33px;
+						animation: piscar 2.5s infinite;
+					}
+				}
+			}
+		}
+		.pergunta-6 {
+			top: -210px;
+			right: -150px;
+			.balao-pergunta {
+				top: 160px;
+				left: -160px;
+			}
+			.duvidas {
+				top: 0;
+				right: 0;
+				span {
+					&:nth-of-type(1) {
+						top: 250px;
+						left: -120px;
+						animation: piscar 1.5s infinite;
+					}
+					&:nth-of-type(2) {
+						top: 260px;
+						left: -80px;
+						animation: piscar 2s infinite;
+					}
+					&:nth-of-type(3) {
+						top: 240px;
+						left: -40px;
+						animation: piscar 2.5s infinite;
+					}
+				}
+			}
+		}
+	}
+	.respostas {
+		background-image: url(#{$path-img}/celular-chat.png);
+		background-position: center top;
+		background-repeat: no-repeat;
+		margin: 0 auto;
+		max-width: 405px;
+		min-height: 775px;
+		padding-top: 30px;
+		position: relative;
+		z-index: 3;
+		@media (max-width: 576px) {
+			background-size: 320px 549px;
+			min-height: 570px;
+		}
+		@media (max-width: 400px) {
+			background-size: 270px 463px;
+			min-height: 570px;
+		}
+		#conteudo-jovem-eleitor {
+			margin: 0 auto;
+			max-height: 580px;
+			padding: 0px 10px 0 8px;
+			width: 88%;
+			@media (max-width: 576px) {
+				width: 70%;
+				max-height: 460px;
+			}
+			@media (max-width: 400px) {
+				width: 71%;
+				max-height: 380px;
+			}
+			.esconder-load {
+				display: none;
+			}
+			.load-conversa {
+				background-color: transparent;
+				position: absolute;
+				right: 0;
+				bottom: -80px;
+				@media (max-width: 576px) {
+					bottom: -58px;
+				}
+				@media (max-width: 400px) {
+					bottom: -51px;
+				}
+				img {
+					width: 150px;
+					@media (max-width: 576px) {
+						width: 120px;
+					}
+					@media (max-width: 400px) {
+						width: 100px;
+					}
+				}
+			}
+			.info-duvidas {
+				border-radius: 10px;
+				overflow: hidden;
+				background-color: #BAFFC0;
+				img {
+					width: 100%;
+					border-radius: 10px;
+					overflow: hidden;
+				}
+				h3 {
+					color: #3EA76A;
+					font-weight: bold;
+					font-size: 22px;
+					margin: 0;
+					padding: 10px;
+				}
+				p {
+					color: #24613E;
+					font-size: 18px;
+					margin: 0;
+					padding: 0 10px 10px 10px;
+				}
+			}
+			.container-respostas {
+				margin-top: 10px;
+				min-height: 200px;
+				display: flex;
+				align-items: flex-end;
+				flex-wrap: wrap;
+				@media (max-width: 576px) {
+					min-height: 97px;
+				}
+				ul {
+					margin: 0;
+					padding: 0;
+					li {
+						list-style: none;
+						border-radius: 10px;
+						margin-bottom: 7px;
+						min-height: 30px;
+						padding: 20px 10px;
+						width: 300px;
+						box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, .2);
+						@media (max-width: 576px) {
+							width: 225px;
+						}
+						@media (max-width: 400px) {
+							width: 164px;
+						}
+					}
+					&.pergunta-selecionada {
+						display: none;
+						font-weight: bold;
+						font-size: 2px;
+						li {
+							background-color: #E1E1E1;
+							margin-right: 40px;
+						}
+					}
+					&.ativar-pergunta-selecionada {
+						display: block;
+						font-size: 18px;
+					}
+					&.conversa {
+						display: none;
+						li {
+							background-color: #BAFFC0;
+							right: 0;
+							margin-left: 40px;
+							&:last-child {
+								background-color: transparent;
+								text-align: right;
+								box-shadow: none;
+							}
+						}
+					}
+					&.ativar-conversa {
+						display: block;
+					}
+					.esconder {
+						visibility: hidden;
+						font-size: 2px;
+					}
+					.mostrar {
+						visibility: visible;
+						transition: all .2s;
+						font-size: 18px;
+					}
+				}
+				a {
+					color: #FF7541;
+					border-bottom: 3px solid #FF7541;
+					padding: 0 5px;
+					&:hover {
+						background-color: #FF7541;
+						color: #fff;
+						text-decoration: none;
+						transition: all .3s;
+					}
+				}
+			}
+		}
+	}
+	.calculadora-jovem-eleitor {
+		background-color: #fff;
+		background-image: url(#{$path-img}/boneco-perguntas-calculadora.png);
+		background-position: center 40px;
+		background-repeat: no-repeat;
+		border-bottom: #ffcc00 solid 4px;
+		border-top: #ffcc00 solid 4px;
+		padding-top: 391px;
+		@media (max-width: 576px) {
+			background-size: 450px auto;
+			background-position: 0 73px;
+			padding-top: 290px;
+		}
+		@media (max-width: 460px) {
+			background-size: 350px auto;
+			background-position: 0 91px;
+			padding-top: 260px;
+		}
+		@media (max-width: 360px) {
+			background-size: 300px auto;
+			background-position: 0 61px;
+			padding-top: 206px;
+		}
+		.box-data-nascimento {
+			background: rgb(204, 204, 204);
+			background: linear-gradient(315deg, rgba(204, 204, 204, 1) 49%, rgba(255, 205, 83, 1) 49%);
+			height: 75px;
+			margin-bottom: 50px;
+			display: flex;
+			justify-content: center;
+			@media (max-width: 576px) {
+				background: rgb(204, 204, 204);
+				padding-bottom: 10px;
+				padding-top: 10px;
+				height: auto;
+			}
+			.form-data-nascimento {
+				.label-data-nascimento {
+					font-weight: bold;
+					line-height: 18px;
+					margin-left: 120px;
+					margin-right: 50px;
+					text-align: right;
+					width: 120px;
+					@media (max-width: 576px) {
+						margin-left: 0;
+						margin-right: 0;
+						width: auto;
+					}
+				}
+				.input-data-nascimento {
+					padding-left: 30px;
+					padding-right: 30px;
+					width: 140px;
+					@media (max-width: 576px) {}
+				}
+			}
+		}
+		.resposta-calculadora {
+			margin: 0 auto;
+			border-left: 10px solid #e24c4b;
+			margin-bottom: 30px;
+		}
+	}
+	.banner-jovem-eleitor {
+		.row {
+			margin-bottom: 30px;
+			padding-bottom: 30px;
+			border-bottom: 1px #CCC solid;
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+		.col-md-8 {
+			p {
+				font-size: 1.3em;
+			}
+			a {
+				font-weight: bolder;
+				font-style: italic;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		.banner {
+			height: 150px;
+			background-repeat: no-repeat;
+			background-position: center;
+			font-size: 24px;
+			font-weight: bold;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+		}
+		a {
+			color: #915A12;
+			border-bottom: 3px solid #915A12;
+			padding: 0 5px;
+			&:hover {
+				background-color: #915A12;
+				color: #fff;
+				text-decoration: none;
+				transition: all .3s;
+				text-decoration: none !important;
+			}
+		}
+		h3 {
+			border-bottom: 2px solid;
+			padding-bottom: 10px;
+		}
+		.banner {
+			background-size: 100% 100%;
+		}
+		.banner-titulo {
+			background-image: url(#{$path-img}/btn_titulo-eleitoral.png);
+			color: #16512F;
+		}
+		.banner-campanha {
+			background-image: url(#{$path-img}/btn_campanha-jovem-eleitor.png);
+			color: #915A12;
+		}
+		.banner-eleicoes {
+			background-image: url(#{$path-img}/btn_eleicoes.png);
+			color: #E6AAAF;
+		}
+		.banner-je {
+			background-image: url(#{$path-img}/btn_justica-eleitoral.png);
+			color: #915A12;
+		}
+	}
+}
+
+#titulo-eleitoral {
+	h2 {
+		&.titulo-secao {
+			text-align: center;
+			padding: 24%;
+			padding-top: 40px;
+			padding-bottom: 40px;
+			font-style: italic;
+			font-weight: bolder;
+			color: #000;
+			font-size: 3em;
+			line-height: 40px;
+		}
+		&.titulo-pagina {
+			color: #000;
+			font-size: 1.7em;
+			font-style: italic;
+			font-weight: bolder;
+			padding-bottom: 40px;
+			padding-top: 40px;
+			text-align: center;
+		}
+	}
+	.titulo_eleitoral_slide {
+		border-bottom: gold 3px solid;
+	}
+}
+
+.quebrar-link {
+	word-break: break-all;
+}
+
+.imagem-principal {
+	@media (max-width: 576px) {
+		overflow: hidden;
+	}
+	img {
+		@media (max-width: 576px) {
+			max-width: 905px;
+		}
+		@media (max-width: 400px) {
+			max-width: 632px;
+		}
+	}
+}
+
+
