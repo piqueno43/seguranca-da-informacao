@@ -1,0 +1,107 @@
+#sobre-tps {
+	background: url("#{$path-img}/bg-faq.png") no-repeat;
+	.conteudos-info {
+		margin-bottom: 30px;
+	}
+	.faq-tps {
+		max-width: 70%;
+	}
+	@media (max-width: 767.98px) {
+		.faq-tps {
+			max-width: 100%;
+		}
+	}
+	.card {
+		margin-bottom: 20px;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		border-top-right-radius: 18px;
+		border-bottom-right-radius: 18px;
+		border-left: 4px solid #00a769;
+		-webkit-box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.15);
+		moz-box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.15);
+		box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.15);
+		h3 {
+			font-size: 1.3rem;
+			padding: 5px 0 4px 0;
+		}
+	}
+	.card-header {
+		border-bottom: none;
+		cursor: pointer;
+		border-top-right-radius: 18px;
+		border-bottom-right-radius: 18px;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		background-color: #fff;
+		&:hover {
+			background-color: #006634;
+			color: #fff;
+		}
+		h3[aria-expanded="false"] {
+			background: url("#{$path-img}/icon_more.png") no-repeat 97%;
+		}
+		h3[aria-expanded="true"] {
+			background: url("#{$path-img}/icon_less.png") no-repeat 97%;
+		}
+	}
+}
+
+#resultados {
+	margin-bottom: 150px;
+	.conteudos-info {
+		margin: 140px 0 80px 0;
+		text-align: left;
+	}
+	.box-result {
+		background-color: #00a769;
+		padding: 10px 10px 5px 10px;
+		border-radius: 35px;
+		text-align: center;
+		-webkit-box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.15);
+		moz-box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.15);
+		box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.15);
+	}
+	img {
+		margin: 0 0 10px 0;
+	}
+	img[src="img/icon_ataque.png"] {
+		max-width: 160px;
+	}
+	img[src="img/icon_starts.png"] {
+		max-width: 90px;
+	}
+	img[src="img/icon_pessoas.png"] {
+		max-width: 140px;
+		margin: 25px 0 25px 0;
+	}
+	img[src="img/icon_time.png"] {
+		max-width: 90px;
+		margin: 15px 0 15px 0;
+	}
+	.titulo-result {
+		color: #00f4a6;
+		text-transform: uppercase;
+		text-align: left;
+		border-left: 2px solid #fff;
+		h3 {
+			font-size: 1.1em;
+			font-weight: bold;
+			margin-top: 10px;
+		}
+	}
+	.numeros-result {
+		color: #fff;
+		font-size: 2.8em;
+		font-weight: bold;
+		font-family: 'Quantico', sans-serif;
+	}
+	p {
+		color: #fff;
+		font-size: 1em;
+		line-height: 21px;
+		height: 45px;
+		margin: 15px 0 0 0;
+	}
+}
+

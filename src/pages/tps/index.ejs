@@ -1,0 +1,1489 @@
+<%
+const config = {
+  'title': 'Teste Público de Segurança - Justiça Eleitoral',
+  'path': 'tps',
+  'fonts': [
+    'shared/fonts/source-sans-pro.css',
+    'tps/fonts/ibm-plex-sans.css',
+  ],
+  'styles': [
+    'shared/bootstrap.css',
+    'shared/font-awesome-5.css',
+    'shared/fancybox.css',
+    'shared/style.css',
+    'shared/simplePagination.css',
+    'tps.css',
+  ],
+  'scripts': [
+    'shared/jquery-3.4.1.min.js',
+    'shared/popper.min.js',
+    'shared/bootstrap.min.js',
+    'shared/jquery.simplePagination.min.js',
+    'shared/geral.js',
+    'tps/tps.js',
+  ],
+};
+%>
+<%- include('../../templates/shared/header', { config })%>
+<%- include('../../templates/shared/menu', { config }); -%>
+<main id="conteudo-tps">
+   <nav id="navegacao-tps" class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+         <a class="navbar-brand" href="#">
+         <img src="/assets/images/tps/logo-tps.png" width="229" height="107" alt="Testes Públicos de Segurança">
+         </a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu-principal" aria-controls="navbar-menu-principal" aria-expanded="false" aria-label="Alterna navegação">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbar-menu-principal">
+            <ul class="navbar-nav">
+               <li class="nav-item active">
+                  <a class="nav-link" href="#">Início <span class="sr-only">(Página atual)</span></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#info-gerais">Informações</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#sobre-tps">Por dentro do TPS</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#edicoes-anteriores">Linha do Tempo</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#resultados">Resultados</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+   <section id="header-tps">
+      <div class="container">
+         <div class="row d-flex flex-nowrap ajuste-mobile-header">
+            <div class="col-12 col-lg-6 header-conteudo-tps">
+               <div class="intro-tps">
+                  <p>Criado para aprimorar o processo eletrônico de votação, o Teste Público de Segurança (TPS) é um evento permanente do calendário da Justiça Eleitoral.</p>
+                  <p>Realizado, preferencialmente, no ano anterior às eleições, traz a participação e colaboração de especialistas na busca por problemas ou fragilidades que, uma vez identificadas, serão resolvidas – e testadas! – antes da realização
+                     das eleições.
+                  </p>
+               </div>
+               <div class="atributos-tps">
+                  <ul>
+                     <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="O evento demonstra a maturidade e confiança nas eleições informatizadas brasileiras.">Maturidade</a>
+                     </li>
+                     <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="Acesso à informação para diversas instituições e qualquer cidadão brasileiro.">Transparência</a>
+                     </li>
+                     <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="Trabalho participativo junto à sociedade. Aberto a críticas e sugestões.">Participação</a>
+                     </li>
+                     <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="Cada investigador que nos aponta defeitos, colabora para melhorar a eficiência do processo.">Colaboração</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-12 col-lg-9 video-tps">
+               <div class="moldura-video"></div>
+               <div class="filtro-video"></div>
+               <div class="video-gif">
+                  <div class="play"><span data-fancybox href="https://www.youtube.com/embed/videoseries?list=PLljYw1P54c4xBHcwONpkB0vMAhovC8sOe"><img
+                     src="/assets/images/tps/play-2.png" alt="Assistir vídeo"></span></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- <span class="col-lg-12  info-gerais_video text-center"><a data-fancybox
+      href="https://www.youtube.com/watch?v=OvCVF7jypko&list=PLljYw1P54c4xBHcwONpkB0vMAhovC8sOe"
+      title="Passo a passo do TPS 2019"><img src="/assets/images/tps/modelo-video-mascara-tps.png" alt="Assistir vídeo"
+          class="img-fluid" style="background-image:
+                                          url(https://i.ytimg.com/vi/OvCVF7jypko/hqdefault.jpg);
+                                          background-size: 150%; background-position-y: -85px;"></a></span>-->
+   <section id="info-gerais">
+      <div class="container">
+         <h2 class="text-center">Teste Público de Segurança 2019<br><span>5ª Edição</span></h2>
+         <div class="row">
+            <div class="col-12 pl-5 pr-5">
+               <ul class="nav nav-pills" id="nav-infos-tps" role="tablist">
+                  <li class="nav-item">
+                     <a class="nav-link active" id="conteudo-tps-live-tab" data-toggle="pill" href="#conteudo-tps-live" role="tab" aria-controls="conteudo-tps-live" aria-selected="true">TPS<img src="/assets/images/tps/tps-live.png" height="30px"></a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" id="conteudo-info-gerais-tab" data-toggle="pill" href="#conteudo-info-gerais" role="tab" aria-controls="conteudo-info-gerais" aria-selected="false">Informações gerais</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" id="conteudo-cronograma-tab" data-toggle="pill" href="#conteudo-cronograma" role="tab" aria-controls="conteudo-cronograma" aria-selected="false">Cronograma</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" id="conteudo-inscricoes-tab" data-toggle="pill" href="#conteudo-inscricoes" role="tab" aria-controls="conteudo-inscricoes" aria-selected="false">Inscrições</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" id="conteudo-documentacao-tab" data-toggle="pill" href="#conteudo-documentacao" role="tab" aria-controls="conteudo-documentacao" aria-selected="false">Documentação</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" id="conteudo-investigacao-tab" data-toggle="pill" href="#conteudo-investigacao" role="tab" aria-controls="conteudo-investigacao" aria-selected="false">Área do Investigador</a>
+                  </li>
+               </ul>
+               <div class="tab-content" id="nav-infos-tpsContent">
+                  <div class="tab-pane fade show active" id="conteudo-tps-live" role="tabpanel" aria-labelledby="conteudo-tps-live-tab">
+                     <!-- TPS LIVE -->
+                     <p class="tps-live-sub">Notícias e publicações sobre o Teste Público de Segurança (TPS), que teve sua quinta edição realizada entre os dias 25 e 29 de novembro de 2019, no TSE. </p>
+                     <div id="accordion">
+                        <div class="row">
+                           <div class="col-md-8">
+                              <div class="card">
+                                 <div class="card-header noticias" id="headingTwo">
+                                    <h5 class="mb-0">
+                                       <button class="btn btn-link collapsed">
+                                       Últimas notícias
+                                       </button>
+                                    </h5>
+                                 </div>
+                                 <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+                                    <div class="card-body">
+                                       <div class="row painel-esclarecimentos">
+                                       </div>
+                                       <div id="paginacao-esclarimentos">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- PODCAST -->
+                           <div class="col-md-4">
+                              <div class="card ">
+                                 <div class="card-header podcast" id="headingThree">
+                                    <h5 class="mb-0">
+                                       <button class="btn btn-link collapsed">
+                                       Podcast
+                                       </button>
+                                    </h5>
+                                 </div>
+                                 <div id="collapseThree" class="collapse show podcast-conteudo" aria-labelledby="headingThree" data-parent="#accordion">
+                                    <div class="card-body text-center">
+                                       <audio controls>
+                                          <!-- <source src="horse.ogg" type="audio/ogg"> -->
+                                          <source
+                                             src="/assets/media/tps/ministra-rosa-weber-encerra-o-tps-2019.mp3"
+                                             type="audio/mpeg">
+                                          Ministra Rosa Weber encerra o TPS 2019
+                                       </audio>
+                                       <p class="text-left">Ministra Rosa Weber encerra o TPS 2019<br>
+                                          <span>29.11.2019 - 20h12</span>
+                                       </p>
+                                       <hr>
+                                       <audio controls>
+                                          <!-- <source src="horse.ogg" type="audio/ogg"> -->
+                                          <source
+                                             src="/assets/media/tps/resultado-preliminar-do-tps-2019-sera-divulgado-as.mp3"
+                                             type="audio/mpeg">
+                                          Resultado preliminar do TPS 2019 será divulgado às 17h
+                                       </audio>
+                                       <p class="text-left">Resultado preliminar do TPS 2019 será divulgado às 17h<br>
+                                          <span>29.11.2019 - 13h00</span>
+                                       </p>
+                                       <hr>
+                                       <audio controls>
+                                          <!-- <source src="horse.ogg" type="audio/ogg"> -->
+                                          <source
+                                             src="/assets/media/tps/equipe-de-apoio-do-tps-2019-auxilia-e-estimula.mp3"
+                                             type="audio/mpeg">
+                                          Equipe de apoio do TPS 2019 auxilia e estimula
+                                          investigadores a quebrar barreiras de segurança do sistema
+                                          de votação
+                                       </audio>
+                                       <p class="text-left">Equipe de apoio do TPS 2019 auxilia e estimula investigadores a quebrar barreiras de segurança do sistema de votação<br>
+                                          <span>29.11.2019 - 09h00</span>
+                                       </p>
+                                       <hr>
+                                       <audio controls>
+                                          <!-- <source src="horse.ogg" type="audio/ogg"> -->
+                                          <source
+                                             src="/assets/media/tps/edicoes-anteriores-do-tps-resultaram-em-melhorias.mp3"
+                                             type="audio/mpeg">
+                                          Edições anteriores do TPS resultaram em melhorias para a
+                                          urna
+                                       </audio>
+                                       <p class="text-left">Edições anteriores do TPS resultaram em melhorias para a urna<br>
+                                          <span>28.11.2019 - 17h26</span>
+                                       </p>
+                                       <hr>
+                                       <audio controls>
+                                          <!-- <source src="horse.ogg" type="audio/ogg"> -->
+                                          <source
+                                             src="/assets/media/tps/tps-2019-relatorios-sao-elaborados-com-base-nos.mp3"
+                                             type="audio/mpeg">
+                                          TPS 2019: relatórios são elaborados com base nos resultados
+                                          dos planos de testes
+                                       </audio>
+                                       <p class="text-left"> TPS 2019: relatórios são elaborados com base nos resultados dos planos de testes<br>
+                                          <span>28.11.2019 - 13h00</span>
+                                       </p>
+                                       <hr>
+                                       <audio controls>
+                                          <!-- <source src="horse.ogg" type="audio/ogg"> -->
+                                          <source
+                                             src="/assets/media/tps/tps-2019-ambiente-monitorado-garante-seguranca-dos.mp3"
+                                             type="audio/mpeg">
+                                          TPS 2019: ambiente monitorado garante segurança dos testes
+                                       </audio>
+                                       <p class="text-left">TPS 2019: ambiente monitorado garante segurança dos testes<br>
+                                          <span>28.11.2019 - 09h00</span>
+                                       </p>
+                                       <hr>
+                                       <audio controls>
+                                          <!-- <source src="horse.ogg" type="audio/ogg"> -->
+                                          <source
+                                             src="/assets/media/tps/investigadores-inovam-no-3o-dia-do-tps.mp3"
+                                             type="audio/mpeg">
+                                          Investigadores inovam no 3º dia do TPS
+                                       </audio>
+                                       <p class="text-left">Investigadores inovam no 3º dia do TPS<br>
+                                          <span>27.11.2019 - 18h00</span>
+                                       </p>
+                                       <hr>
+                                       <audio controls>
+                                          <!-- <source src="horse.ogg" type="audio/ogg"> -->
+                                          <source
+                                             src="/assets/media/tps/terceiro-dia-do-tps-2019-segue-com-aplicacao-dos.mp3"
+                                             type="audio/mpeg">
+                                          Terceiro dia do TPS 2019 segue com aplicação dos planos de
+                                          testes
+                                       </audio>
+                                       <p class="text-left">Terceiro dia do TPS 2019 segue com aplicação dos planos de testes<br>
+                                          <span>27.11.2019 - 13h00</span>
+                                       </p>
+                                       <hr>
+                                       <audio controls>
+                                          <!-- <source src="horse.ogg" type="audio/ogg"> -->
+                                          <source
+                                             src="/assets/media/tps/tps-2019-grupos-intensificam-tentativas-de-ataques.mp3"
+                                             type="audio/mpeg">
+                                          TPS 2019: grupos intensificam tentativas de ataques ao
+                                          sistema eletrônico de votação
+                                       </audio>
+                                       <p class="text-left">TPS 2019: grupos intensificam tentativas de ataques ao sistema eletrônico de votação<br>
+                                          <span>27.11.2019 - 09h00</span>
+                                       </p>
+                                       <hr>
+                                       <audio controls>
+                                          <!-- <source src="horse.ogg" type="audio/ogg"> -->
+                                          <source
+                                             src="/assets/media/tps/investigadores-encerram-o-segundo-dia-do-tps-2019.mp3"
+                                             type="audio/mpeg">
+                                          Investigadores encerram o segundo dia do TPS 2019
+                                       </audio>
+                                       <p class="text-left">Investigadores encerram o segundo dia do TPS 2019<br>
+                                          <span>26.11.2019 - 18h41</span>
+                                       </p>
+                                       <hr>
+                                       <audio controls>
+                                          <!-- <source src="horse.ogg" type="audio/ogg"> -->
+                                          <source
+                                             src="/assets/media/tps/investigadores-aplicam-planos-de-ataque-ao-sistema.mp3"
+                                             type="audio/mpeg">
+                                          Investigadores aplicam planos de ataque ao sistema de
+                                          votação
+                                       </audio>
+                                       <p class="text-left">Investigadores aplicam planos de ataque ao sistema de votação<br>
+                                          <span>26.11.2019 - 13h00</span>
+                                       </p>
+                                       <hr>
+                                       <audio controls>
+                                          <!-- <source src="horse.ogg" type="audio/ogg"> -->
+                                          <source
+                                             src="/assets/media/tps/segundo-dia-do-tps-2019-comeca-a-partir-das-9h.mp3"
+                                             type="audio/mpeg">
+                                          Segundo dia do TPS 2019 começa a partir das 9h
+                                       </audio>
+                                       <p class="text-left">Segundo dia do TPS 2019 começa a partir das 9h
+                                          <br>
+                                          <span>26.11.2019 - 9h00</span>
+                                       </p>
+                                       <hr>
+                                       <audio controls>
+                                          <!-- <source src="horse.ogg" type="audio/ogg"> -->
+                                          <source
+                                             src="/assets/media/tps/comissao-avaliadora-faz-balanco-do-primeiro-dia-do.mp3"
+                                             type="audio/mpeg">
+                                          Comissão avaliadora faz balanço do primeiro dia do TPS 2019
+                                       </audio>
+                                       <p class="text-left">Comissão avaliadora faz balanço do primeiro dia do TPS 2019<br>
+                                          <span>25.11.2019 - 18h00</span>
+                                       </p>
+                                       <hr>
+                                       <audio controls>
+                                          <!-- <source src="horse.ogg" type="audio/ogg"> -->
+                                          <source
+                                             src="/assets/media/tps/investigadores-iniciam-seus-planos-no-tps-2019.mp3"
+                                             type="audio/mpeg">
+                                          Investigadores iniciam seus planos no TPS 2019
+                                       </audio>
+                                       <p class="text-left">Investigadores iniciam seus planos no TPS 2019 2019<br>
+                                          <span>25.11.2019 - 16h00</span>
+                                       </p>
+                                       <hr>
+                                       <audio controls>
+                                          <!-- <source src="horse.ogg" type="audio/ogg"> -->
+                                          <source src="/assets/media/tps/comecou-no-inicio-da-tarde-de-hoje-o-tps-2019.mp3"
+                                             type="audio/mpeg">
+                                          Começou no início da tarde de hoje o TPS 2019
+                                       </audio>
+                                       <p class="text-left">Começou no início da tarde de hoje o TPS 2019
+                                          <br>
+                                          <span>25.11.2019 - 13h00</span>
+                                       </p>
+                                       <hr>
+                                       <audio controls>
+                                          <!-- <source src="horse.ogg" type="audio/ogg"> -->
+                                          <source src="/assets/media/tps/tse-realiza-tps-2019-a-partir-das-13h-de-hoje-ate.mp3"
+                                             type="audio/mpeg">
+                                          TSE realiza TPS 2019 a partir das 13h de hoje até
+                                          sexta-feira (29)
+                                       </audio>
+                                       <p class="text-left">TSE realiza TPS 2019 a partir das 13h de hoje até sexta-feira (29)<br>
+                                          <span>25.11.2019 - 09h07</span>
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- / PODCAST -->
+                        </div>
+                        <div class="row">
+                           <div class="col-md-6">
+                              <div class="card">
+                                 <div class="card-header info" id="headingFour">
+                                    <h5 class="mb-0">
+                                       <button class="btn btn-link collapsed">
+                                       Passo a passo do TPS
+                                       </button>
+                                    </h5>
+                                 </div>
+                                 <div id="collapseFour" class="collapse show" aria-labelledby="headingFour" data-parent="#accordion">
+                                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                       <div class="carousel-inner">
+                                          <div class="carousel-item active">
+                                             <img class="d-block w-100" src="/assets/images/tps/infografico-1.png" alt="First slide">
+                                          </div>
+                                          <div class="carousel-item">
+                                             <img class="d-block w-100" src="/assets/images/tps/infografico-2.png" alt="First slide">
+                                          </div>
+                                          <div class="carousel-item">
+                                             <img class="d-block w-100" src="/assets/images/tps/infografico-3.png" alt="First slide">
+                                          </div>
+                                          <div class="carousel-item">
+                                             <img class="d-block w-100" src="/assets/images/tps/infografico-4.png" alt="First slide">
+                                          </div>
+                                          <div class="carousel-item">
+                                             <img class="d-block w-100" src="/assets/images/tps/infografico-5.png" alt="First slide">
+                                          </div>
+                                          <div class="carousel-item">
+                                             <img class="d-block w-100" src="/assets/images/tps/infografico-6.png" alt="First slide">
+                                          </div>
+                                       </div>
+                                       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                       <span class="carousel-control-prev-icon" aria-hidden="true"><img class="d-block w-100"
+                                          src="/assets/images/tps/seta-esquerda.png"></span>
+                                       <span class="sr-only">Previous</span>
+                                       </a>
+                                       <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                       <span class="carousel-control-next-icon" aria-hidden="true"><img class="d-block w-100"
+                                          src="/assets/images/tps/seta-direita.png"></span>
+                                       <span class="sr-only">Next</span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- PLAYLIST -->
+                           <div class="col-md-6">
+                              <div class="card">
+                                 <div class="card-header videos" id="headingOne">
+                                    <h5 class="mb-0">
+                                       <button class="btn btn-link">
+                                       Assista à playlist
+                                       </button>
+                                    </h5>
+                                 </div>
+                                 <div id="collapseOne" class="collapse show video-conteudo" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="card-body text-center">
+                                       <iframe style="width:100%" ; height="248" src="https://www.youtube.com/embed/videoseries?list=PLljYw1P54c4xBHcwONpkB0vMAhovC8sOe" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                       <!--
+                                          <a data-fancybox
+                                              href="https://www.youtube.com/watch?v=OvCVF7jypko&list=PLljYw1P54c4xBHcwONpkB0vMAhovC8sOe"
+                                              class="btn btn-outline-primary btn-lg">Assista à playlist
+                                              agora!</a> -->
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- / PLAYLIST -->
+                        </div>
+                     </div>
+                  </div>
+                  <!-- FIM: TPS LIVE-->
+                  <div class="tab-pane fade" id="conteudo-info-gerais" role="tabpanel" aria-labelledby="conteudo-info-gerais-tab">
+                     <div class="row">
+                        <div class="col-md-8 offset-2">
+                           <p>Em 2019, a Justiça Eleitoral promoveu novamente o Teste Público de Segurança do sistema eletrônico de votação, o TPS.</p>
+                           <p>Os testes ocorreram no período de 25 a 29 de novembro de 2019 com o objetivo de buscar a colaboração da sociedade brasileira para o aperfeiçoamento do sistema eletrônico de votação utilizado nas eleições do país.
+                              Qualquer cidadão brasileiro, maior de 18 anos, poderia participar do evento, realizado na sede do Tribunal Superior Eleitoral (TSE), em Brasília/DF.
+                           </p>
+                           <p>No período de 14 a 18 de outubro de 2019, de 9h às 18h, foi realizada a cerimônia de assinatura e inspeção dos códigos-fonte, no Edifício-Sede do TSE.</p>
+                           <p>Os investigadores presentes em posse dos respectivos certificados digitais no padrão ICP Brasil puderam assinar os códigos-fonte com certificado próprio.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="tab-pane fade" id="conteudo-inscricoes" role="tabpanel" aria-labelledby="conteudo-inscricoes-tab">
+                     <div class="row">
+                        <div class="col-md-8 offset-2">
+                           <p>O prazo para encaminhamento do Plano de Teste foi de 14 a 27 de outubro de 2019.
+                           </p>
+                           <p><strong>Lista dos planos de teste aprovados para o TPS 2019 - Resultado
+                              final.</strong>
+                           </p>
+                           <ul>
+                              <li>Fellipe Ribeiro Silva Abib - Inscrição em grupo</li>
+                              <li>Jairo Simão Santana Melo - Inscrição em grupo</li>
+                              <li>José Fillipe de Moraes Albano - Inscrição individual</li>
+                              <li>Leonardo Cunha dos Santos - Inscrição individual</li>
+                              <li>Luis Antonio Brasil Kowada - Inscrição em grupo</li>
+                              <li>Luis Fernando de Almeida - Inscrição em grupo</li>
+                              <li>Paulo Cesar Herrmann Wanner - Inscrição em grupo</li>
+                              <li>Roberto Miyano Neto - Inscrição individual</li>
+                           </ul>
+                           <p>Acesso à <a href="/assets/arquivos/tps/tps-planos-de-testes-aprovados.pdf" target="_blank">lista completa</a> de planos de teste aprovados e reprovados, com resumo e justificativa da decisão.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="tab-pane fade" id="conteudo-cronograma" role="tabpanel" aria-labelledby="conteudo-cronograma-tab">
+                     <div class="row">
+                        <div class="col-sm-3">
+                           <div class="card atual">
+                              <h3>Marco 1</h3>
+                              <h4>Encaminhamento do formulário de pré-inscrição preenchido e dos documentos comprobatórios exigidos.</h4>
+                              <!-- <span class="badge badge-success">16/08 a 29/09/2019</span> -->
+                           </div>
+                        </div>
+                        <div class="col-sm-3">
+                           <div class="card atual">
+                              <h3>Marco 2</h3>
+                              <h4>Publicação das pré-inscrições aprovadas.</h4>
+                              <!-- <span class="badge badge-success">03/10/2019</span> -->
+                           </div>
+                        </div>
+                        <div class="col-sm-3">
+                           <div class="card atual">
+                              <h3>Marco 3</h3>
+                              <h4>Apresentação de recurso referente à fase de pré-inscrição.</h4>
+                              <!-- <span class="badge badge-success">04 a 08/10/2019</span> -->
+                           </div>
+                        </div>
+                        <div class="col-sm-3">
+                           <div class="card atual">
+                              <h3>Marco 4</h3>
+                              <h4>Publicação do resultado do recurso referente à fase de pré-inscrição.
+                              </h4>
+                              <!-- <span class="badge badge-success">10/10/2019</span> -->
+                           </div>
+                        </div>
+                        <div class="col-sm-3">
+                           <div class="card atual">
+                              <h3>Marco 5</h3>
+                              <h4>Disponibilização de vídeos explicativos sobre o processo eleitoral.</h4>
+                              <!-- <span class="badge badge-success">14/10/2019</span> -->
+                           </div>
+                        </div>
+                        <div class="col-sm-3">
+                           <div class="card atual">
+                              <h3>Marco 6</h3>
+                              <h4>Assinatura e inspeção dos códigos-fonte.</h4>
+                              <!-- <span class="badge badge-success">14 a 18/10/2019</span> -->
+                           </div>
+                        </div>
+                        <div class="col-sm-3">
+                           <div class="card atual">
+                              <h3>Marco 7</h3>
+                              <h4>Encaminhamento do formulário Plano de Teste preenchido e dos documentos complementares, caso haja.</h4>
+                              <!-- <span class="badge badge-success">14 a 27/10/2019</span> -->
+                           </div>
+                        </div>
+                        <div class="col-sm-3">
+                           <div class="card atual">
+                              <h3>Marco 8</h3>
+                              <h4>Publicação das inscrições aprovadas.</h4>
+                              <!-- <span class="badge badge-success">30/10/2019</span> -->
+                           </div>
+                        </div>
+                        <div class="col-sm-3">
+                           <div class="card atual">
+                              <h3>Marco 9</h3>
+                              <h4>Apresentação de recursos referentes à fase de inscrição aprovada.</h4>
+                              <!-- <span class="badge badge-success">31 a 03/11/2019</span> -->
+                           </div>
+                        </div>
+                        <div class="col-sm-3">
+                           <div class="card atual">
+                              <h3>Marco 10</h3>
+                              <h4>Publicação do resultado do recurso referente à fase de inscrição aprovada.
+                              </h4>
+                              <!-- <span class="badge badge-success">05/11/2019</span> -->
+                           </div>
+                        </div>
+                        <div class="col-sm-3">
+                           <div class="card atual">
+                              <h3>Marco 11</h3>
+                              <h4>Sorteio público para seleção de inscrições.</h4>
+                              <!-- <span class="badge badge-success">06/11/2019</span> -->
+                           </div>
+                        </div>
+                        <div class="col-sm-3">
+                           <div class="card atual">
+                              <h3>Marco 12</h3>
+                              <h4>Publicação do resultado das inscrições selecionadas.</h4>
+                              <!-- <span class="badge badge-success">06/11/2019</span> -->
+                           </div>
+                        </div>
+                        <div class="col-sm-3">
+                           <div class="card atual">
+                              <h3>Marco 13</h3>
+                              <h4>Apresentação de recursos referentes à fase de inscrição selecionada.
+                              </h4>
+                              <!-- <span class="badge badge-success">07 a 10/11/2019</span> -->
+                           </div>
+                        </div>
+                        <div class="col-sm-3">
+                           <div class="card atual">
+                              <h3>Marco 14</h3>
+                              <h4>Publicação do resultado do recurso referente à fase de inscrição selecionada.
+                              </h4>
+                              <!-- <span class="badge badge-success">11/11/2019</span> -->
+                           </div>
+                        </div>
+                        <div class="col-sm-3">
+                           <div class="card atual">
+                              <h3>Marco 15</h3>
+                              <h4>Requisição de passagens e diárias.</h4>
+                              <!-- <span class="badge badge-success">12 a 20/11/2019</span> -->
+                           </div>
+                        </div>
+                        <div class="col-sm-3">
+                           <div class="card atual">
+                              <h3>Marco 16</h3>
+                              <h4>Abertura dos testes públicos de segurança e credenciamento dos investigadores.
+                              </h4>
+                              <!-- <span class="badge badge-success">25/11/2019</span> -->
+                           </div>
+                        </div>
+                        <div class="col-sm-3">
+                           <div class="card atual">
+                              <h3>Marco 17</h3>
+                              <h4>Realização dos testes públicos de segurança.</h4>
+                              <!-- <span class="badge badge-success">25 a 29/11/2019</span> -->
+                           </div>
+                        </div>
+                        <div class="col-sm-3">
+                           <div class="card atual">
+                              <h3>Marco 18</h3>
+                              <h4>Divulgação preliminar dos resultados do Teste Público de Segurança e entrega do certificado de participação.</h4>
+                              <!-- <span class="badge badge-success">29/11/2019</span> -->
+                           </div>
+                        </div>
+                        <div class="col-sm-3">
+                           <div class="card atual">
+                              <h3>Marco 19</h3>
+                              <h4>Divulgação do resultado final do Teste Público de Segurança.</h4>
+                              <!-- <span class="badge badge-success">10/12/2019</span> -->
+                           </div>
+                        </div>
+                        <div class="col-sm-3">
+                           <div class="card">
+                              <h3>Marco 20</h3>
+                              <h4>Realização do Teste de Confirmação</h4>
+                              <span class="badge badge-success">26, 27 e 28 de agosto</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="tab-pane fade" id="conteudo-documentacao" role="tabpanel" aria-labelledby="conteudo-documentacao-tab">
+                     <div class="row">
+                        <div class="col-md-8 offset-2">
+                           <p><a href="/assets/arquivos/tps/tps_2019_relatorio_final.pdf" class="file-pdf" target="_blank">Relatório Final (TPS 2019)</a></p>
+                           <p><a href="/assets/arquivos/tps/tps_2019_relatorio_tecnico.pdf" class="file-pdf" target="_blank">Relatório Técnico (TPS 2019)</a></p>
+                           <p><a href="/assets/arquivos/tps/tps-edital-testes-seguranca-2019-atualizado-25-9-2019.pdf" class="file-pdf" target="_blank">Novo edital do TPS (cronograma
+                              atualizado)</a>
+                           </p>
+                           <p><a href="/assets/arquivos/tps/TPS-Edital-Testes-Seguranca-2019.pdf" class="file-pdf" target="_blank">Edital do
+                              TPS</a>
+                           </p>
+                           <p><a href="https://www.tse.jus.br/legislacao/codigo-eleitoral/normas-editadas-pelo-tse/resolucao-no-23-444-de-30-de-abril-de-2015-2013-brasilia-2013-df" class="file-pdf" target="_blank">Resolução nº 23.444, do TSE</a></p>
+                           <p><a href="/assets/arquivos/tps/formPlanodeTesteTPS-Revisado.pdf" class="file-pdf" target="_blank">Plano de teste:
+                              documento para identificação e descrição das ações a serem desempenhadas
+                              pelos investigadores e/ou
+                              grupos de investigadores na realização do teste</a>
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="tab-pane fade" id="conteudo-investigacao" role="tabpanel" aria-labelledby="conteudo-investigacao-tab">
+                     <div class="row">
+                        <div class="col-md-8 offset-2">
+                           <p><b>Avisos</b></p>
+                           <p>Atenção, investigador! Fique atento aos prazos e marcos do Cronograma e aos novos documentos inseridos periodicamente na aba “Documentação”.
+                           </p>
+                           <p>
+                              <a data-toggle="collapse" href="#collapsePlano" role="button" aria-expanded="false" aria-controls="collapsePlano">
+                              <b>1. PLANO DE TESTE:</b>
+                              </a>
+                           </p>
+                           <div class="collapse" id="collapsePlano">
+                              <p>
+                                 O investigador poderá elaborar e enviar o plano de teste de sua autoria por meio de uma aplicação web a ser disponibilizada pelo TSE. O link para acesso a aplicação será enviado por e-mail para cada investigador.
+                              </p>
+                           </div>
+                           <p>
+                              <a data-toggle="collapse" href="#collapseCodigo" role="button" aria-expanded="false" aria-controls="collapseCodigo">
+                              <b>2. CÓDIGOS-FONTE:</b>
+                              </a>
+                           </p>
+                           <div class="collapse" id="collapseCodigo">
+                              <p>
+                                 O Tribunal Superior Eleitoral, por meio da Comissão Reguladora do Teste Público de Segurança, informa que foi realizada nova assinatura dos códigos-fonte devido a alterações realizadas em sistemas eleitorais objeto do TPS. A nova assinatura ocorreu no
+                                 dia 18 de outubro, às 15h.
+                              </p>
+                              <br>
+                              <br>
+                              <p>
+                                 <b>As alterações nos sistemas que ensejaram nova lacração foram:</b>
+                              <p></p>
+                              <div class="row tabela ">
+                                 <div class="col-md-4">
+                                    <b>Sistema</b>
+                                 </div>
+                                 <div class="col-md-8">
+                                    <b>Alteração</b>
+                                 </div>
+                                 <div class="col-md-4">
+                                    Gedai-Ue
+                                 </div>
+                                 <div class="col-md-8">
+                                    Foi identificada uma inconsistência nos pacotes de chaves gerados pela urna e embarcados no Gedai-UE. Essa inconsistência fazia com que o Gedai-UE gravasse na flash de carga um conjunto de chaves que não podia ser aberto pela urna, impedindo por completo
+                                    a execução do software. Identificada a inconsistência, os pacotes de chaves foram atualizados e o Gedai-UE regerado.
+                                 </div>
+                                 <div class="col-md-4">
+                                    RecArquivosUrna
+                                 </div>
+                                 <div class="col-md-8">
+                                    <p>
+                                       Implementação da rejeição de arquivos que não possuem assinatura de hardware da urna;
+                                    </p>
+                                    <p>
+                                       Modificação do servidor de mensageria utilizado para o TPS2019 no arquivo de configuração;
+                                    </p>
+                                    <p>
+                                       Correção no recebimento do arquivo de metadados do Transportador Desktop (arquivo de extensão id); Correção de método duplicado na classe: BatchProcessadorArquivoBoletimUrna.java;
+                                    </p>
+                                    <p>
+                                       Ajustes na implementação da rejeição de arquivos que não possuem assinatura de hardware da urna;
+                                    </p>
+                                 </div>
+                                 <div class="col-md-4">
+                                    InfoArquivosUrna
+                                 </div>
+                                 <div class="col-md-8">
+                                    Ajustes na implementação da rejeição de arquivos que não possuem assinatura de hardware da urna;
+                                 </div>
+                                 <div class="col-md-4">
+                                    Transportador Desktop
+                                 </div>
+                                 <div class="col-md-8">
+                                    Ajustes na implementação da rejeição de arquivos que não possuem assinatura de hardware da urna;
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="sobre-tps">
+      <div class="container">
+         <h2 class="text-center">Por dentro do TPS</h2>
+         <div class="row ">
+            <div class="col-12">
+               <div class="row justify-content-md-center">
+                  <div id="accordion" class="faq-tps col-12 col-lg-10">
+                     <div class="card estrutura_pergunta_tps_1">
+                        <div class="card-header">
+                           <h3 data-toggle="collapse" data-target="#pergunta_je_1" class="collapsed" aria-expanded="false">O que é TPS?</h3>
+                        </div>
+                        <div id="pergunta_je_1" class="collapse">
+                           <div class="card-body">
+                              <p>Teste Público de Segurança, também conhecido como TPS, é um evento fixo no calendário eleitoral – previsto na <a target="_blank" href="https://www.tse.jus.br/legislacao/codigo-eleitoral/normas-editadas-pelo-tse/resolucao-no-23-444-de-30-de-abril-de-2015-2013-brasilia-2013-df">Resolução
+                                 nº 23.444, do TSE</a> – onde qualquer brasileiro pode apresentar um plano de ataque aos sistemas eleitorais envolvidos na geração de mídias, votação, apuração, transmissão e recebimento de arquivos.
+                              </p>
+                              <p>O TPS envolve várias etapas, desde a apresentação dos planos de ataque, apresentação do sistema aos investigadores, abertura do código e o período de ataque propriamente dito, finalizando meses depois quando
+                                 o TSE convida os envolvidos para testar novamente o sistema e verificar se as falhas foram corrigidas.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card estrutura_pergunta_tps_2">
+                        <div class="card-header">
+                           <h3 data-toggle="collapse" data-target="#pergunta_je_2" class="collapsed" aria-expanded="false">Por que fazer o TPS? Qual o objetivo?</h3>
+                        </div>
+                        <div id="pergunta_je_2" class="collapse">
+                           <div class="card-body">
+                              <p>O TSE instituiu a realização do TPS com o objetivo de fortalecer a confiabilidade, a transparência e a segurança da captação, da apuração, da transmissão e do recebimento dos votos, além de propiciar melhorias
+                                 no processo eleitoral.
+                              </p>
+                              <p>Quando um investigador e sua equipe tem sucesso em seu plano de ataque, todos ganham, pois a falha será corrigida e o sistema se tornará cada vez mais seguro.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card estrutura_pergunta_tps_3">
+                        <div class="card-header">
+                           <h3 data-toggle="collapse" data-target="#pergunta_je_3" class="collapsed" aria-expanded="false">Desde quando o TPS é realizado?
+                           </h3>
+                        </div>
+                        <div id="pergunta_je_3" class="collapse">
+                           <div class="card-body">
+                              <p>A primeira edição do Teste Público de Segurança aconteceu em 2009 e desde então foram realizadas outras quatro edições: 2012, 2016, 2017 e 2019.</p>
+                              <p>Em 2016, ele passou a ser obrigatório e disciplinado pela <a target="_blank" href="https://www.tse.jus.br/legislacao/codigo-eleitoral/normas-editadas-pelo-tse/resolucao-no-23-444-de-30-de-abril-de-2015-2013-brasilia-2013-df">Resolução
+                                 nº 23.444, do TSE</a>. A norma prevê que os testes sejam realizados, preferencialmente, no ano anterior à eleição, para que eventuais falhas possam ser corrigidas nas urnas que serão utilizadas no pleito.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card estrutura_pergunta_tps_4">
+                        <div class="card-header">
+                           <h3 data-toggle="collapse" data-target="#pergunta_je_4" class="collapsed" aria-expanded="false">Quais evoluções já surgiram do TPS?</h3>
+                        </div>
+                        <div id="pergunta_je_4" class="collapse">
+                           <div class="card-body">
+                              <p>Para conhecer as evoluções no ecossistema da urna eletrônica proporcionadas pelo TPS, acesse a <a href="#edicoes-anteriores">Linha do
+                                 Tempo do TPS</a> e, para conhecer alguns dados do teste público, acesse a aba <a href="#resultados">Resultados.</a>
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card estrutura_pergunta_tps_5">
+                        <div class="card-header">
+                           <h3 data-toggle="collapse" data-target="#pergunta_je_5" class="collapsed" aria-expanded="false">Quantas pessoas já participaram?</h3>
+                        </div>
+                        <div id="pergunta_je_5" class="collapse">
+                           <div class="card-body">
+                              <p>Até agora, 89 investigadores já participaram dos testes públicos de segurança. Neste universo, alguns contribuíram individualmente e outros como parte de uma das 21 equipes nas quatro edições do TPS.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card estrutura_pergunta_tps_6">
+                        <div class="card-header">
+                           <h3 data-toggle="collapse" data-target="#pergunta_je_6" class="collapsed" aria-expanded="false">Quem pode participar do TPS?</h3>
+                        </div>
+                        <div id="pergunta_je_6" class="collapse">
+                           <div class="card-body">
+                              <p>Qualquer brasileiro, a partir de 18 anos completos, que atenda aos requisitos do edital do TPS pode participar do teste público.</p>
+                              <p><a href="https://www.justicaeleitoral.jus.br/tps/index.html#conteudo-inscricoes">Saiba
+                                 mais e participe!</a>
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card estrutura_pergunta_tps_7">
+                        <div class="card-header">
+                           <h3 data-toggle="collapse" data-target="#pergunta_je_9" class="collapsed" aria-expanded="false">Como saber se falhas apontadas no TPS foram corrigidas?
+                           </h3>
+                        </div>
+                        <div id="pergunta_je_9" class="collapse">
+                           <div class="card-body">
+                              <p>Os relatórios técnicos apresentados pelos investigadores relatam, analiticamente, os planos de testes executados e, consequentemente, os resultados provenientes deles. Sempre que apontadas falhas, indicadas
+                                 oportunidades de melhoria ou comprovado o sucesso em um plano de ataque, o TSE procederá às correções e evoluções, bem como promoverá um novo teste – chamado de Teste de Confirmação – em que os investigadores
+                                 poderão aplicar um novo ataque nos mesmos moldes e nas mesmas condições do teste inicial e, assim, confirmar a realização das melhorias.
+                              </p>
+                              <p>Em resumo, os investigadores são convocados para verificar as correções implementadas e executar novamente os seus planos de teste, para comprovar que as falhas foram tratadas.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card estrutura_pergunta_tps_7">
+                        <div class="card-header">
+                           <h3 data-toggle="collapse" data-target="#pergunta_je_11" class="collapsed" aria-expanded="false">Outros países realizam testes públicos de votação?
+                           </h3>
+                        </div>
+                        <div id="pergunta_je_11" class="collapse">
+                           <div class="card-body">
+                              <p>Temos a informação de que a Suíça realizou pela primeira vez em 2019 um Teste Público de Invasão (PIT, sigla em inglês). Para mais informações, visite a <a target="_blank" href="https://www.onlinevote-pit.ch/">página
+                                 oficial do E-Voting Public Intrusion Test (PIT).</a>
+                              </p>
+                              <p>Em 2013, a Associação de Autoridades de Voto da Califórnia, nos Estados Unidos, foi formada para manter os esforços em direção aos sistemas de votação de código aberto de <a href="https://en.wikipedia.org/wiki/Electronic_voting">Licença
+                                 Pública Geral de propriedade pública.</a>
+                              </p>
+                              <p>Também é possível verificar a realização de “desafios hacker” de invasão de urnas eletrônicas comerciais (vendidas abertamente no mercado e sem restrições e customizações para um determinado sistema eleitoral
+                                 e seus elementos de segurança), como o realizado na Def Con 2017 - um dos maiores eventos de segurança da informação no mundo, no qual estavam presentes técnicos da equipe do TSE.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card estrutura_pergunta_tps_8">
+                        <div class="card-header">
+                           <h3 data-toggle="collapse" data-target="#pergunta_tps_8" class="collapsed" aria-expanded="false">Quais são as fases do TPS?</h3>
+                        </div>
+                        <div id="pergunta_tps_8" class="collapse">
+                           <div class="card-body">
+                              <p>O TPS é dividido em três fases:</p>
+                              <ul>
+                                 <li><strong>Preparação:</strong> recepção de pré-inscrições, inscrições, planos de testes, apresentação dos sistemas, dos códigos-fonte e demais atividades prévias à realização do TPS.</li>
+                                 <li><strong>Realização:</strong> os técnicos comparecem ao local do teste para colocar em prática seus planos previamente definidos.
+                                 </li>
+                                 <li><strong>Avaliação:</strong> período em que a Comissão Avaliadora analisa os relatórios de teste de cada investigador ou equipe, produzindo um relatório final com todos os resultados.</li>
+                              </ul>
+                              <p>O detalhamento das atribuições e formação de cada uma das comissões pode ser encontrado na <a target="_blank" href="https://www.tse.jus.br/legislacao/codigo-eleitoral/normas-editadas-pelo-tse/resolucao-no-23-444-de-30-de-abril-de-2015-2013-brasilia-2013-df">Resolução
+                                 nº 23.444, do TSE</a>.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card estrutura_pergunta_tps_9">
+                        <div class="card-header">
+                           <h3 data-toggle="collapse" data-target="#pergunta_tps_9" class="collapsed" aria-expanded="false">Quem organiza, realiza e avalia o TPS?</h3>
+                        </div>
+                        <div id="pergunta_tps_9" class="collapse">
+                           <div class="card-body">
+                              <p>Para que o TPS possa ser colocado em prática, são montadas, a cada edição, quatro comissões:</p>
+                              <ul>
+                                 <li><strong>Organizadora:</strong> planeja e elabora o projeto geral, organizando as atividades. É formada por profissionais de diferentes áreas do TSE.</li>
+                                 <li><strong>Reguladora:</strong> define os procedimentos e a metodologia, além de supervisionar todas as etapas do processo. Também é formada por profissionais do TSE.</li>
+                                 <li><strong>Avaliadora:</strong>  valida a metodologia e os critérios de julgamento, assim como avalia e homologa os resultados. Conta com representantes da comunidade acadêmica/científica, do Ministério Público
+                                    Federal, da Ordem dos Advogados do Brasil, do Congresso Nacional, da Polícia Federal e da Sociedade Brasileira de Computação, além de um engenheiro elétrico/eletrônico ou de computação devidamente registrado
+                                    no Conselho Regional de Engenharia e Agronomia (Crea), indicado pelo Conselho Federal de Engenharia e Agronomia (Confea) e um representante indicado pelo presidente do TSE. Comunicação Institucional: responsável
+                                    pela divulgação do TPS e pelas respostas aos questionamentos do público e da imprensa. É formada por membros do TSE.
+                                 </li>
+                                 <li><strong>Comunicação Institucional:</strong> responsável pela divulgação do TPS, assim como responder a questionamentos do público e da imprensa, é formada por membros do TSE.</li>
+                              </ul>
+                              <p>O detalhamento das atribuições e formação de cada uma das comissões pode ser encontrado na <a target="_blank" href="https://www.tse.jus.br/legislacao/codigo-eleitoral/normas-editadas-pelo-tse/resolucao-no-23-444-de-30-de-abril-de-2015-2013-brasilia-2013-df">Resolução
+                                 nº 23.444, do TSE</a>.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card estrutura_pergunta_tps_9">
+                        <div class="card-header">
+                           <h3 data-toggle="collapse" data-target="#pergunta_tps_10" class="collapsed" aria-expanded="false">Qual é o benefício do TPS para o processo eleitoral?
+                           </h3>
+                        </div>
+                        <div id="pergunta_tps_10" class="collapse">
+                           <div class="card-body">
+                              <p>Pautado na transparência institucional – um dos pilares de atuação da Justiça Eleitoral brasileira –, o teste reúne especialistas em Tecnologia da Informação e Segurança da Informação das mais diversas organizações,
+                                 instituições acadêmicas e órgãos públicos para realizar planos de ataque aos softwares e hardwares da urna eletrônica e sistemas correlatos.
+                              </p>
+                              <p>Com o teste, o TSE busca, principalmente:</p>
+                              <ul>
+                                 <li>Identificar eventuais vulnerabilidades nos procedimentos e nos softwares eleitorais.</li>
+                                 <li>Possibilitar a realização de correções e aprimoramentos a partir dos resultados apresentados.</li>
+                                 <li>Testar a confiabilidade da captação e da apuração dos votos.</li>
+                                 <li>Verificar a robustez e a maturidade do Sistema Eletrônico de Votação e Apuração brasileiro, com a finalidade maior de realizar melhorias contínuas no processo eleitoral, acompanhando os avanços na tecnologia
+                                    mundial, especialmente nas áreas de Tecnologia e Segurança da Informação.
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="edicoes-anteriores">
+      <div class="container">
+         <h2 class="text-center">Linha do Tempo</h2>
+      </div>
+      <div class="linha-tempo-tps">
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <div class="linha-anos-anteriores row">
+                     <div class="col ano-tps ativo">
+                        <a href="#ano-tps-2009" class="ano-tps-2009">2009</a>
+                     </div>
+                     <div class="col ano-tps">
+                        <a href="#ano-tps-2012" class="ano-tps-2012">2012</a>
+                     </div>
+                     <div class="col ano-tps">
+                        <a href="#ano-tps-2016" class="ano-tps-2016">2016</a>
+                     </div>
+                     <div class="col ano-tps">
+                        <a href="#ano-tps-2017" class="ano-tps-2017">2017</a>
+                     </div>
+                     <div class="col ano-tps">
+                        <a href="#ano-tps-2019" class="ano-tps-2019">2019</a>
+                     </div>
+                  </div>
+                  <div class="col-12 conteudo-anos-anteriores">
+                     <!--TPS 2009-->
+                     <div class="conteudo-tps conteudo-tps-2009 ativo">
+                        <ul class="nav nav-pills nav-tps-olds" id="nav-cont-tps-2009" role="tablist">
+                           <li class="nav-item">
+                              <a class="nav-link active" id="cont-2009-ancora-1-tab" data-toggle="pill" href="#cont-2009-ancora-1" role="tab" aria-controls="cont-2009-ancora-1" aria-selected="true">Informações gerais</a>
+                           </li>
+                           <!--<li class="nav-item">
+                              <a class="nav-link" id="cont-2009-ancora-2-tab" data-toggle="pill" href="#cont-2009-ancora-2" role="tab" aria-controls="cont-2009-ancora-2" aria-selected="false">Vídeos</a>
+                              </li>-->
+                           <!--<li class="nav-item">
+                              <a class="nav-link" id="cont-2009-ancora-3-tab" data-toggle="pill" href="#cont-2009-ancora-3" role="tab" aria-controls="cont-2009-ancora-3" aria-selected="false">Fotos</a>
+                              </li>-->
+                           <li class="nav-item">
+                              <a class="nav-link" id="cont-2009-ancora-4-tab" data-toggle="pill" href="#cont-2009-ancora-4" role="tab" aria-controls="cont-2009-ancora-4" aria-selected="false">Documentação</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" id="cont-2009-ancora-5-tab" data-toggle="pill" href="#cont-2009-ancora-5" role="tab" aria-controls="cont-2009-ancora-5" aria-selected="false">Notícias</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" id="cont-2009-ancora-6-tab" data-toggle="pill" href="#cont-2009-ancora-6" role="tab" aria-controls="cont-2009-ancora-6" aria-selected="false">Resultados</a>
+                           </li>
+                        </ul>
+                        <div class="tab-content content-tps-olds" id="nav-cont-tps-2009">
+                           <div class="tab-pane fade show active" id="cont-2009-ancora-1" role="tabpanel" aria-labelledby="cont-2009-ancora-1">
+                              <p>A primeira edição do Teste Público de Segurança ocorreu durante os dias
+                                 <strong>10 e 13 de novembro de 2009</strong>, com o intuito de buscar a colaboração da sociedade para o aperfeiçoamento da urna eletrônica utilizada nas eleições brasileiras.
+                              </p>
+                              <p>Os 37 especialistas em informática e eletrônica que participaram da iniciativa tentaram atacar o sistema eletrônico de votação e encontrar algum tipo de vulnerabilidade.</p>
+                           </div>
+                           <!--<div class="tab-pane fade show" id="cont-2009-ancora-2" role="tabpanel" aria-labelledby="cont-2009-ancora-2"></div>-->
+                           <!--<div class="tab-pane fade show" id="cont-2009-ancora-3" role="tabpanel" aria-labelledby="cont-2009-ancora-3"></div>-->
+                           <div class="tab-pane fade show" id="cont-2009-ancora-4" role="tabpanel" aria-labelledby="cont-2009-ancora-4">
+                              <p><a href="https://www.justicaeleitoral.jus.br/arquivos/tse-edital-n-1-2012-comunicado-sobre-a-realizacao-dos-testes-publicos-de-seguranca-da-urna-eletronica" class="file-pdf" target="_blank">Edital - Abertura</a></p>
+                              <p><a href="https://www.justicaeleitoral.jus.br/arquivos/tse-relatorio-final-da-comissao-avaliadora-1o-teste-de-seguranca" class="file-pdf" target="_blank">Relatório final da comissão
+                                 avaliadora</a>
+                              </p>
+                           </div>
+                           <div class="tab-pane fade show" id="cont-2009-ancora-5" role="tabpanel" aria-labelledby="cont-2009-ancora-5">
+                              <ul>
+                                 <li><a href="http://agenciaje.tse.jus.br/noticias/2009/outubro/tse-realiza-audiencia-para-explicar-testes" target="_blank">TSE realiza audiência para explicar testes
+                                    públicos de segurança no sistema eletrônico de votação</a>
+                                 </li>
+                                 <li><a href="http://agenciaje.tse.jus.br/noticias/2009/novembro/ministro-ricardo-lewandowski-afirma-que-testes" target="_blank">Ministro Ricardo Lewandowski afirma que testes
+                                    públicos são marco para a democracia</a>
+                                 </li>
+                                 <li><a href="http://agenciaje.tse.jus.br/noticias/2009/outubro/observadores-de-sete-instituicoes-vao-monitorar" target="_blank">Observadores de sete instituições vão monitorar
+                                    testes no sistema eletrônico de votação</a>
+                                 </li>
+                                 <li><a href="http://agenciaje.tse.jus.br/noticias/2009/novembro/tse-premia-contribuicoes-para-aprimorar-seguranca" target="_blank">TSE premia contribuições para aprimorar
+                                    segurança do sistema eletrônico de votação</a>
+                                 </li>
+                                 <li><a href="http://agenciaje.tse.jus.br/noticias/2009/outubro/sete-academicos-e-cientistas-integram-comissao" target="_blank">Sete acadêmicos e cientistas integram Comissão
+                                    Avaliadora dos testes de segurança do sistema eletrônico de
+                                    votação</a>
+                                 </li>
+                                 <li><a href="http://agenciaje.tse.jus.br/noticias/2009/novembro/urnas-eletronicas-2010-terminam-os-testes-de" target="_blank">Urnas eletrônicas 2010: terminam os testes de
+                                    segurança sem violações ao sistema</a>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="tab-pane fade show" id="cont-2009-ancora-6" role="tabpanel" aria-labelledby="cont-2009-ancora-6">
+                              <p>
+                                 A primeira edição do teste público de segurança ocorreu durante os dias 10 e 13 de novembro de 2009. Os 37 especialistas em informática e eletrônica que participaram da iniciativa executaram suas atividades com o objetivo de atacar o sistema e tentar
+                                 encontrar algum tipo de vulnerabilidade. Nenhum dos testes foi bem sucedido em alterar a destinação de votos ou violar o sigilo da votação.
+                              </p>
+                              <p>
+                                 Na ocasião, um dos investigadores buscou quebrar o sigilo do voto por meio da captação da radiação eletromagnética emitida pelo teclado da urna enquanto o eleitor digita o número do candidato e, com isso, identificar as teclas pressionadas pelo eleitor.
+                                 O teste não foi bem sucedido na tentativa de violação de sigilo do voto. O aparelho de rádio utilizado pelo especialista somente conseguiu captar essa radiação a uma distância de cinco centímetros da urna
+                                 eletrônica, o que na prática tornaria o ataque inviável pois a urna instalada na seção eleitoral fica necessariamente isolada e sob vigilância. Além disso, somente uma das teclas foi corretamente identificada.
+                                 Como resposta, as urnas fabricadas após o TPS passaram a criptografar as teclas do terminal do eleitor, o que produz um sinal elétrico diferente sempre que uma tecla é pressionada, impedindo assim qualquer
+                                 tentativa de identificação de um padrão que caracterize uma tecla específica.
+                              </p>
+                              <p>
+                                 Investigadores da Marinha do Brasil chegaram a introduzir um arquivo na mídia de votação usada nas seções eleitorais, mas o procedimento foi rejeitado pelo sistema da urna. Duas alterações tentadas pelos investigadores em arquivos do sistema foram imediatamente
+                                 detectadas pelos módulos de segurança instalados. Primeiro os investigadores tentaram alterar um arquivo. Depois tentaram gerar a mídia sem o uso do gerador de mídias, e por fim, tentaram iniciar o sistema
+                                 por meio de outro programa. Mas todas tentativas foram frustradas pelas barreiras de segurança do sistema, principalmente pelas assinaturas digitais e pelo uso de mecanismos de criptografia.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <!--TPS 2012-->
+                     <div class="conteudo-tps conteudo-tps-2012">
+                        <ul class="nav nav-pills nav-tps-olds" id="nav-cont-tps-2012" role="tablist">
+                           <li class="nav-item">
+                              <a class="nav-link active" id="cont-2012-ancora-1-tab" data-toggle="pill" href="#cont-2012-ancora-1" role="tab" aria-controls="cont-2012-ancora-1" aria-selected="true">Informações gerais</a>
+                           </li>
+                           <!--<li class="nav-item">
+                              <a class="nav-link" id="cont-2012-ancora-2-tab" data-toggle="pill" href="#cont-2012-ancora-2" role="tab" aria-controls="cont-2012-ancora-2" aria-selected="false">Vídeos</a>
+                              </li>-->
+                           <!--<li class="nav-item">
+                              <a class="nav-link" id="cont-2012-ancora-3-tab" data-toggle="pill" href="#cont-2012-ancora-3" role="tab" aria-controls="cont-2012-ancora-3" aria-selected="false">Fotos</a>
+                              </li>-->
+                           <li class="nav-item">
+                              <a class="nav-link" id="cont-2012-ancora-4-tab" data-toggle="pill" href="#cont-2012-ancora-4" role="tab" aria-controls="cont-2012-ancora-4" aria-selected="false">Documentação</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" id="cont-2012-ancora-5-tab" data-toggle="pill" href="#cont-2012-ancora-5" role="tab" aria-controls="cont-2012-ancora-5" aria-selected="false">Notícias</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" id="cont-2012-ancora-6-tab" data-toggle="pill" href="#cont-2012-ancora-6" role="tab" aria-controls="cont-2012-ancora-6" aria-selected="false">Resultados</a>
+                           </li>
+                        </ul>
+                        <div class="tab-content content-tps-olds" id="nav-cont-tps-2012">
+                           <div class="tab-pane fade show active" id="cont-2012-ancora-1" role="tabpanel" aria-labelledby="cont-2012-ancora-1">
+                              <p>A segunda edição do Teste Público de Segurança ocorreu durante os dias
+                                 <strong>20 a 22 de março de 2012</strong>, no edifício-sede do TSE, em Brasília. Participaram do evento 24 investigadores. Eles foram divididos em nove grupos e executaram mais de 20 planos de ataque.
+                              </p>
+                           </div>
+                           <!--<div class="tab-pane fade show" id="cont-2012-ancora-2" role="tabpanel" aria-labelledby="cont-2012-ancora-2">
+                              </div>-->
+                           <!--<div class="tab-pane fade show" id="cont-2012-ancora-3" role="tabpanel" aria-labelledby="cont-2012-ancora-3">
+                              </div>-->
+                           <div class="tab-pane fade show" id="cont-2012-ancora-4" role="tabpanel" aria-labelledby="cont-2012-ancora-4">
+                              <p><a href="https://www.justicaeleitoral.jus.br/arquivos/tse-edital-n-1-2012-comunicado-sobre-a-realizacao-dos-testes-publicos-de-seguranca-da-urna-eletronica" class="file-pdf" target="_blank">Edital - Abertura</a></p>
+                              <p><a href="https://www.justicaeleitoral.jus.br/arquivos/tse-avaliacoes-sobre-o-teste-de-seguranca-da-urna-eletronica" class="file-pdf" target="_blank">Relatório final da comissão
+                                 avaliadora</a>
+                              </p>
+                           </div>
+                           <div class="tab-pane fade show" id="cont-2012-ancora-5" role="tabpanel" aria-labelledby="cont-2012-ancora-5">
+                              <ul>
+                                 <li><a href="https://www.tse.jus.br/imprensa/noticias-tse/2012/Marco/tse-confirma-importancia-dos-testes-para-aprimoramento-do-sistema-de-votacao" target="_blank">TSE confirma importância dos testes para
+                                    aprimoramento do sistema de votação</a>
+                                 </li>
+                                 <li><a href="https://www.tse.jus.br/imprensa/noticias-tse/2012/Marco/teste-da-equipe-da-unb-reforca-sigilo-do-voto" target="_blank">Teste da equipe da UnB contribui para
+                                    aprimoramento do sigilo do voto</a>
+                                 </li>
+                                 <li><a href="https://www.tse.jus.br/imprensa/noticias-tse/2012/Marco/tse-avalia-positivamente-testes-de-seguranca-na-urna-eletronica" target="_blank">TSE avalia positivamente testes de segurança na
+                                    urna eletrônica</a>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="tab-pane fade show" id="cont-2012-ancora-6" role="tabpanel" aria-labelledby="cont-2012-ancora-6">
+                              <p>
+                                 Das melhorias trazidas ao processo eletrônico, a mais significativa foi a implementada pelo Tribunal ao Registro Digital do Voto (RDV), arquivo que armazena os votos dos eleitores, exatamente como digitados na urna, mas embaralhados entre cada cargo.
+                                 É a partir do RDV que são criados a zerésima e o boletim de urna. O arquivo também permite a recontagem dos votos por parte dos partidos políticos e demais interessados.
+                              </p>
+                              <p>
+                                 Na ocasião, o grupo formado por um professor e alunos da Universidade de Brasília havia conseguido refazer o sequenciamento dos votos contidos pelo RDV. Contudo, para efetivar a violação do sigilo do voto seria necessário obter a sequência de comparecimento
+                                 dos eleitores, o que não foi feito pela equipe a partir dos registros da urna.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <!--TPS 2016-->
+                     <div class="conteudo-tps conteudo-tps-2016">
+                        <ul class="nav nav-pills nav-tps-olds" id="nav-cont-tps-2016" role="tablist">
+                           <li class="nav-item">
+                              <a class="nav-link active" id="cont-2016-ancora-1-tab" data-toggle="pill" href="#cont-2016-ancora-1" role="tab" aria-controls="cont-2016-ancora-1" aria-selected="true">Informações gerais</a>
+                           </li>
+                           <!-- <li class="nav-item">
+                              <a class="nav-link" id="cont-2016-ancora-2-tab" data-toggle="pill"
+                                  href="#cont-2016-ancora-2" role="tab" aria-controls="cont-2016-ancora-2"
+                                  aria-selected="false">Vídeos</a>
+                              </li> -->
+                           <li class="nav-item">
+                              <a class="nav-link" id="cont-2016-ancora-3-tab" data-toggle="pill" href="#cont-2016-ancora-3" role="tab" aria-controls="cont-2016-ancora-3" aria-selected="false">Fotos</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" id="cont-2016-ancora-4-tab" data-toggle="pill" href="#cont-2016-ancora-4" role="tab" aria-controls="cont-2016-ancora-4" aria-selected="false">Documentação</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" id="cont-2016-ancora-5-tab" data-toggle="pill" href="#cont-2016-ancora-5" role="tab" aria-controls="cont-2016-ancora-5" aria-selected="false">Notícias</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" id="cont-2016-ancora-6-tab" data-toggle="pill" href="#cont-2016-ancora-6" role="tab" aria-controls="cont-2016-ancora-6" aria-selected="false">Resultados</a>
+                           </li>
+                        </ul>
+                        <div class="tab-content content-tps-olds" id="nav-cont-tps-2016">
+                           <div class="tab-pane fade show active" id="cont-2016-ancora-1" role="tabpanel" aria-labelledby="cont-2016-ancora-1">
+                              <p>A terceira edição do Teste Público de Segurança ocorreu durante os dias
+                                 <strong>8, 9 e 10 de março de 2016</strong>, no edifício-sede do TSE, em Brasília. Participaram do evento <strong>13 investigadores</strong>, os quais tiveram acesso aos componentes internos e externos do
+                                 sistema eletrônico de votação para criarem seus planos de ataque.
+                              </p>
+                           </div>
+                           <div class="tab-pane fade fotos-tps" id="cont-2016-ancora-2" role="tabpanel" aria-labelledby="cont-2016-ancora-2">
+                              <!-- <div class="foto-tps">
+                                 <a data-fancybox href="video/videos-tps-2016/abertura-teste.mp4"><img src="/assets/images/tps/capas-video-tps-2016/capa-abertura-teste.jpg" alt=""></a>
+                                 </div>
+                                 <div class="foto-tps">
+                                 <a data-fancybox href="video/videos-tps-2016/balanco-tps.mp4"><img src="/assets/images/tps/capas-video-tps-2016/capa-balanco-tps.jpg" alt=""></a>
+                                 </div>
+                                 <div class="foto-tps">
+                                 <a data-fancybox href="video/videos-tps-2016/pilula-tps.mp4"><img src="/assets/images/tps/capas-video-tps-2016/capa-pilula-tps.jpg" alt=""></a>
+                                 </div>
+                                 <div class="foto-tps">
+                                 <a data-fancybox href="video/videos-tps-2016/vt-teste-urna.mp4"><img src="/assets/images/tps/capas-video-tps-2016/capa-vt-teste-urna.jpg" alt=""></a>
+                                 </div> -->
+                           </div>
+                           <div class="tab-pane fade fotos-tps" id="cont-2016-ancora-3" role="tabpanel" aria-labelledby="cont-2016-ancora-3">
+                              <div class="foto-tps">
+                                 <a data-fancybox="gallery" href="/assets/images/tps/fotos-tps-2016/fotos-tps-2016_1.jpg"><img src="/assets/images/tps/fotos-tps-2016/fotos-tps-2016_1.jpg" alt=""></a>
+                              </div>
+                              <div class="foto-tps">
+                                 <a data-fancybox="gallery" href="/assets/images/tps/fotos-tps-2016/fotos-tps-2016_2.jpg"><img src="/assets/images/tps/fotos-tps-2016/fotos-tps-2016_2.jpg" alt=""></a>
+                              </div>
+                              <div class="foto-tps">
+                                 <a data-fancybox="gallery" href="/assets/images/tps/fotos-tps-2016/fotos-tps-2016_3.jpg"><img src="/assets/images/tps/fotos-tps-2016/fotos-tps-2016_3.jpg" alt=""></a>
+                              </div>
+                              <div class="foto-tps">
+                                 <a data-fancybox="gallery" href="/assets/images/tps/fotos-tps-2016/fotos-tps-2016_4.jpg"><img src="/assets/images/tps/fotos-tps-2016/fotos-tps-2016_4.jpg" alt=""></a>
+                              </div>
+                              <div class="foto-tps">
+                                 <a data-fancybox="gallery" href="/assets/images/tps/fotos-tps-2016/fotos-tps-2016_5.jpg"><img src="/assets/images/tps/fotos-tps-2016/fotos-tps-2016_5.jpg" alt=""></a>
+                              </div>
+                              <div class="foto-tps">
+                                 <a data-fancybox="gallery" href="/assets/images/tps/fotos-tps-2016/fotos-tps-2016_6.jpg"><img src="/assets/images/tps/fotos-tps-2016/fotos-tps-2016_6.jpg" alt=""></a>
+                              </div>
+                           </div>
+                           <div class="tab-pane fade" id="cont-2016-ancora-4" role="tabpanel" aria-labelledby="cont-2016-ancora-4">
+                              <p><a href="#" class="file-pdf" target="_blank">Edital</a></p>
+                              <p><a href="https://www.justicaeleitoral.jus.br/arquivos/tse-testes-publicos-de-seguranca-2016-compendio" class="file-pdf" target="_blank">Acesse o compêndio</a></p>
+                           </div>
+                           <div class="tab-pane fade" id="cont-2016-ancora-5" role="tabpanel" aria-labelledby="cont-2016-ancora-5">
+                              <ul>
+                                 <li><a href="https://www.tse.jus.br/imprensa/noticias-tse/2016/Marco/teste-de-seguranca-2016-comissao-avaliadora-e-formada-por-membros-de-diversas-areas-do-conhecimento" target="_blank">Teste de Segurança 2016: Comissão Avaliadora é
+                                    formada por membros de diversas áreas do conhecimento</a>
+                                 </li>
+                                 <li><a href="https://www.tse.jus.br/imprensa/noticias-tse/2016/Marco/tse-realiza-teste-publico-de-seguranca-2016-do-sistema-eletronico-de-votacao-a-partir-desta-terca-8" target="_blank">TSE realiza Teste Público de Segurança 2016 do
+                                    Sistema Eletrônico de Votação a partir desta terça (8)</a>
+                                 </li>
+                                 <li><a href="https://www.tse.jus.br/imprensa/noticias-tse/2016/Marco/tse-da-inicio-ao-teste-publico-de-seguranca-2016" target="_blank">TSE dá início ao Teste Público de Segurança
+                                    2016</a>
+                                 </li>
+                                 <li><a href="https://www.tse.jus.br/imprensa/noticias-tse/2016/Marco/investigadores-executam-planos-de-testes-no-primeiro-dia-do-tps-2016" target="_blank">Investigadores executam planos de testes no
+                                    primeiro dia do TPS 2016</a>
+                                 </li>
+                                 <li><a href="https://www.tse.jus.br/imprensa/noticias-tse/2016/Marco/tps-2016-criadores-da-urna-acompanham-trabalho-dos-investigadores" target="_blank">TPS 2016: criadores da urna acompanham trabalho
+                                    dos investigadores</a>
+                                 </li>
+                                 <li><a href="https://www.tse.jus.br/imprensa/noticias-tse/2016/Marco/ambiente-do-tps-2016-e-preparado-para-garantir-a-tranquila-execucao-dos-planos-de-teste" target="_blank">Ambiente do TPS 2016 é preparado para garantir a
+                                    tranquila execução dos planos de teste</a>
+                                 </li>
+                                 <li><a href="https://www.tse.jus.br/imprensa/noticias-tse/2016/Marco/contribuicoes-dos-investigadores-do-tps-serao-aplicadas-para-as-eleicoes-2016" target="_blank">Contribuições dos investigadores do TPS serão
+                                    aplicadas para as Eleições 2016</a>
+                                 </li>
+                                 <li><a href="https://www.tse.jus.br/imprensa/noticias-tse/2016/Marco/ministro-dias-toffoli-faz-balanco-sobre-o-teste-publico-de-seguranca-2016" target="_blank">Ministro Dias Toffoli faz balanço sobre o Teste
+                                    Público de Segurança 2016</a>
+                                 </li>
+                                 <li><a href="https://www.tse.jus.br/imprensa/noticias-tse/2016/Marco/tps-2016-conheca-os-tres-planos-de-aperfeicoamento-da-urna-eletronica" target="_blank">TPS 2016: conheça os três planos de
+                                    aperfeiçoamento da urna eletrônica</a>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="tab-pane fade" id="cont-2016-ancora-6" role="tabpanel" aria-labelledby="cont-2016-ancora-6">
+                              <p>
+                                 Em um dos planos, o investigador conseguiu alterar o resultados de um Boletim de Urna (BU) e utilizá-lo como entrada do Sistema de Apuração (SA) da urna, produzindo um novo BU válido, mas com resultados adulterados. O SA é um sistema usado em situações
+                                 em que o resultado de uma urna gravado em meio eletrônico foi perdido ou quando foi necessário realizar a votação por cédulas de papel.
+                              </p>
+                              <p>
+                                 Corrigindo a vulnerabilidade, o TSE modificou o algoritmo do código verificador do BU, que passou a ter força de autenticador. Além disso, foi incluído um QR Code com assinatura digital no Boletim de Urna, permitindo aos interessados conferir a autenticidade
+                                 e integridade do BU.
+                              </p>
+                              <p>
+                                 Em outro plano, o grupo de investigadores fez a gravação das instruções por áudio utilizadas por deficientes visuais para a votação. Essas instruções incluem as teclas pressionadas e o voto confirmado pelo eleitor. O áudio era ativado especificamente
+                                 para cada eleitor previamente cadastrado ou para todos os eleitores de uma seção previamente configurada, mesmo que algum eleitor nela inscrito não precisasse de áudio.
+                              </p>
+                              <p>
+                                 A resposta do TSE foi restringir o uso de áudio somente para os eleitores previamente cadastrados ou por liberação do mesário. Além disso, sempre que o áudio é ativado, é mostrada mensagem no terminal do eleitor alertando sobre a ativação do recurso.
+                                 Caso o áudio esteja ativado indevidamente, o eleitor pode solicitar ao mesário a suspensão da sua votação e a verificação de ausência de equipamentos estranhos na cabine de votação.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <!--TPS 2017-->
+                     <div class="conteudo-tps conteudo-tps-2017">
+                        <ul class="nav nav-pills nav-tps-olds" id="nav-cont-tps-2017" role="tablist">
+                           <li class="nav-item">
+                              <a class="nav-link active" id="cont-2017-ancora-1-tab" data-toggle="pill" href="#cont-2017-ancora-1" role="tab" aria-controls="cont-2017-ancora-1" aria-selected="true">Informações gerais</a>
+                           </li>
+                           <!-- <li class="nav-item">
+                              <a class="nav-link" id="cont-2017-ancora-2-tab" data-toggle="pill"
+                                  href="#cont-2017-ancora-2" role="tab" aria-controls="cont-2017-ancora-2"
+                                  aria-selected="false">Vídeos</a>
+                              </li> -->
+                           <li class="nav-item">
+                              <a class="nav-link" id="cont-2017-ancora-3-tab" data-toggle="pill" href="#cont-2017-ancora-3" role="tab" aria-controls="cont-2017-ancora-3" aria-selected="false">Fotos</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" id="cont-2017-ancora-4-tab" data-toggle="pill" href="#cont-2017-ancora-4" role="tab" aria-controls="cont-2017-ancora-4" aria-selected="false">Documentação</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" id="cont-2017-ancora-5-tab" data-toggle="pill" href="#cont-2017-ancora-5" role="tab" aria-controls="cont-2017-ancora-5" aria-selected="false">Notícias</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" id="cont-2017-ancora-6-tab" data-toggle="pill" href="#cont-2017-ancora-6" role="tab" aria-controls="cont-2017-ancora-6" aria-selected="false">Resultados</a>
+                           </li>
+                        </ul>
+                        <div class="tab-content content-tps-olds" id="nav-cont-tps-2017">
+                           <div class="tab-pane fade show active" id="cont-2017-ancora-1" role="tabpanel" aria-labelledby="cont-2017-ancora-1">
+                              <p>O último teste público de segurança foi realizado no período de
+                                 <strong>27 a 30 de novembro de 2017</strong>, com 14 participantes efetivos, sendo 3 grupos e 4 participantes individuais. Dos 13 planos de teste apresentados, 10 foram executados, dentre os quais 4 contribuíram
+                                 para o aprimoramento do processo eleitoral e 6 não.
+                              </p>
+                           </div>
+                           <div class="tab-pane fade fotos-tps" id="cont-2017-ancora-2" role="tabpanel" aria-labelledby="cont-2017-ancora-2">
+                              <!-- <div class="foto-tps">
+                                 <a data-fancybox href="video/videos-tps-2017/balanco-primeira-etapa-tps-2017.mp4"><img src="/assets/images/tps/capas-video-tps-2017/capa-balanco-primeira-etapa.jpg" alt=""></a>
+                                 </div>
+                                 <div class="foto-tps">
+                                 <a data-fancybox href="video/videos-tps-2017/campanha-institucional-sobre-tps-2017.mp4"><img src="/assets/images/tps/capas-video-tps-2017/capa-campanha-institucional-sobre-tps.jpg" alt=""></a>
+                                 </div>
+                                 <div class="foto-tps">
+                                 <a data-fancybox href="video/videos-tps-2017/conceito-tps-2017.avi"><img src="/assets/images/tps/capas-video-tps-2017/capa-conceito-tps.jpg" alt=""></a>
+                                 </div>
+                                 <div class="foto-tps">
+                                 <a data-fancybox href="video/videos-tps-2017/depoimento-sti-tse-tps-2017.mp4"><img src="/assets/images/tps/capas-video-tps-2017/capa-depoimento-sti-tse.jpg" alt=""></a>
+                                 </div>
+                                 <div class="foto-tps">
+                                 <a data-fancybox href="video/videos-tps-2017/inscricoes-para-o-tps-2017.mp4"><img src="/assets/images/tps/capas-video-tps-2017/capa-inscricoes-tps.jpg" alt=""></a>
+                                 </div>
+                                 <div class="foto-tps">
+                                 <a data-fancybox href="video/videos-tps-2017/o-tps-2017.mp4"><img src="/assets/images/tps/capas-video-tps-2017/capa-o-tps.jpg" alt=""></a>
+                                 </div> -->
+                           </div>
+                           <div class="tab-pane fade fotos-tps" id="cont-2017-ancora-3" role="tabpanel" aria-labelledby="cont-2017-ancora-3">
+                              <div class="foto-tps">
+                                 <a data-fancybox="gallery" href="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_1.jpg"><img src="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_1.jpg" alt=""></a>
+                              </div>
+                              <div class="foto-tps">
+                                 <a data-fancybox="gallery" href="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_2.jpg"><img src="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_2.jpg" alt=""></a>
+                              </div>
+                              <div class="foto-tps">
+                                 <a data-fancybox="gallery" href="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_3.jpg"><img src="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_3.jpg" alt=""></a>
+                              </div>
+                              <div class="foto-tps">
+                                 <a data-fancybox="gallery" href="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_4.jpg"><img src="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_4.jpg" alt=""></a>
+                              </div>
+                              <div class="foto-tps">
+                                 <a data-fancybox="gallery" href="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_5.jpg"><img src="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_5.jpg" alt=""></a>
+                              </div>
+                              <div class="foto-tps">
+                                 <a data-fancybox="gallery" href="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_6.jpg"><img src="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_6.jpg" alt=""></a>
+                              </div>
+                              <div class="foto-tps">
+                                 <a data-fancybox="gallery" href="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_7.jpg"><img src="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_7.jpg" alt=""></a>
+                              </div>
+                              <div class="foto-tps">
+                                 <a data-fancybox="gallery" href="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_8.jpg"><img src="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_8.jpg" alt=""></a>
+                              </div>
+                              <div class="foto-tps">
+                                 <a data-fancybox="gallery" href="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_9.jpg"><img src="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_9.jpg" alt=""></a>
+                              </div>
+                              <div class="foto-tps">
+                                 <a data-fancybox="gallery" href="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_10.jpg"><img src="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_10.jpg" alt=""></a>
+                              </div>
+                              <div class="foto-tps">
+                                 <a data-fancybox="gallery" href="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_11.jpg"><img src="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_11.jpg" alt=""></a>
+                              </div>
+                              <div class="foto-tps">
+                                 <a data-fancybox="gallery" href="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_12.jpg"><img src="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_12.jpg" alt=""></a>
+                              </div>
+                              <div class="foto-tps">
+                                 <a data-fancybox="gallery" href="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_13.jpg"><img src="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_13.jpg" alt=""></a>
+                              </div>
+                              <div class="foto-tps">
+                                 <a data-fancybox="gallery" href="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_14.jpg"><img src="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_14.jpg" alt=""></a>
+                              </div>
+                              <div class="foto-tps">
+                                 <a data-fancybox="gallery" href="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_15.jpg"><img src="/assets/images/tps/fotos-tps-2017/fotos-tps-2017_15.jpg" alt=""></a>
+                              </div>
+                           </div>
+                           <div class="tab-pane fade" id="cont-2017-ancora-4" role="tabpanel" aria-labelledby="cont-2017-ancora-4">
+                              <p><a href="https://www.justicaeleitoral.jus.br/arquivos/tse-edital-testes-publicos-de-seguranca-2017" class="file-pdf" target="_blank">Edital</a></p>
+                              <p><a href="https://www.justicaeleitoral.jus.br/arquivos/tse-testes-publicos-de-seguranca-2017-relatorio-da-comissao-avaliadora" class="file-pdf" target="_blank">Relatório da Comissão
+                                 avaliadora</a>
+                              </p>
+                              <!-- <a><a href="https://www.justicaeleitoral.jus.br/arquivos/tse-t-estes-publicos-de-seguranca-2017-relatorio-tecnico" class="file-pdf" target="_blank">Relatório Técnico</a></p> -->
+                              <p><a href="https://www.justicaeleitoral.jus.br/arquivos/relatorio-tecnico-tps-2017-1527192798117" class="file-pdf" target="_blank">Relatório Técnico</a></p>
+                              <p><a href="https://www.justicaeleitoral.jus.br/arquivos/tse-testes-publicos-de-seguranca-2017-em-numeros" class="file-pdf" target="_blank">TPS em números</a></p>
+                           </div>
+                           <div class="tab-pane fade" id="cont-2017-ancora-5" role="tabpanel" aria-labelledby="cont-2017-ancora-5">
+                              <ul>
+                                 <li><a href="https://www.tse.jus.br/imprensa/noticias-tse/2017/Novembro/tps-2017-planos-de-ataque-a-urna-eletronica-executados-no-1o-dia-nao-tem-exito" target="_blank">TPS 2017: planos de ataque à urna eletrônica são
+                                    executados no 1º dia de evento</a>
+                                 </li>
+                                 <li><a href="https://www.tse.jus.br/imprensa/noticias-tse/2017/Novembro/tps-2017-interessados-podem-acompanhar-os-testes-sem-necessidade-de-inscricao-previa" target="_blank">TPS 2017: interessados podem acompanhar os
+                                    testes sem necessidade de inscrição prévia</a>
+                                 </li>
+                                 <li><a href="https://www.tse.jus.br/imprensa/noticias-tse/2017/Novembro/divulgacao-de-relatorio-parcial-dos-trabalhos-marca-o-encerramento-do-tps-2017-nesta-quinta-30" target="_blank">Divulgação de relatório parcial dos trabalhos
+                                    marca reta final do TPS 2017 nesta sexta (1º)</a>
+                                 </li>
+                                 <li><a href="https://www.tse.jus.br/imprensa/noticias-tse/2017/Novembro/tps-2017-observadores-internacionais-comentam-o-segundo-dia-de-testes" target="_blank">TPS 2017: observadores internacionais comentam o
+                                    segundo dia de testes</a>
+                                 </li>
+                                 <li><a href="https://www.tse.jus.br/imprensa/noticias-tse/2017/Novembro/aviso-de-pauta-divulgacao-de-relatorio-parcial-do-tps-2017-muda-a-data-devido-a-alteracao-nos-trabalhos" target="_blank">TSE divulga relatório parcial do TPS 2017 a
+                                    partir das 11h30 desta sexta-feira (1º)</a>
+                                 </li>
+                                 <li><a href="https://www.tse.jus.br/imprensa/noticias-tse/2017/Novembro/tps-2017-dois-grupos-de-investigadores-continuam-execucao-de-planos-de-ataque-nesta-sexta-1deg" target="_blank">TPS 2017: dois grupos de investigadores
+                                    continuam execução de planos de ataque nesta sexta (1°)</a>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="tab-pane fade" id="cont-2017-ancora-6" role="tabpanel" aria-labelledby="cont-2017-ancora-6">
+                              <p>
+                                 Foram encontrados três problemas na edição de 2017: vazamento de chave de criptografia das mídias da urna no ambiente de inspeção de código-fonte (a chave incluída no código não foi retirada do ambiente de inspeção); um bug no mecanismo de verificação
+                                 de assinatura digital de bibliotecas (assinatura digital embarcada no binário executável); e ausência de assinatura digital complementar em duas bibliotecas.
+                              </p>
+                              <p>
+                                 Esses três problemas permitiram que os investigadores modificassem o comportamento do software da urna durante a execução, apresentando resultados diversos.
+                              </p>
+                              <p>
+                                 O bug no mecanismo de assinatura foi corrigido pelo TSE; a quantidade de bibliotecas foi reduzida; os processos de testes de software foram aprimorados de modo a garantir que todos os executáveis estejam assinados e que as assinaturas sejam devidamente
+                                 validadas; e todas as chaves foram retiradas do código-fonte do software da urna (para 2018 foi utilizado um mecanismo de derivação de chaves e a partir de 2020 será utilizado um hardware seguro).
+                              </p>
+                              <p>
+                                 Outro ponto observado durante o TPS foi a capacidade de inicialização do sistema operacional da urna numa máquina virtual com o objetivo e realizar uma engenharia reversa e, assim, revelar chaves criptográficas. Como resposta, a criptografia do sistema
+                                 operacional foi fortalecida, de modo que somente a urna consiga decifrar e iniciar o sistema operacional.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- / TPS 2017-->
+                     <!-- TPS 2019 -->
+                     <div class="conteudo-tps conteudo-tps-2019">
+                        <ul class="nav nav-pills nav-tps-olds" id="nav-cont-tps-2019" role="tablist">
+                           <li class="nav-item">
+                              <a class="nav-link active" id="cont-2019-ancora-1-tab" data-toggle="pill" href="#cont-2019-ancora-1" role="tab" aria-controls="cont-2019-ancora-1" aria-selected="true">Informações
+                              gerais</a>
+                           </li>
+                           <!-- <li class="nav-item">
+                              <a class="nav-link" id="cont-2019-ancora-2-tab" data-toggle="pill"
+                                  href="#cont-2019-ancora-2" role="tab"
+                                  aria-controls="cont-2019-ancora-2" aria-selected="false">Vídeos</a>
+                              </li>
+                              <li class="nav-item">
+                              <a class="nav-link" id="cont-2019-ancora-3-tab" data-toggle="pill"
+                                  href="#cont-2019-ancora-3" role="tab"
+                                  aria-controls="cont-2019-ancora-3" aria-selected="false">Fotos</a>
+                              </li> -->
+                           <li class="nav-item">
+                              <a class="nav-link" id="cont-2019-ancora-4-tab" data-toggle="pill" href="#cont-2019-ancora-4" role="tab" aria-controls="cont-2019-ancora-4" aria-selected="false">Documentação</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" id="cont-2019-ancora-5-tab" data-toggle="pill" href="#cont-2019-ancora-5" role="tab" aria-controls="cont-2019-ancora-5" aria-selected="false">Notícias</a>
+                           </li>
+                           <!-- <li class="nav-item">
+                              <a class="nav-link" id="cont-2019-ancora-6-tab" data-toggle="pill"
+                                  href="#cont-2019-ancora-6" role="tab"
+                                  aria-controls="cont-2019-ancora-6"
+                                  aria-selected="false">Resultados</a>
+                              </li> -->
+                        </ul>
+                        <div class="tab-content content-tps-olds" id="nav-cont-tps-2019">
+                           <div class="tab-pane fade show active" id="cont-2019-ancora-1" role="tabpanel" aria-labelledby="cont-2019-ancora-1">
+                              <p>A quinta edição do Teste Público de Segurança aconteceu no período de <strong>25 a 29 de novembro de 2019</strong>. Mais uma vez, o teste teve como objetivo buscar a colaboração da sociedade brasileira para
+                                 o aperfeiçoamento do sistema eletrônico de votação utilizado nas eleições do país.
+                              </p>
+                              <p>O TPS é uma ação decorrente da missão estratégica do TSE de “garantir a legitimidade do processo eleitoral e a efetiva prestação jurisdicional, a fim de fortalecer a democracia”, e reúne investigadores independentes
+                                 para, individualmente ou organizados em times, executarem planos de ataque aos componentes internos e externos da urna eletrônica.
+                              </p>
+                           </div>
+                           <div class="tab-pane fade fotos-tps" id="cont-2019-ancora-2" role="tabpanel" aria-labelledby="cont-2019-ancora-2">
+                              <!-- <div class="foto-tps">
+                                 <a data-fancybox href="video/videos-tps-2019/balanco-primeira-etapa-tps-2019.mp4"><img src="/assets/images/tps/capas-video-tps-2019/capa-balanco-primeira-etapa.jpg" alt=""></a>
+                                 </div>
+                                 <div class="foto-tps">
+                                 <a data-fancybox href="video/videos-tps-2019/campanha-institucional-sobre-tps-2019.mp4"><img src="/assets/images/tps/capas-video-tps-2019/capa-campanha-institucional-sobre-tps.jpg" alt=""></a>
+                                 </div>
+                                 <div class="foto-tps">
+                                 <a data-fancybox href="video/videos-tps-2019/conceito-tps-2019.avi"><img src="/assets/images/tps/capas-video-tps-2019/capa-conceito-tps.jpg" alt=""></a>
+                                 </div>
+                                 <div class="foto-tps">
+                                 <a data-fancybox href="video/videos-tps-2019/depoimento-sti-tse-tps-2019.mp4"><img src="/assets/images/tps/capas-video-tps-2019/capa-depoimento-sti-tse.jpg" alt=""></a>
+                                 </div>
+                                 <div class="foto-tps">
+                                 <a data-fancybox href="video/videos-tps-2019/inscricoes-para-o-tps-2019.mp4"><img src="/assets/images/tps/capas-video-tps-2019/capa-inscricoes-tps.jpg" alt=""></a>
+                                 </div>
+                                 <div class="foto-tps">
+                                 <a data-fancybox href="video/videos-tps-2019/o-tps-2019.mp4"><img src="/assets/images/tps/capas-video-tps-2019/capa-o-tps.jpg" alt=""></a>
+                                 </div> -->
+                           </div>
+                           <div class="tab-pane fade fotos-tps" id="cont-2019-ancora-3" role="tabpanel" aria-labelledby="cont-2019-ancora-3">
+                           </div>
+                           <div class="tab-pane fade" id="cont-2019-ancora-4" role="tabpanel" aria-labelledby="cont-2019-ancora-4">
+                              <p><a href="/assets/arquivos/tps/tps-edital-testes-seguranca-2019-atualizado-17-12-2019.pdf" class="file-pdf" target="_blank">Edital do TPS 2019</a></p>
+                              <p><a href="/assets/arquivos/tps/tps_2019_relatorio_final-atualizado_17_12_2019.pdf" class="file-pdf" target="_blank">Relatório Final do TPS 2019</a></p>
+                              <!-- <a><a href="https://www.justicaeleitoral.jus.br/arquivos/tse-t-estes-publicos-de-seguranca-2017-relatorio-tecnico" class="file-pdf" target="_blank">Relatório Técnico</a></p> -->
+                              <p><a href="/assets/arquivos/tps/tps_2019_relatorio_tecnico_atualizado_17_12_2019.pdf" class="file-pdf" target="_blank">Relatório Técnico do TPS 2019</a></p>
+                           </div>
+                           <div class="tab-pane fade noticias-linha-do-tempo" id="cont-2019-ancora-5" role="tabpanel" aria-labelledby="cont-2019-ancora-5">
+                              <div class="noticias-linha-do-tempo">
+                              </div>
+                           </div>
+                           <div class="tab-pane fade" id="cont-2019-ancora-6" role="tabpanel" aria-labelledby="cont-2019-ancora-6">
+                              <p>
+                                 Foram encontrados três problemas na edição de 2017: vazamento de chave de criptografia das mídias da urna no ambiente de inspeção de código-fonte (a chave incluída no código não foi retirada do ambiente de inspeção); um bug no mecanismo de verificação
+                                 de assinatura digital de bibliotecas (assinatura digital embarcada no binário executável); e ausência de assinatura digital complementar em duas bibliotecas.
+                              </p>
+                              <p>
+                                 Esses três problemas permitiram que os investigadores modificassem o comportamento do software da urna durante a execução, apresentando resultados diversos.
+                              </p>
+                              <p>
+                                 O bug no mecanismo de assinatura foi corrigido pelo TSE; a quantidade de bibliotecas foi reduzida; os processos de testes de software foram aprimorados de modo a garantir que todos os executáveis estejam assinados e que as assinaturas sejam devidamente
+                                 validadas; e todas as chaves foram retiradas do código-fonte do software da urna (para 2018 foi utilizado um mecanismo de derivação de chaves e a partir de 2020 será utilizado um hardware seguro).
+                              </p>
+                              <p>
+                                 Outro ponto observado durante o TPS foi a capacidade de inicialização do sistema operacional da urna numa máquina virtual com o objetivo e realizar uma engenharia reversa e, assim, revelar chaves criptográficas. Como resposta, a criptografia do sistema
+                                 operacional foi fortalecida, de modo que somente a urna consiga decifrar e iniciar o sistema operacional.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- / TPS 2019 -->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="resultados">
+      <div class="container">
+         <h2 class="text-center">Resultados</h2>
+         <div class="row">
+            <div class="col-12 col-lg-3 text-center">
+               <div class="box-result">
+                  <div class="imagem-box-result">
+                     <img src="/assets/images/tps/icon_ataque.png" />
+                  </div>
+                  <div class="dados-result">
+                     <div class="numeros-result separar-itens">50</div>
+                     <div class="titulo-result">Planos de <br> ataques</div>
+                  </div>
+                  <div class="texto-obs-result">entre apresentados e executados</div>
+               </div>
+            </div>
+            <div class="col-12 col-lg-3 text-center">
+               <div class="box-result">
+                  <div class="imagem-box-result">
+                     <img src="/assets/images/tps/icon_starts.png" />
+                  </div>
+                  <div class="dados-result">
+                     <div class="numeros-result">5</div>
+                     <div class="titulo-result">Edições do <br> evento</div>
+                  </div>
+                  <div class="texto-obs-result">2009, 2012, 2016, 2017 e 2019</div>
+               </div>
+            </div>
+            <div class="col-12 col-lg-3 text-center">
+               <div class="box-result">
+                  <div class="imagem-box-result">
+                     <img src="/assets/images/tps/icon_pessoas.png" />
+                  </div>
+                  <div class="dados-result">
+                     <div class="numeros-result separar-itens">89</div>
+                     <div class="titulo-result">Participantes <br> investigadores</div>
+                  </div>
+                  <!--<div class="texto-obs-result">*aproximadamente</div>-->
+               </div>
+            </div>
+            <div class="col-12 col-lg-3 text-center">
+               <div class="box-result">
+                  <div class="imagem-box-result">
+                     <img src="/assets/images/tps/icon_time.png" />
+                  </div>
+                  <div class="dados-result">
+                     <div class="numeros-result separar-itens">126</div>
+                     <div class="titulo-result">Horas</div>
+                  </div>
+                  <div class="texto-obs-result">de testes públicos executados</div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+</main>
+<%- include('../../templates/shared/footer', { config }); -%>
