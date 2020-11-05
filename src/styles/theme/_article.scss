@@ -1,0 +1,52 @@
+.article {
+
+  @include media-breakpoint-up(xs) {
+    @include make-col-ready(0);
+    @include make-col(12);
+  }
+
+  @include media-breakpoint-up(sm) {
+    @include make-col(7);
+  }
+
+  @include media-breakpoint-up(md) {
+    @include make-col-ready();
+    @include make-col(7);
+    padding-right: 20px;
+    padding-left: 0;
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include make-col-ready();
+    @include make-col(8);
+    padding-left: 0;
+    padding-right: 30px;
+  }
+
+
+
+  &-body {
+    @include media-breakpoint-up(xs) {
+      padding: 15px;
+      @include font-size(16px);
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: 30px;
+      @include font-size(20px);
+    }
+
+    background-color: #fff;
+    border-bottom: 15px;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: $box-shadow;
+    color: #4D4D4D;
+
+    article img {
+      @include img-fluid;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+}

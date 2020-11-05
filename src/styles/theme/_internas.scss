@@ -1,0 +1,23 @@
+.title-section {
+  @extend .recent-title;
+}
+
+.highlights {
+  padding-right: 40px;
+  padding-left: 40px;
+
+  .carousel {
+    box-shadow: $box-shadow;
+  }
+
+
+
+  .carousel + .carousel {
+    margin-top: 30px;
+  }
+
+  .carousel-body {
+    padding: 30px;
+    background-color: #E8E8E8;
+  }
+}

@@ -102,7 +102,7 @@ export const media = () => {
 
 export const pages = () => {
   return gulp
-    .src(['src/pages/**/*.ejs'])
+    .src(['src/views/**/*.ejs'])
     .pipe(ejs({conteudo}))
     .pipe(rename({extname: '.html'}))
     .pipe(gulp.dest(dest))

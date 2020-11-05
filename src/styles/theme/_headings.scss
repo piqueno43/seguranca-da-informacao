@@ -1,0 +1,33 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $primary;
+}
+
+h1,
+.main-title {
+  @include font-size(44px);
+  font-family: 'Gotham Black';
+}
+
+h2,
+.sidebar-page,
+.article-page {
+  @include font-size(40px);
+  font-family: 'Gotham Black';
+}
+
+h3,
+.article-title {
+  @include font-size(30px);
+  font-family: 'Gotham Medium';
+}
+
+h4,
+.article-topic {
+  @include font-size(18px);
+  font-family: 'Gotham Bold';
+}

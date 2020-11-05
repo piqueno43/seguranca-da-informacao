@@ -1,0 +1,15 @@
+.main {
+  min-height: 300px;
+
+  &.main-inside {
+    background-color: transparent;
+
+    @include media-breakpoint-up(xs){
+      margin-top: -20px;
+    }
+
+    @include media-breakpoint-up(lg){
+      margin-top: -70px;
+    }
+  }
+}
