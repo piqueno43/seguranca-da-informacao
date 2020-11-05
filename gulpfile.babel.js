@@ -9,7 +9,6 @@ import del from 'del';
 import webpack from 'webpack-stream';
 import browserSync from 'browser-sync';
 import rename from 'gulp-rename';
-import conteudo from './src/contents/je.json';
 const dest = 'dist';
 
 const paths = {
@@ -103,7 +102,7 @@ export const media = () => {
 export const pages = () => {
   return gulp
     .src(['src/views/**/*.ejs'])
-    .pipe(ejs({conteudo}))
+    .pipe(ejs())
     .pipe(rename({extname: '.html'}))
     .pipe(gulp.dest(dest))
     .pipe(browserSync.stream());
