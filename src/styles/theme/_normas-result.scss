@@ -1,0 +1,25 @@
+.norma {
+  & + .norma {
+    padding-top: 20px;
+  }
+
+  .card {
+    border-color: rgba($primary, .1);
+    background-color: rgba($primary, .1);
+
+    &-body {
+      font-size: 1rem;
+    }
+  }
+}
+.procedimento {
+  margin-top: 10px;
+  & + .procedimento {
+    padding-top: 10px;
+  }
+
+  .card {
+    background-color: #fff;
+  }
+}
+

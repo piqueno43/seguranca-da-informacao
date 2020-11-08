@@ -1,0 +1,15 @@
+<main class="main container-fluid main-inside">
+  <div class="container">
+    <div class="row">
+      <%- include('../templates/<%=page%>'); -%>
+      <div id="aside" class="sticky-top">
+        <%- include('../templates/highlights'); -%>
+        <%- include('../templates/categories'); -%>
+      </div>
+      <div class="col-12">
+        <h1 class="title-section">RECOMENDAMOS PARA VOCÊ</h1>
+      </div>
+      <%- include('../templates/carousel', { inside: false }); -%>
+    </div>
+  </div>
+</main>

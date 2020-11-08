@@ -9,7 +9,8 @@
   border-bottom-left-radius: $input-border-radius;
   border-bottom-right-radius: $input-border-radius;
 }
-form {
+
+form:not(.form-filters) {
   input.form-control {
     position: relative;
     top: 5px;

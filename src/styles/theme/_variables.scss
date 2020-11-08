@@ -22,4 +22,12 @@ $input-border-color: $primary;
 $input-focus-border-color: rgba($primary, .50);
 $input-placeholder-color: rgba($primary, .50);
 
-// $border-radius:               .25rem !default;
+$nav-tabs-link-active-color:        #fff !default;
+$nav-tabs-link-active-bg:           $primary;
+$nav-tabs-link-active-border-color: $primary;
+$nav-tabs-border-color: $primary;
+$nav-tabs-border-width: 5px;
+$nav-tabs-border-radius: 10px;
+// $nav-pills-border-radius:           $border-radius !default;
+// $nav-pills-link-active-color:       $component-active-color !default;
+// $nav-pills-link-active-bg:          $component-active-bg !default;
