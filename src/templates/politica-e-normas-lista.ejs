@@ -1,52 +1,94 @@
 <section class="article" id="article">
   <div class="article-body">
-    <%- include('includes/breadcrumbs', { title: '5Políticas e normas' }) -%>
+    <%- include('includes/breadcrumbs', { title: 'Políticas e normas' }) -%>
     <article>
       <h2>Políticas e normas</h2>
       <p>Você está navegando pela internet quando encontra um anúncio do produto dos seus sonhos e, o melhor: por um preço incrível! Antes de correr para encher o seu carrinho, você tem certeza de que está em um e-commerce confiável? Algumas dicas para comprar online com segurança são capazes de determinar se você está fazendo uma boa escolha!</p>
       <p>A verdade é que, à medida que a modalidade de comércio online cresce, os crimes virtuais também aumentaram. Como estamos cada vez mais adaptados aos e-commerces, podemos acabar por deixar passar detalhes importantes, que nos colocam em fraudes e golpes.</p>
-      <div class="filters">
+      <div class="listas">
         <%- include('filtros', { active: 'lista'}) -%>
         <div class="lista-normas">
          <div class="lista-norma">
-            <h5>
+          <h5>
             <a data-toggle="collapse" href="#collapseFilter-0" role="button" aria-expanded="false" aria-controls="collapseFilter-0">
-              Título norma <i class="fas fa-plus-square"></i>
+              TRE-DF <i class="fas fa-plus-square"></i>
             </a>
           </h5>
           <div class="collapse" id="collapseFilter-0">
             <div class="card card-body">
-              Você está navegando pela internet quando encontra um anúncio do produto dos seus sonhos e, o melhor: por um preço incrível! Antes de correr para encher o seu carrinho, você tem certeza de que está em um e-commerce confiável? Algumas dicas para comprar online com segurança são capazes de determinar se você está fazendo uma boa escolha!
-              <strong>Processo SEI: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</strong>
-              <div class="procedimentos">
-                <div class="procedimento">
-                    <h6>
-                    <a data-toggle="collapse" href="#collapseProcedimento-0" role="button" aria-expanded="false" aria-controls="collapseProcedimento-0">
-                      Procedimentos <i class="fas fa-caret-up"></i>
-                    </a>
-                  </h6>
-                  <div class="collapse" id="collapseProcedimento-0">
-                    <div class="card card-body">
-                      Você está navegando pela internet quando encontra um anúncio do produto dos seus sonhos e, o melhor: por um preço incrível! Antes de correr para encher o seu carrinho, você tem certeza de que está em um e-commerce confiável? Algumas dicas para comprar online com segurança são capazes de determinar se você está fazendo uma boa escolha!
+              <a class="has-more" href="#" data-toggle="modal" data-target="#titleModal-0">Título norma</a>
+              <!-- Modal norma -->
+                <div class="modal fade" id="titleModal-0" tabindex="-1" aria-labelledby="titleModal-0-Label" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="titleModal-0-Label">Norma</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Você está navegando pela internet quando encontra um anúncio do produto dos seus sonhos e, o melhor: por um preço incrível! Antes de correr para encher o seu carrinho, você tem certeza de que está em um e-commerce confiável? Algumas dicas para comprar online com segurança são capazes de determinar se você está fazendo uma boa escolha!
+                      </div>
                     </div>
                   </div>
                 </div>
+                <!-- Modal norma -->
+              <a class="has-more" data-toggle="collapse" href="#collapseList-0" role="button" aria-expanded="false" aria-controls="collapseList-0" href="#"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+            <div class="collapse" id="collapseList-0">
+              <div class="card card-body">
+                <a class="no-more" data-toggle="modal" data-target="#listModal-0" href="#">Procedimentos</a>
+                <!-- Modal -->
+                <div class="modal fade" id="listModal-0" tabindex="-1" aria-labelledby="listModal-0-Label" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="listModal-0-Label">Procedimentos</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Você está navegando pela internet quando encontra um anúncio do produto dos seus sonhos e, o melhor: por um preço incrível! Antes de correr para encher o seu carrinho, você tem certeza de que está em um e-commerce confiável? Algumas dicas para comprar online com segurança são capazes de determinar se você está fazendo uma boa escolha!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal -->
               </div>
+            </div>
             </div>
           </div>
          </div>
-          <div class="norma">
-            <h5>
+         <div class="lista-norma">
+          <h5>
             <a data-toggle="collapse" href="#collapseFilter-1" role="button" aria-expanded="false" aria-controls="collapseFilter-1">
-              Título norma <i class="fas fa-caret-up"></i>
+              TRE-GO <i class="fas fa-plus-square"></i>
             </a>
           </h5>
           <div class="collapse" id="collapseFilter-1">
             <div class="card card-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+              <a class="no-more" href="#" data-toggle="modal" data-target="#titleModal-1">Título norma</a>
+              <!-- Modal norma -->
+                <div class="modal fade" id="titleModal-1" tabindex="-1" aria-labelledby="titleModal-1-Label" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="titleModal-1-Label">Norma</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Você está navegando pela internet quando encontra um anúncio do produto dos seus sonhos e, o melhor: por um preço incrível! Antes de correr para encher o seu carrinho, você tem certeza de que está em um e-commerce confiável? Algumas dicas para comprar online com segurança são capazes de determinar se você está fazendo uma boa escolha!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal norma -->
             </div>
           </div>
-          </div>
+         </div>
         </div>
       </div>
     </article>

@@ -1,0 +1,27 @@
+.listas {
+  .lista-normas {
+    padding-top: 30px;
+
+    .lista-norma + .lista-norma {
+      padding-top: 30px;
+    }
+  }
+
+  .card {
+    border: none;
+    display: inline-block;
+  }
+
+  .no-more {
+    color: $primary;
+    font-size: 16px;
+  }
+
+  .has-more {
+    color:$preto;
+
+    .fa {
+      color: $primary;
+    }
+  }
+}
