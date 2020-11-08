@@ -50,7 +50,13 @@
   }
 
   &-text {
-    color: #4D4D4D;
+    a {
+      color: #4D4D4D;
+
+      &:hover {
+        color: $primary;
+      }
+    }
 
     @include media-breakpoint-up(xs) {
       @include font-size(16px);

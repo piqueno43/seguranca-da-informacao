@@ -4,10 +4,12 @@ const recents = ['animals', 'arch', 'nature', 'people', 'tech', 'any'];
 <section class="recent" id="recent">
   <h1 class="recent-title">RECENTES</h1>
   <div class="recent-body">
-    <% recents.forEach(recent => { %>
-      <div class="recent-item">
-      <img class="recent-img" src="http://placeimg.com/260/260/<%= recent %> " alt="">
-      <p class="recent-text">PayPal passa a aceitar transações com bitcoin e ether</p>
+    <% recents.forEach((recent, index) => { %>
+    <div class="recent-item">
+      <a href="#recent-<%=index%>">
+        <img class="recent-img" src="http://placeimg.com/260/260/<%= recent %>" alt="<%= recent %>">
+        <p class="recent-text">PayPal passa a aceitar transações com bitcoin e ether</p>
+      </a>
       <div class="recent-date">
         <span>22 Out</span>
         <span>10 min read</span>

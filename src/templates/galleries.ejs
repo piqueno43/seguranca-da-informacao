@@ -34,11 +34,11 @@ const galleries = ['animals', 'arch', 'nature', 'people', 'tech', 'any'];
         </div>
       </form>
       <div class="card-columns">
-        <% galleries.forEach(galery=>{%>
+        <% galleries.forEach((galery, index) => { %>
         <div class="card">
-          <img src="http://placeimg.com/237/199/<%=galery%>" class="card-img-top" alt="...">
+          <img src="http://placeimg.com/237/199/<%=galery%>" class="card-img-top" alt="<%=galery%>">
           <div class="card-body">
-            <h5 class="card-title">PayPal passa a aceitar transações com bitcoin e ether</h5>
+            <h5 class="card-title"><a href="#galery-<%=index%>">PayPal passa a aceitar transações com bitcoin e ether</a></h5>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum</p>
           </div>
         </div>

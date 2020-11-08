@@ -2,9 +2,9 @@
 const carousels = ['animals', 'arch', 'nature', 'people', 'tech', 'any'];
 %>
 <div class="owlCarouselFooter">
-  <% carousels.forEach(carousel=>{%>
+  <% carousels.forEach((carousel, index) => { %>
   <div class="carousel-footer">
-    <img src="http://placeimg.com/398/398/<%= carousel %> " alt="" class="carousel-footer-img">
+    <a href="#-item-<%= index %>"><img src="http://placeimg.com/398/398/<%= carousel %>" alt="<%= carousel %>" class="carousel-footer-img"></a>
   </div>
   <%})%>
 </div>

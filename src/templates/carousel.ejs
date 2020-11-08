@@ -2,12 +2,12 @@
 const carousels = ['animals', 'arch', 'nature', 'people', 'tech', 'any'];
 %>
 <div class="owlCarousel <% if(inside) {%>carousel-inside<%} -%>" id="owlCarousel">
- <% carousels.forEach(carousel=>{%>
+ <% carousels.forEach((carousel, index) => { %>
   <div class="carousel">
-    <img src="http://placeimg.com/400/200/<%=carousel%>" alt="" class="carousel-img-top">
+    <img src="http://placeimg.com/400/200/<%=carousel%>" alt="<%=carousel%>" class="carousel-img-top">
     <div class="carousel-body">
       <div class="carousel-text">
-        PayPal passa a aceitar transações com bitcoin e ether
+        <a href="#-carousel-<%=index%>">PayPal passa a aceitar transações com bitcoin e ether</a>
       </div>
       <div class="carousel-date">30 de outubro de 2020</div>
     </div>

@@ -20,13 +20,16 @@
       border-radius: 15px;
     }
   }
+
   .card-title {
     @include font-size(16px);
   }
+
   .card-text {
     font-family: 'Gotham Book';
     @include font-size(14px);
   }
+
   .card-img-top {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
