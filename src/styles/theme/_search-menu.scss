@@ -1,0 +1,69 @@
+.menu-form {
+  &-row {
+    @include make-row(0);
+    justify-content: flex-end;
+  }
+
+  input {
+    width: 0;
+    padding: 0;
+    display: none;
+
+    &.input-active {
+      display: flex;
+      width: auto;
+      padding: $input-padding-y $input-padding-x;
+
+      @include media-breakpoint-only(xs) {
+        top: 0;
+      }
+
+      @include media-breakpoint-only(lg) {
+        top: 5px;
+      }
+    }
+  }
+
+  .form-control {
+    @include media-breakpoint-up(sm) {
+      height: $input-height-sm;
+      padding: $input-padding-y-sm $input-padding-x-sm;
+      @include font-size($input-font-size-sm);
+      line-height: $input-line-height-sm;
+      @include border-radius($input-border-radius-sm);
+    }
+
+    @include media-breakpoint-up(md) {
+      height: $input-height;
+      padding: $input-padding-y $input-padding-x;
+      @include font-size($input-font-size);
+      line-height: $input-line-height;
+      @include border-radius($input-border-radius);
+    }
+
+    @include media-breakpoint-up(lg) {
+      height: $input-height-lg;
+      padding: $input-padding-y-lg $input-padding-x-lg;
+      @include font-size($input-font-size-lg);
+      line-height: $input-line-height-lg;
+      @include border-radius($input-border-radius-lg);
+    }
+  }
+  .form-control.input-active {
+    @include media-breakpoint-only(xs) {
+      // margin-top: -7px;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-top: -5px;
+    }
+  }
+  .btn-form {
+    @include media-breakpoint-up(sm) {
+      @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+    }
+  }
+}
