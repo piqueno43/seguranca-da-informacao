@@ -59,5 +59,12 @@
             items:3
         }
     }
-})
+  })
+
+
 })(jQuery)
+
+$(function () {
+  // Enable tooltip
+  $('.has-tooltip').tooltip()
+})

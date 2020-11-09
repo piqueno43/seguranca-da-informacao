@@ -5,6 +5,14 @@
     .lista-norma + .lista-norma {
       padding-top: 30px;
     }
+
+    a[aria-expanded="true"] {
+      .fas {
+        &::before{
+          content: "\f146";
+        }
+      }
+    }
   }
 
   .card {
@@ -23,5 +31,13 @@
     .fa {
       color: $primary;
     }
+    &[aria-expanded="true"] {
+      .fa {
+        &::before{
+          content: "\f146";
+        }
+      }
+    }
   }
+
 }

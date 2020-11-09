@@ -11,6 +11,13 @@
       font-size: 1rem;
     }
   }
+  a[aria-expanded="true"] {
+    .fas {
+      &::before{
+        content: "\f0d7";
+      }
+    }
+  }
 }
 .procedimento {
   margin-top: 10px;
@@ -20,6 +27,14 @@
 
   .card {
     background-color: #fff;
+  }
+
+  a[aria-expanded="true"] {
+    .fas {
+      &::before{
+        content: "\f0d7";
+      }
+    }
   }
 }
 
