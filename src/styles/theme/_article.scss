@@ -23,7 +23,15 @@
     padding-right: 30px;
   }
 
+  &.article-full {
+    @include make-col-ready();
+    @include make-col(12);
 
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
 
   &-body {
     @include media-breakpoint-up(xs) {
