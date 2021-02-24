@@ -60,6 +60,13 @@
         }
     }
   })
+  // initialize olw carousel highlights-carousel
+  $('.highlights-carousel')
+  .addClass('owl-carousel owl-theme')
+  .owlCarousel({
+    margin:60,
+    items:1
+  })
 
 
 })(jQuery)
